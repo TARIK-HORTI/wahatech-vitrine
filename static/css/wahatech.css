@@ -434,7 +434,7 @@ a.al-tag:hover { background: var(--al-lime); color: var(--al-forest); }
 .al-filters ~ .al-tile { height: auto; }
 
 .al-nav .nav-link, .al-nav .btn { white-space: nowrap; }
-@media (max-width: 1199.98px) {
+@media (max-width: 1399.98px) {
   .al-nav .navbar-collapse { background: #fff; border-radius: var(--al-radius); padding: 1rem; margin-top: .75rem; box-shadow: var(--al-shadow); }
 }
 html, body { overflow-x: clip; }
@@ -711,3 +711,72 @@ html, body { overflow-x: clip; }
 /* Version vitrine statique (export_static) */
 .vitrine-toast { position: fixed; inset-inline: 1rem; bottom: 1.25rem; margin-inline: auto; max-width: 34rem; z-index: 3000; background: var(--al-forest); color: #fff; padding: .9rem 1.2rem; border-radius: 14px; box-shadow: var(--al-shadow-lg); font-weight: 600; text-align: center; transition: opacity .6s, transform .6s; }
 .vitrine-toast.is-hidden { opacity: 0; transform: translateY(12px); }
+
+/* ===== Eau : barrages et pluie ===== */
+.al-water-kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 1rem; }
+.al-water-kpi { background: var(--al-white); border: 1px solid var(--al-line); border-radius: var(--al-radius); padding: 1rem 1.2rem; display: flex; flex-direction: column; gap: .2rem; }
+.al-water-kpi span { font-size: .85rem; color: var(--al-muted); }
+.al-water-kpi b { font-family: var(--al-display); font-size: 1.8rem; color: var(--al-forest); line-height: 1.1; }
+.al-water-kpi small { color: var(--al-muted); font-size: .8rem; }
+.al-water-kpi-main { background: var(--al-forest); border-color: var(--al-forest); }
+.al-water-kpi-main span, .al-water-kpi-main small { color: rgba(255, 255, 255, .78); }
+.al-water-kpi-main b { color: #fff; }
+.al-fill { display: block; width: 100%; height: 10px; margin-top: .4rem; }
+.al-fill-bg { fill: rgba(95, 168, 211, .22); }
+.al-fill-fg { fill: #5fa8d3; }
+.al-water-kpi-main .al-fill-bg { fill: rgba(255, 255, 255, .2); }
+.al-water-kpi-main .al-fill-fg { fill: #8fd0f5; }
+.al-fill-sm { height: 8px; margin: 0; flex: 1; min-width: 80px; }
+.al-fill-cell { display: flex; align-items: center; gap: .6rem; min-width: 180px; }
+.al-water-rate { font-weight: 700; padding: .15rem .6rem; border-radius: 999px; font-size: .9rem; }
+.al-water-rate-low { background: rgba(224, 123, 31, .15); color: #a2510c; }
+.al-water-rate-mid { background: rgba(240, 162, 36, .15); color: #8a5a00; }
+.al-water-rate-high { background: rgba(47, 143, 58, .14); color: #1f6a28; }
+.al-chart { width: 100%; height: auto; display: block; direction: ltr; }
+.al-chart-axis { stroke: var(--al-line); stroke-width: 1; }
+.al-chart-grid { stroke: var(--al-line); stroke-width: 1; stroke-dasharray: 3 4; }
+.al-chart-bar { fill: #5fa8d3; }
+.al-chart-bar-alt { fill: var(--al-forest-2); opacity: .8; }
+.al-chart-avg { fill: none; stroke: var(--al-clay); stroke-width: 2.5; stroke-linejoin: round; }
+.al-chart-tick { font-size: 11px; fill: var(--al-muted); font-family: var(--al-font); }
+.al-chart-legend { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem .5rem; font-size: .82rem; color: var(--al-muted); margin-top: .4rem; }
+.al-chart-legend span { display: inline-block; width: 14px; height: 10px; border-radius: 2px; }
+.al-lg-bar { background: #5fa8d3; }
+.al-lg-avg { background: var(--al-clay); height: 3px !important; }
+
+/* ===== Conseil : formations, bulletins, actualités ===== */
+.al-event-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; }
+.al-event { position: relative; display: flex; gap: 1rem; background: var(--al-white); border: 1px solid var(--al-line); border-radius: var(--al-radius); padding: 1.1rem; transition: box-shadow .2s var(--al-ease), transform .2s var(--al-ease); }
+.al-event:hover { box-shadow: var(--al-shadow); transform: translateY(-2px); }
+.al-event h3 { font-size: 1.1rem; margin: .2rem 0 .4rem; }
+.al-event-date { flex: none; width: 64px; text-align: center; background: var(--al-sand); border-radius: var(--al-radius-sm); padding: .5rem .3rem; align-self: flex-start; }
+.al-event-date b { display: block; font-family: var(--al-display); font-size: 1.6rem; color: var(--al-forest); line-height: 1; }
+.al-event-date span { font-size: .75rem; color: var(--al-muted); }
+.al-news-list { display: grid; gap: 1rem; }
+.al-news { background: var(--al-white); border: 1px solid var(--al-line); border-radius: var(--al-radius); padding: 1.1rem 1.3rem; }
+.al-news h3 { font-size: 1.15rem; margin: .25rem 0 .5rem; }
+
+/* ===== Calendrier cultural ===== */
+.al-cal { width: 100%; border-collapse: separate; border-spacing: 0; min-width: 760px; font-size: .88rem; }
+.al-cal th, .al-cal td { padding: .45rem .3rem; border-bottom: 1px solid var(--al-line); }
+.al-cal thead th { text-align: center; color: var(--al-muted); font-weight: 600; font-size: .78rem; }
+.al-cal tbody th { text-align: start; font-weight: 500; width: 34%; }
+.al-cal tbody th span { display: block; }
+.al-cal td { text-align: center; position: relative; }
+.al-cal-kind { font-size: .7rem; text-transform: uppercase; letter-spacing: .04em; font-weight: 700; margin-bottom: .1rem; background: none !important; }
+.al-cal-bar { display: block; height: 14px; border-radius: 4px; margin: 0 -2px; }
+.al-cal-k-plant { background: var(--al-leaf); color: var(--al-leaf); }
+.al-cal-k-care { background: var(--al-forest-2); color: var(--al-forest-2); }
+.al-cal-k-feed { background: var(--al-sun); color: #8a5a00; }
+.al-cal-k-protect { background: var(--al-clay); color: #a2510c; }
+.al-cal-k-harvest { background: #8e44ad; color: #6c3483; }
+.al-cal-water td span { color: #2f7fb0; font-size: .7rem; letter-spacing: -.05em; }
+.al-cal-w3 { background: rgba(95, 168, 211, .28); }
+.al-cal-w2 { background: rgba(95, 168, 211, .17); }
+.al-cal-w1 { background: rgba(95, 168, 211, .08); }
+.al-fill-green { fill: var(--al-leaf); }
+.al-fill-lg { height: 14px; }
+.al-steps-inline { display: flex; flex-wrap: wrap; gap: .4rem 1.4rem; padding-inline-start: 1.1rem; color: var(--al-muted); font-size: .9rem; }
+.al-label-badge { display: inline-flex; align-items: center; gap: .3rem; align-self: flex-start; font-size: .75rem; font-weight: 700; padding: .15rem .55rem; border-radius: 999px; margin-bottom: .35rem; background: rgba(47, 143, 58, .12); color: #1f6a28; }
+.al-label-igp, .al-label-ao { background: rgba(240, 162, 36, .16); color: #8a5a00; }
+.al-label-label { background: rgba(23, 73, 110, .1); color: var(--al-forest-2); }
