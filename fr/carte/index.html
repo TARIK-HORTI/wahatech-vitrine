@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="fr" dir="ltr" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Carte — WahaTech</title>
+  <meta name="description" content="Carte des coopératives, terres agricoles et matériel à louer au Maroc.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0f3550">
+  <meta name="htmx-config" content='{"includeIndicatorStyles": false}'>
+  <meta property="og:title" content="WahaTech">
+  <meta property="og:description" content="Innovation agricole, des oasis au monde">
+  <meta property="og:type" content="website">
+  
+  <link rel="alternate" hreflang="fr" href="/fr/carte/">
+  <link rel="alternate" hreflang="ar" href="/ar/carte/">
+  <link rel="alternate" hreflang="en" href="/en/carte/">
+  <link rel="icon" href="/static/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/static/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/css/wahatech.css">
+  <script src="/static/js/wahatech.js" defer></script>
+  <link rel="stylesheet" href="/static/vendor/leaflet/leaflet.css">
+<script src="/static/vendor/leaflet/leaflet.js" defer></script>
+<script src="/static/js/map.js" defer></script>
+
+</head>
+<body class="lang-fr ">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <div class="al-demo-banner" role="note">
+    <strong>Version de démonstration</strong>
+    <span>Toutes les données sont fictives. Vos idées nous aident à améliorer WahaTech avant son lancement.</span>
+    <a href="/fr/compte/connexion/">Comptes de test</a>
+    <a href="/fr/avis/">Donner mon avis</a>
+  </div>
+  
+<nav class="navbar navbar-expand-xl al-nav" aria-label="Navigation principale">
+  <div class="container">
+    <a class="al-brand" href="/fr/" dir="ltr">
+      <img src="/static/img/logo-mark.svg" alt="" width="46" height="51">
+      <span>Waha<em>Tech</em></span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#alNav" aria-controls="alNav" aria-expanded="false" aria-label="Ouvrir le menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg>
+    </button>
+    <div class="collapse navbar-collapse" id="alNav">
+      <ul class="navbar-nav mx-auto mb-3 mb-xl-0">
+        <li class="nav-item"><a class="nav-link" href="/fr/consultation-agricole/">Consultation agricole</a></li>
+        <li class="nav-item"><a class="nav-link" href="/fr/cooperatives/">Coopératives</a></li>
+        <li class="nav-item"><a class="nav-link" href="/fr/foncier/">Foncier</a></li>
+        <li class="nav-item"><a class="nav-link" href="/fr/materiel/">Matériel</a></li>
+        <li class="nav-item"><a class="nav-link" href="/fr/services/">Services</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Infos</a>
+          <ul class="dropdown-menu al-dropdown">
+            <li><a class="dropdown-item" href="/fr/stress-hydrique/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg> Stress hydrique <span class="hs-beta-inline">Bêta</span></a></li>
+            <li><a class="dropdown-item" href="/fr/carte/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 4.99-5.54 10.19-7.4 11.8a1 1 0 0 1-1.2 0C9.54 20.19 4 14.99 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg> Carte</a></li>
+            <li><a class="dropdown-item" href="/fr/aides-agricoles/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg> Aides</a></li>
+            <li><a class="dropdown-item" href="/fr/prix-du-marche/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m22 7-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/></svg> Prix</a></li>
+            <li><a class="dropdown-item" href="/fr/meteo/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="M20 12h2"/><path d="m19.07 4.93-1.41 1.41"/><path d="M15.95 12.5a4 4 0 0 0-5.93-4.68"/><path d="M13 22H7a5 5 0 1 1 4.9-6H13a3 3 0 0 1 0 6Z"/></svg> Météo</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="d-flex flex-wrap flex-xl-nowrap align-items-center gap-2">
+        
+<form method="post" action="/i18n/setlang/" class="al-lang m-0" aria-label="Langue du site">
+  <input type="hidden" name="csrfmiddlewaretoken" value="Wm2xlkKfdGKSXTKzewiHjrQJ0WhFyj2pekfPXddWDNGM2EtukJYeuTJy3F4XPiq5">
+  <input type="hidden" name="next" value="/fr/carte/">
+  
+  <button type="submit" name="language" value="fr" lang="fr" class="is-active" aria-current="true" title="Français">FR</button>
+  
+  <button type="submit" name="language" value="ar" lang="ar" class=""  title="العربية">ع</button>
+  
+  <button type="submit" name="language" value="en" lang="en" class=""  title="Anglais">EN</button>
+  
+</form>
+
+        
+          <a class="btn btn-al-ghost" href="/fr/compte/connexion/">Connexion</a>
+          <a class="btn btn-al" href="/fr/avis/">Donner mon avis</a>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+  
+
+  <main id="contenu">
+<section class="al-page-head al-page-head-compact">
+  <div class="container">
+    <div class="al-kicker reveal">Carte</div>
+    <h1 class="reveal" data-delay="80">Tout WahaTech près de chez vous</h1>
+    <p class="al-sub reveal" data-delay="160">Coopératives, terres et fermes, matériel et transport. Les positions sont approximatives (environ 1 km) pour protéger chacun.</p>
+  </div>
+</section>
+<div class="container pb-5">
+  <div class="al-map-layers" role="group" aria-label="Calques">
+    <label class="al-layer al-layer-cooperatives"><input type="checkbox" data-layer="cooperatives" checked> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg> Coopératives</label>
+    <label class="al-layer al-layer-land"><input type="checkbox" data-layer="land" checked> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14.1 6.3 9.9 4.2a2 2 0 0 0-1.8 0L3.6 6.4A1 1 0 0 0 3 7.3v12.1a1 1 0 0 0 1.4.9l3.7-1.8a2 2 0 0 1 1.8 0l4.2 2.1a2 2 0 0 0 1.8 0l4.5-2.2a1 1 0 0 0 .6-.9V5.4a1 1 0 0 0-1.4-.9l-3.7 1.8a2 2 0 0 1-1.8 0Z"/><path d="M15 6.7v14"/><path d="M9 3.3v14"/></svg> Terres et fermes</label>
+    <label class="al-layer al-layer-equipment"><input type="checkbox" data-layer="equipment" checked> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 4h9l1 7"/><path d="M4 11V4"/><path d="M8 10V4"/><path d="M18 5c-.6 0-1 .4-1 1v5.6"/><path d="m10 11 11 .9c.6 0 .9.5.8 1.1l-.8 5h-1"/><circle cx="7" cy="15" r=".5"/><circle cx="7" cy="15" r="5"/><path d="M16 18h-5"/><circle cx="18" cy="18" r="2"/></svg> Matériel et transport</label>
+  </div>
+  <div class="al-map al-map-big" data-map-public data-src="/fr/carte/donnees.json"></div>
+  <p class="small text-secondary mt-2">Fond de carte © <a href="https://www.openstreetmap.org/copyright" rel="noopener" target="_blank">OpenStreetMap</a></p>
+</div>
+</main>
+  
+<footer class="al-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <a class="al-brand mb-3" href="/fr/" dir="ltr">
+          <img src="/static/img/logo-mark.svg" alt="" width="46" height="51">
+          <span>Waha<em>Tech</em></span>
+        </a>
+        <p class="mt-3 pe-lg-4">Innovation agricole, des oasis au monde. La plateforme qui rapproche les compétences, les produits et les besoins du monde agricole.</p>
+      </div>
+      <div class="col-6 col-lg-2 offset-lg-1">
+        <h4>Plateforme</h4>
+        <ul>
+          <li><a href="/fr/consultation-agricole/">Consultation agricole</a></li>
+          <li><a href="/fr/cooperatives/">Produits des coopératives</a></li>
+          <li><a href="/fr/foncier/">Terres et fermes</a></li>
+          <li><a href="/fr/materiel/">Matériel et transport</a></li>
+          <li><a href="/fr/services/">Services WahaTech</a></li>
+          <li><a href="/fr/carte/">Carte</a></li>
+          <li><a href="/fr/aides-agricoles/">Guide des aides agricoles</a></li>
+          <li><a href="/fr/prix-du-marche/">Prix des marchés de gros</a></li>
+          <li><a href="/fr/meteo/">Météo et alertes</a></li>
+          <li><a href="/fr/stress-hydrique/">Stress hydrique (HydroStress)</a></li>
+          <li><a href="/fr/#marketplace">Marketplace</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h4>Compte</h4>
+        <ul>
+          <li><a href="#" data-vitrine-locked>Créer un compte</a></li>
+          <li><a href="/fr/compte/connexion/">Connexion</a></li>
+          <li><a href="#" data-vitrine-locked>Mot de passe oublié</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-3">
+        <h4>Informations</h4>
+        <ul>
+          <li><a href="/fr/a-propos/">À propos</a></li>
+          <li><a href="/fr/questions-frequentes/">Questions fréquentes</a></li>
+          <li><a href="/fr/conditions-utilisation/">Conditions d'utilisation</a></li>
+          <li><a href="/fr/confidentialite/">Confidentialité</a></li>
+          <li><a href="/fr/avis/?depuis=/fr/carte/">Suggestions et réclamations</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="al-footer-bottom d-flex flex-column flex-md-row justify-content-between gap-2">
+      <span>© <span data-year>2026</span> WahaTech. Tous droits réservés.</span>
+      <span>Né au Maroc, ouvert sur le monde.</span>
+    </div>
+  </div>
+</footer>
+
+  <script src="/static/vendor/bootstrap/bootstrap.bundle.min.js" defer></script>
+  <script src="/static/vendor/htmx/htmx.min.js" defer></script>
+<script src="/static/js/vitrine.js" defer></script>
+</body>
+</html>

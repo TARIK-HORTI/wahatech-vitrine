@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 110" fill="none">
+  <defs>
+    <clipPath id="hx"><path d="M50 9 L89 31.5 L89 78.5 L50 101 L11 78.5 L11 31.5 Z"/></clipPath>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F6B53A"/><stop offset="1" stop-color="#E8891C"/>
+    </linearGradient>
+  </defs>
+  <g clip-path="url(#hx)">
+    <rect width="100" height="110" fill="url(#sky)"/>
+    <path d="M0 74 C 20 68 34 70 50 74 C 66 70 80 68 100 74 V 110 H 0 Z" fill="#2F8F3A"/>
+    <g transform="translate(0 -3)"><g stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity=".95">
+      <path d="M50 80 V 92"/>
+      <path d="M50 82 L 40 88 V 96"/>
+      <path d="M50 82 L 60 88 V 96"/>
+      <path d="M48 80 L 30 84"/>
+      <path d="M52 80 L 70 84"/>
+    </g>
+    <g fill="#FFFFFF">
+      <circle cx="50" cy="94" r="2.4"/><circle cx="40" cy="97.5" r="2.4"/><circle cx="60" cy="97.5" r="2.4"/>
+      <circle cx="28.5" cy="84.5" r="2.4"/><circle cx="71.5" cy="84.5" r="2.4"/>
+    </g></g>
+  </g>
+  <path d="M50 40 C 51.5 54 50.5 66 50 80" stroke="#1B6B2A" stroke-width="6" stroke-linecap="round"/>
+  <g fill="#2F8F3A">
+    <path d="M50 40 C 38 30 25 31 15 41 C 27 37 38 37 50 40 Z"/>
+    <path d="M50 40 C 62 30 75 31 85 41 C 73 37 62 37 50 40 Z"/>
+    <path d="M50 40 C 40 42 31 49 27 59 C 35 51 42 46 50 40 Z"/>
+    <path d="M50 40 C 60 42 69 49 73 59 C 65 51 58 46 50 40 Z"/>
+  </g>
+  <g fill="#1B6B2A">
+    <path d="M50 40 C 44 28 34 22 23 22 C 33 28 42 33 50 40 Z"/>
+    <path d="M50 40 C 56 28 66 22 77 22 C 67 28 58 33 50 40 Z"/>
+    <path d="M50 40 C 48 30 50 21 56 14 C 54 24 52 32 50 40 Z"/>
+  </g>
+  <path d="M50 9 L89 31.5 L89 78.5 L50 101 L11 78.5 L11 31.5 Z" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M50 4 L93.5 29 L93.5 81 L50 106 L6.5 81 L6.5 29 Z" stroke="#1F5E9C" stroke-width="6" stroke-linejoin="round"/>
+</svg>
