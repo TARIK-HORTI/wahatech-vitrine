@@ -638,8 +638,8 @@ html, body { overflow-x: clip; }
 .al-land-thumbs figure { margin: 0; text-align: center; }
 .al-land-thumbs img { width: 160px; height: 110px; object-fit: cover; border-radius: var(--al-radius-sm); display: block; margin-bottom: .25rem; }
 
-/* Navigation à 6 liens : plus compacte sur les écrans de 1200 à 1439 px */
-@media (min-width: 1200px) and (max-width: 1439.98px) {
+/* Navigation à 7 liens : compacte sur les grands écrans */
+@media (min-width: 1200px) {
   .al-nav .nav-link { padding: .5rem .4rem !important; font-size: .92rem; }
   .al-nav .btn-link { padding-inline: .35rem; font-size: .94rem; }
   .al-nav .al-brand span { font-size: 1.3rem; }
@@ -691,11 +691,11 @@ html, body { overflow-x: clip; }
 .al-dropdown { border-radius: 12px; border-color: var(--al-line); box-shadow: var(--al-shadow); padding: .4rem; }
 .al-dropdown .dropdown-item { border-radius: 8px; display: flex; align-items: center; gap: .5rem; font-weight: 500; padding: .45rem .7rem; }
 .al-dropdown .dropdown-item:active { background: var(--al-forest); }
-@media (min-width: 1200px) and (max-width: 1439.98px) {
+@media (min-width: 1200px) {
   .al-nav .navbar-nav { margin-inline: .5rem !important; }
   .al-nav .al-avatar + * { font-size: .92rem; }
 }
-@media (min-width: 1200px) and (max-width: 1599.98px) {
+@media (min-width: 1200px) {
   .al-nav .al-brand img { width: 40px; height: auto; }
   .al-nav .al-brand span { font-size: 1.22rem; }
   .al-nav .btn-al-ghost.d-inline-flex { padding-inline-end: .75rem !important; }
@@ -780,3 +780,12 @@ html, body { overflow-x: clip; }
 .al-label-badge { display: inline-flex; align-items: center; gap: .3rem; align-self: flex-start; font-size: .75rem; font-weight: 700; padding: .15rem .55rem; border-radius: 999px; margin-bottom: .35rem; background: rgba(47, 143, 58, .12); color: #1f6a28; }
 .al-label-igp, .al-label-ao { background: rgba(240, 162, 36, .16); color: #8a5a00; }
 .al-label-label { background: rgba(23, 73, 110, .1); color: var(--al-forest-2); }
+
+/* Emploi agricole */
+.al-status-hired, .al-status-approved { background: rgba(140, 198, 63, .2); color: #2a6a2f; }
+.al-status-withdrawn, .al-status-rejected, .al-status-draft { background: #eeeae2; color: var(--al-muted); }
+.al-status-pending { background: rgba(240, 162, 36, .18); color: #8a5300; }
+.al-job { flex-wrap: nowrap; align-items: flex-start; }
+.al-job-ico { flex: 0 0 auto; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 12px; background: var(--al-sand); color: var(--al-leaf); }
+.al-job-tags { display: flex; flex-wrap: wrap; gap: .35rem .75rem; align-items: center; margin-top: .35rem; font-size: .82rem; color: var(--al-ink); }
+.al-job-tags > span { display: inline-flex; align-items: center; gap: .25rem; }

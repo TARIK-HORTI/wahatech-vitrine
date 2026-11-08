@@ -54,6 +54,7 @@
         <li class="nav-item"><a class="nav-link" href="/fr/intrants/">Intrants</a></li>
         <li class="nav-item"><a class="nav-link" href="/fr/foncier/">Foncier</a></li>
         <li class="nav-item"><a class="nav-link" href="/fr/materiel/">Matériel</a></li>
+        <li class="nav-item"><a class="nav-link" href="/fr/emploi/">Emploi</a></li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Infos</a>
           <ul class="dropdown-menu al-dropdown">
@@ -79,7 +80,7 @@
       <div class="d-flex flex-wrap flex-xxl-nowrap align-items-center gap-2">
         
 <form method="post" action="/i18n/setlang/" class="al-lang m-0" aria-label="Langue du site">
-  <input type="hidden" name="csrfmiddlewaretoken" value="TckTTuXAzJKSv2KmF1yQ1NdtFUghuZEh0UGFcLj4DecL8xsjtHcWT1GhlVXWhNjY">
+  <input type="hidden" name="csrfmiddlewaretoken" value="zVNoQOmmR3YUuwxMXqaKWnfrv9LGsWrmcPxgk8UZ6Iq5r4Lpxg2xvYia0qhiqNy9">
   <input type="hidden" name="next" value="/fr/stress-hydrique/exemple/">
   
   <button type="submit" name="language" value="fr" lang="fr" class="is-active" aria-current="true" title="Français">FR</button>
@@ -143,7 +144,7 @@
       <form class="al-card hs-form" method="post" action="/fr/stress-hydrique/analyser/"
            
            >
-        <input type="hidden" name="csrfmiddlewaretoken" value="TckTTuXAzJKSv2KmF1yQ1NdtFUghuZEh0UGFcLj4DecL8xsjtHcWT1GhlVXWhNjY">
+        <input type="hidden" name="csrfmiddlewaretoken" value="zVNoQOmmR3YUuwxMXqaKWnfrv9LGsWrmcPxgk8UZ6Iq5r4Lpxg2xvYia0qhiqNy9">
         <h2 class="al-h-section"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></svg> Votre parcelle</h2>
         <input type="hidden" name="coordinates" id="id_coordinates">
         <p class="hs-parcel-info" data-hs-area>Aucune parcelle dessinée.</p>
@@ -187,7 +188,7 @@
         <div class="row g-3 mb-3">
           <div class="col-sm-6">
             <label class="form-label" for="id_analysis_date">Date à analyser</label>
-            <input type="date" name="analysis_date" value="2026-10-01" min="2019-01-01" max="2026-10-31" class="form-control" required id="id_analysis_date">
+            <input type="date" name="analysis_date" value="2026-10-03" min="2019-01-01" max="2026-11-02" class="form-control" required id="id_analysis_date">
           </div>
           <div class="col-sm-6">
             <label class="form-label" for="id_lookback_days">Période observée</label>
@@ -228,7 +229,7 @@
     <div>
       <div class="al-kicker mb-1">Rapport d'analyse</div>
       <h2 class="hs-report-title">Errachidia – Tafilalet · Palmier dattier</h2>
-      <p class="text-secondary mb-0">Date analysée : <strong dir="ltr">01/10/2026</strong> · 3,81 ha · près de Erfoud (Tafilalet)</p>
+      <p class="text-secondary mb-0">Date analysée : <strong dir="ltr">03/10/2026</strong> · 3,81 ha · près de Erfoud (Tafilalet)</p>
     </div>
     <div class="d-flex flex-wrap gap-2">
       <a class="btn btn-al" href="/fr/stress-hydrique/exemple/rapport.html"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 12h-6l-2 3h-4l-2-3H2"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg> Télécharger le rapport</a>
@@ -246,7 +247,7 @@
         <div>
           <span class="hs-status-label">Niveau de stress hydrique</span>
           <strong class="hs-status-value">Normal</strong>
-          <span class="hs-status-conf">Confiance <b dir="ltr">87 %</b></span>
+          <span class="hs-status-conf">Confiance <b dir="ltr">52 %</b></span>
         </div>
       </div>
       <p class="hs-status-text">
@@ -258,29 +259,29 @@
         
         <div class="hs-prob">
           <span>Normal</span>
-          <svg viewBox="0 0 100 8" preserveAspectRatio="none" role="img" aria-label="Normal 87 %">
+          <svg viewBox="0 0 100 8" preserveAspectRatio="none" role="img" aria-label="Normal 52 %">
             <rect x="0" y="0" width="100" height="8" rx="4" class="hs-prob-bg"/>
-            <rect x="0" y="0" width="86.89" height="8" rx="4" class="hs-prob-normal"/>
+            <rect x="0" y="0" width="52.2" height="8" rx="4" class="hs-prob-normal"/>
           </svg>
-          <b dir="ltr">87 %</b>
+          <b dir="ltr">52 %</b>
         </div>
         
         <div class="hs-prob">
           <span>Modéré</span>
-          <svg viewBox="0 0 100 8" preserveAspectRatio="none" role="img" aria-label="Modéré 11 %">
+          <svg viewBox="0 0 100 8" preserveAspectRatio="none" role="img" aria-label="Modéré 45 %">
             <rect x="0" y="0" width="100" height="8" rx="4" class="hs-prob-bg"/>
-            <rect x="0" y="0" width="11.0" height="8" rx="4" class="hs-prob-moderate"/>
+            <rect x="0" y="0" width="44.52" height="8" rx="4" class="hs-prob-moderate"/>
           </svg>
-          <b dir="ltr">11 %</b>
+          <b dir="ltr">45 %</b>
         </div>
         
         <div class="hs-prob">
           <span>Sévère</span>
-          <svg viewBox="0 0 100 8" preserveAspectRatio="none" role="img" aria-label="Sévère 2 %">
+          <svg viewBox="0 0 100 8" preserveAspectRatio="none" role="img" aria-label="Sévère 3 %">
             <rect x="0" y="0" width="100" height="8" rx="4" class="hs-prob-bg"/>
-            <rect x="0" y="0" width="2.11" height="8" rx="4" class="hs-prob-severe"/>
+            <rect x="0" y="0" width="3.28" height="8" rx="4" class="hs-prob-severe"/>
           </svg>
-          <b dir="ltr">2 %</b>
+          <b dir="ltr">3 %</b>
         </div>
         
       </div>
@@ -289,23 +290,23 @@
     <div class="col-lg-7">
       
       <div class="hs-kpis">
-        <div class="hs-kpi"><span>NDVI</span><b dir="ltr">0,5557</b><small>vigueur de la végétation</small></div>
-        <div class="hs-kpi"><span>NDWI</span><b dir="ltr">0,1963</b><small>eau dans les feuilles</small></div>
-        <div class="hs-kpi"><span>MSI</span><b dir="ltr">0,6773</b><small>stress hydrique (plus haut = plus sec)</small></div>
-        <div class="hs-kpi"><span>Pluie 30 j</span><b dir="ltr">6,4 mm</b><small>dont 7 derniers jours : 0,0 mm</small></div>
-        <div class="hs-kpi"><span>T° max</span><b dir="ltr">31,0 °C</b><small>moyenne 19,5 °C</small></div>
-        <div class="hs-kpi"><span>Jours secs</span><b dir="ltr">19</b><small>consécutifs au maximum</small></div>
+        <div class="hs-kpi"><span>NDVI</span><b dir="ltr">0,4059</b><small>vigueur de la végétation</small></div>
+        <div class="hs-kpi"><span>NDWI</span><b dir="ltr">0,0633</b><small>eau dans les feuilles</small></div>
+        <div class="hs-kpi"><span>MSI</span><b dir="ltr">0,8598</b><small>stress hydrique (plus haut = plus sec)</small></div>
+        <div class="hs-kpi"><span>Pluie 30 j</span><b dir="ltr">40,2 mm</b><small>dont 7 derniers jours : 0,0 mm</small></div>
+        <div class="hs-kpi"><span>T° max</span><b dir="ltr">31,2 °C</b><small>moyenne 19,4 °C</small></div>
+        <div class="hs-kpi"><span>Jours secs</span><b dir="ltr">13</b><small>consécutifs au maximum</small></div>
       </div>
       
       
       <h3 class="hs-h3 mt-4">Pluie et températures</h3>
       <svg class="hs-chart" dir="ltr" viewBox="0 0 640 220" role="img" aria-label="Pluie quotidienne et températures sur la période">
         <line x1="34" x2="606" y1="194" y2="194" class="hs-axis"/>
-        <rect x="36.9" y="26.6" width="13.3" height="167.4" class="hs-bar"><title>2026-09-02 : 4.6 mm</title></rect><rect x="55.9" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-03 : 0.0 mm</title></rect><rect x="75.0" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-04 : 0.0 mm</title></rect><rect x="94.1" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-05 : 0.0 mm</title></rect><rect x="113.1" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-06 : 0.0 mm</title></rect><rect x="132.2" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-07 : 0.0 mm</title></rect><rect x="151.3" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-08 : 0.0 mm</title></rect><rect x="170.3" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-09 : 0.0 mm</title></rect><rect x="189.4" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-10 : 0.0 mm</title></rect><rect x="208.5" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-11 : 0.0 mm</title></rect><rect x="227.5" y="132.1" width="13.3" height="61.9" class="hs-bar"><title>2026-09-12 : 1.7 mm</title></rect><rect x="246.6" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-13 : 0.0 mm</title></rect><rect x="265.7" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-14 : 0.0 mm</title></rect><rect x="284.7" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-15 : 0.0 mm</title></rect><rect x="303.8" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-16 : 0.0 mm</title></rect><rect x="322.9" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-17 : 0.0 mm</title></rect><rect x="341.9" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-18 : 0.0 mm</title></rect><rect x="361.0" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-19 : 0.0 mm</title></rect><rect x="380.1" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-20 : 0.0 mm</title></rect><rect x="399.1" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-21 : 0.0 mm</title></rect><rect x="418.2" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-22 : 0.0 mm</title></rect><rect x="437.3" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-23 : 0.0 mm</title></rect><rect x="456.3" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-24 : 0.0 mm</title></rect><rect x="475.4" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-25 : 0.0 mm</title></rect><rect x="494.5" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-26 : 0.0 mm</title></rect><rect x="513.5" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-27 : 0.0 mm</title></rect><rect x="532.6" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-28 : 0.0 mm</title></rect><rect x="551.7" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-29 : 0.0 mm</title></rect><rect x="570.7" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-30 : 0.0 mm</title></rect><rect x="589.8" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-10-01 : 0.0 mm</title></rect>
-        <polyline points="43.5,52.0 62.6,69.6 81.7,77.5 100.7,57.5 119.8,53.9 138.9,70.2 157.9,49.6 177.0,53.9 196.1,73.3 215.1,72.7 234.2,58.7 253.3,44.8 272.3,55.7 291.4,79.3 310.5,71.5 329.5,49.6 348.6,57.5 367.7,36.3 386.7,54.5 405.8,63.6 424.9,67.8 443.9,51.4 463.0,69.0 482.1,60.5 501.1,66.6 520.2,53.9 539.3,42.9 558.3,73.9 577.4,53.9 596.5,60.5" class="hs-line-max"/>
-        <polyline points="43.5,151.5 62.6,161.2 81.7,157.0 100.7,151.5 119.8,148.5 138.9,162.5 157.9,153.4 177.0,135.8 196.1,152.7 215.1,171.6 234.2,160.0 253.3,135.2 272.3,138.8 291.4,163.1 310.5,171.6 329.5,135.8 348.6,144.9 367.7,136.4 386.7,158.8 405.8,155.8 424.9,151.5 443.9,147.3 463.0,157.0 482.1,143.0 501.1,159.4 520.2,149.7 539.3,138.2 558.3,155.2 577.4,141.2 596.5,151.5" class="hs-line-min"/>
-        <text x="43.5" y="214" class="hs-tick" text-anchor="middle">02/09</text><text x="138.9" y="214" class="hs-tick" text-anchor="middle">07/09</text><text x="234.2" y="214" class="hs-tick" text-anchor="middle">12/09</text><text x="329.5" y="214" class="hs-tick" text-anchor="middle">17/09</text><text x="424.9" y="214" class="hs-tick" text-anchor="middle">22/09</text><text x="520.2" y="214" class="hs-tick" text-anchor="middle">27/09</text>
-        <text x="4" y="20" class="hs-tick">5 mm</text>
+        <rect x="36.9" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-04 : 0.0 mm</title></rect><rect x="55.9" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-05 : 0.0 mm</title></rect><rect x="75.0" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-06 : 0.0 mm</title></rect><rect x="94.1" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-07 : 0.0 mm</title></rect><rect x="113.1" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-08 : 0.0 mm</title></rect><rect x="132.2" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-09 : 0.0 mm</title></rect><rect x="151.3" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-10 : 0.0 mm</title></rect><rect x="170.3" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-11 : 0.0 mm</title></rect><rect x="189.4" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-12 : 0.0 mm</title></rect><rect x="208.5" y="58.0" width="13.3" height="136.0" class="hs-bar"><title>2026-09-13 : 12.4 mm</title></rect><rect x="227.5" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-14 : 0.0 mm</title></rect><rect x="246.6" y="71.2" width="13.3" height="122.8" class="hs-bar"><title>2026-09-15 : 11.2 mm</title></rect><rect x="265.7" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-16 : 0.0 mm</title></rect><rect x="284.7" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-17 : 0.0 mm</title></rect><rect x="303.8" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-18 : 0.0 mm</title></rect><rect x="322.9" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-19 : 0.0 mm</title></rect><rect x="341.9" y="12.0" width="13.3" height="182.0" class="hs-bar"><title>2026-09-20 : 16.6 mm</title></rect><rect x="361.0" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-21 : 0.0 mm</title></rect><rect x="380.1" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-22 : 0.0 mm</title></rect><rect x="399.1" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-23 : 0.0 mm</title></rect><rect x="418.2" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-24 : 0.0 mm</title></rect><rect x="437.3" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-25 : 0.0 mm</title></rect><rect x="456.3" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-26 : 0.0 mm</title></rect><rect x="475.4" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-27 : 0.0 mm</title></rect><rect x="494.5" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-28 : 0.0 mm</title></rect><rect x="513.5" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-29 : 0.0 mm</title></rect><rect x="532.6" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-30 : 0.0 mm</title></rect><rect x="551.7" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-10-01 : 0.0 mm</title></rect><rect x="570.7" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-10-02 : 0.0 mm</title></rect><rect x="589.8" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-10-03 : 0.0 mm</title></rect>
+        <polyline points="43.5,59.3 62.6,37.5 81.7,41.7 100.7,42.3 119.8,61.7 138.9,35.1 157.9,64.8 177.0,73.3 196.1,54.5 215.1,63.6 234.2,63.6 253.3,70.8 272.3,53.9 291.4,80.6 310.5,75.7 329.5,42.9 348.6,59.3 367.7,58.7 386.7,69.0 405.8,67.2 424.9,72.1 443.9,44.8 463.0,41.7 482.1,63.0 501.1,75.7 520.2,76.9 539.3,52.6 558.3,57.5 577.4,84.2 596.5,67.8" class="hs-line-max"/>
+        <polyline points="43.5,133.3 62.6,142.4 81.7,146.7 100.7,129.7 119.8,155.2 138.9,143.0 157.9,169.1 177.0,164.3 196.1,150.3 215.1,147.3 234.2,155.2 253.3,168.5 272.3,149.1 291.4,163.7 310.5,156.4 329.5,143.0 348.6,158.8 367.7,164.9 386.7,147.9 405.8,161.2 424.9,157.6 443.9,140.0 463.0,147.9 482.1,160.0 501.1,164.9 520.2,164.9 539.3,128.5 558.3,150.9 577.4,169.7 596.5,167.9" class="hs-line-min"/>
+        <text x="43.5" y="214" class="hs-tick" text-anchor="middle">04/09</text><text x="138.9" y="214" class="hs-tick" text-anchor="middle">09/09</text><text x="234.2" y="214" class="hs-tick" text-anchor="middle">14/09</text><text x="329.5" y="214" class="hs-tick" text-anchor="middle">19/09</text><text x="424.9" y="214" class="hs-tick" text-anchor="middle">24/09</text><text x="520.2" y="214" class="hs-tick" text-anchor="middle">29/09</text>
+        <text x="4" y="20" class="hs-tick">17 mm</text>
         <text x="636" y="20" class="hs-tick" text-anchor="end">35 °C</text>
         <text x="636" y="194" class="hs-tick" text-anchor="end">5 °C</text>
       </svg>
@@ -327,19 +328,19 @@
           <thead><tr><th>Indice</th><th>Valeur</th><th>Plage normale</th><th>État</th></tr></thead>
           <tbody>
           
-          <tr><td>NDVI</td><td dir="ltr">0,5557</td><td dir="ltr">0,25 – 0,8</td>
+          <tr><td>NDVI</td><td dir="ltr">0,4059</td><td dir="ltr">0,25 – 0,8</td>
             <td><span class="hs-tag hs-tag-healthy">Normal</span></td></tr>
           
-          <tr><td>NDWI</td><td dir="ltr">0,1963</td><td dir="ltr">0,0 – 0,5</td>
+          <tr><td>NDWI</td><td dir="ltr">0,0633</td><td dir="ltr">0,0 – 0,5</td>
             <td><span class="hs-tag hs-tag-healthy">Normal</span></td></tr>
           
-          <tr><td>MSI</td><td dir="ltr">0,6773</td><td dir="ltr">0,0 – 1,0</td>
+          <tr><td>MSI</td><td dir="ltr">0,8598</td><td dir="ltr">0,0 – 1,0</td>
             <td><span class="hs-tag hs-tag-healthy">Normal</span></td></tr>
           
-          <tr><td>SAVI</td><td dir="ltr">0,4004</td><td dir="ltr">0,18 – 0,65</td>
+          <tr><td>SAVI</td><td dir="ltr">0,303</td><td dir="ltr">0,18 – 0,65</td>
             <td><span class="hs-tag hs-tag-healthy">Normal</span></td></tr>
           
-          <tr><td>EVI</td><td dir="ltr">0,396</td><td dir="ltr">0,15 – 0,6</td>
+          <tr><td>EVI</td><td dir="ltr">0,2119</td><td dir="ltr">0,15 – 0,6</td>
             <td><span class="hs-tag hs-tag-healthy">Normal</span></td></tr>
           
           </tbody>
@@ -347,7 +348,7 @@
       </div>
     </div>
   </div>
-  <p class="small text-secondary mb-0">Modèle : Random Forest · données synthetic · pred_20261106_144858_252860 · Sentinel-2 : 6 image(s)</p>
+  <p class="small text-secondary mb-0">Modèle : Random Forest · données synthetic · pred_20261108_120131_925781 · Sentinel-2 : 6 image(s)</p>
 </section>
 
   </div>
@@ -360,7 +361,7 @@
       <li><a href="/fr/stress-hydrique/exemple/">
         <span class="hs-dot hs-dot-0" aria-hidden="true"></span>
         <strong>Normal</strong> · Errachidia – Tafilalet · Palmier dattier · 3,81 ha
-        <span class="text-secondary">· 1 Oct 2026 · démo</span>
+        <span class="text-secondary">· 3 Oct 2026 · démo</span>
       </a></li>
       
     </ul>
@@ -394,6 +395,7 @@
           <li><a href="/fr/intrants/">Intrants agricoles</a></li>
           <li><a href="/fr/foncier/">Terres et fermes</a></li>
           <li><a href="/fr/materiel/">Matériel et transport</a></li>
+          <li><a href="/fr/emploi/">Emploi agricole</a></li>
           <li><a href="/fr/services/">Services WahaTech</a></li>
           <li><a href="/fr/carte/">Carte</a></li>
           <li><a href="/fr/aides-agricoles/">Guide des aides agricoles</a></li>
