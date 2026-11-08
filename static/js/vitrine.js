@@ -3,9 +3,9 @@
   "use strict";
   var lang = (document.documentElement.lang || "fr").slice(0, 2);
   var TEXT = {
-    fr: "Version vitrine : cette action sera disponible au lancement officiel de WahaTech.",
-    ar: "نسخة عرض: هذه الخاصية ستكون متاحة عند الإطلاق الرسمي لـ WahaTech.",
-    en: "Showcase version: this action will be available at WahaTech's official launch."
+    fr: "Version vitrine : pour essayer cette fonction, cliquez sur « Comptes de test » en haut de la page (démo complète).",
+    ar: "نسخة عرض: لتجربة هذه الخاصية، اضغط على «حسابات التجربة» أعلى الصفحة (النسخة التجريبية الكاملة).",
+    en: "Showcase version: to try this feature, click “Test accounts” at the top of the page (full demo)."
   };
   var EXAMPLE = {
     fr: "Version vitrine : voici un exemple de rapport d'analyse.",
