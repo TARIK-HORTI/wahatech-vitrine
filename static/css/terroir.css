@@ -1,0 +1,178 @@
+/* ==========================================================================
+   WahaTech — thème « terroir » : vert profond, or et crème, titres serif.
+   Chargé après wahatech.css et cooperatives.css : il redéfinit les couleurs
+   et habille l'accueil (diaporama, catégories rondes, cartes coopératives).
+   ========================================================================== */
+:root {
+  --al-forest: #0b3d22;
+  --al-forest-2: #145a32;
+  --al-leaf: #2f6e2c;
+  --al-lime: #c8a24a;
+  --al-sun: #d4ab52;
+  --al-clay: #a8782a;
+  --al-sand: #f3ecdc;
+  --al-cream: #fbf7ee;
+  --al-ink: #1f2a1f;
+  --al-muted: #5d6857;
+  --al-line: #e4d9c2;
+  --al-shadow: 0 1px 2px rgba(11, 61, 34, .06), 0 8px 24px rgba(11, 61, 34, .08);
+  --al-shadow-lg: 0 24px 60px rgba(11, 61, 34, .18);
+  --tr-gold: #c8a24a;
+  --tr-gold-dark: #a9852f;
+  --tr-deep: #072a16;
+}
+
+::selection { background: var(--tr-gold); color: #fff; }
+.btn-al-accent:hover { background: #d8b664; color: var(--al-forest); box-shadow: 0 10px 24px rgba(200, 162, 74, .35); }
+.btn-al:hover, .btn-al:focus-visible { box-shadow: 0 10px 24px rgba(11, 61, 34, .28); }
+
+/* ---------- Bandeau du haut ---------- */
+.tr-topbar { background: var(--tr-deep); color: #eadcb5; font-size: .8rem; padding: .4rem 0; }
+.tr-topbar .container { display: flex; flex-wrap: wrap; justify-content: center; gap: .4rem 2rem; }
+.tr-topbar span { display: inline-flex; align-items: center; gap: .4rem; }
+.tr-topbar svg { color: var(--tr-gold); }
+
+/* ---------- Barre de navigation verte ---------- */
+.al-nav, .al-nav.is-scrolled { background: var(--al-forest); backdrop-filter: none; -webkit-backdrop-filter: none; box-shadow: 0 2px 0 var(--tr-gold); }
+.al-nav .al-brand { color: #fff; }
+.al-nav .al-brand span { color: var(--tr-gold); }
+.al-nav .al-brand span em { color: #fff; }
+.al-nav .nav-link { color: #f3ead2; font-weight: 600; letter-spacing: .02em; }
+.al-nav .nav-link:hover, .al-nav .nav-link:focus-visible, .al-nav .nav-link.show { color: #fff; background: rgba(255, 255, 255, .1); }
+.al-nav .navbar-toggler { color: #fff; }
+.al-nav .wc-cart-link { color: #fff; }
+.al-nav .btn-al-ghost { color: #fff; border-color: rgba(255, 255, 255, .45); background: transparent; }
+.al-nav .btn-al-ghost:hover { background: #fff; color: var(--al-forest); border-color: #fff; }
+.al-nav .btn-al { background: var(--tr-gold); color: var(--al-forest); }
+.al-nav .btn-al:hover { background: #d8b664; color: var(--al-forest); }
+.al-nav .btn-link { color: #f3ead2; }
+.al-nav .dropdown-menu { border: 0; border-top: 3px solid var(--tr-gold); border-radius: 0 0 12px 12px; box-shadow: var(--al-shadow-lg); }
+.al-nav .dropdown-item { color: var(--al-ink); }
+.al-nav .dropdown-item:hover { background: var(--al-sand); color: var(--al-forest); }
+@media (max-width: 1399.98px) {
+  .al-nav .navbar-collapse { background: var(--al-forest-2); box-shadow: var(--al-shadow-lg); }
+}
+
+/* ---------- Boutons du thème ---------- */
+.tr-btn-gold { background: var(--tr-gold); color: var(--al-forest); border: 0; text-transform: uppercase; letter-spacing: .06em; font-size: .92rem; }
+.tr-btn-gold:hover, .tr-btn-gold:focus-visible { background: #d8b664; color: var(--al-forest); transform: translateY(-2px); box-shadow: 0 10px 24px rgba(0, 0, 0, .2); }
+.tr-btn-outline { background: transparent; color: var(--al-forest); border: 2px solid var(--al-forest); text-transform: uppercase; letter-spacing: .06em; font-size: .85rem; }
+.tr-btn-outline:hover { background: var(--al-forest); color: #fff; }
+.lang-ar .tr-btn-gold, .lang-ar .tr-btn-outline { text-transform: none; letter-spacing: 0; }
+
+/* ---------- Diaporama ---------- */
+.tr-slider { position: relative; overflow: hidden; background: var(--al-forest); }
+.tr-slide { display: none; position: relative; align-items: center; min-height: clamp(420px, 62vh, 580px); padding: 3.5rem 0 4.5rem; color: #fff; }
+.tr-slide.is-active { display: flex; animation: tr-fade .9s var(--al-ease); }
+.tr-slide::before { content: ""; position: absolute; inset: 0; background: url("../img/terroir-branch.svg") no-repeat; background-size: min(520px, 70%); background-position: right -60px bottom -80px; opacity: .45; pointer-events: none; }
+[dir="rtl"] .tr-slide::before { background-position: left -60px bottom -80px; transform: scaleX(-1); }
+.tr-slide-1 { background: linear-gradient(115deg, #072a16 0%, #0b3d22 45%, #1d5b33 100%); }
+.tr-slide-2 { background: linear-gradient(115deg, #2b1d08 0%, #5a3d12 50%, #8a6420 100%); }
+.tr-slide-3 { background: linear-gradient(115deg, #0b3d22 0%, #23472a 50%, #6b5a24 100%); }
+.tr-slide .container { display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
+.tr-slide-text { position: relative; z-index: 1; max-width: 640px; }
+.tr-slide-kicker { display: inline-block; font-size: .8rem; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; color: var(--tr-gold); border-bottom: 2px solid var(--tr-gold); padding-bottom: .35rem; }
+.tr-slide h1, .tr-slide h2 { font-family: var(--al-display); color: #fff; text-transform: uppercase; font-size: clamp(2rem, 4.4vw, 3.5rem); letter-spacing: .01em; line-height: 1.1; margin: 1.1rem 0 1rem; }
+.tr-slide h1 span { color: var(--tr-gold); }
+.tr-slide p { color: rgba(255, 255, 255, .86); font-size: 1.08rem; max-width: 36rem; margin-bottom: 1.75rem; }
+.tr-slide-art { position: relative; z-index: 1; flex: none; width: clamp(200px, 26vw, 320px); aspect-ratio: 1; border-radius: 50%; display: grid; place-items: center; color: #fff; border: 6px solid rgba(200, 162, 74, .85); box-shadow: 0 0 0 14px rgba(200, 162, 74, .15), var(--al-shadow-lg); }
+.tr-arrow { position: absolute; top: 50%; transform: translateY(-50%); z-index: 3; width: 46px; height: 46px; border-radius: 50%; border: 1px solid rgba(255, 255, 255, .45); background: rgba(0, 0, 0, .18); color: #fff; display: none; place-items: center; font-size: 1.2rem; transition: background-color .2s; }
+.tr-arrow:hover { background: var(--tr-gold); color: var(--al-forest); }
+.tr-prev { inset-inline-start: 1rem; }
+.tr-next { inset-inline-end: 1rem; }
+.tr-dots { position: absolute; bottom: 1.4rem; left: 0; right: 0; z-index: 3; display: none; justify-content: center; gap: .55rem; }
+.tr-dot { width: 12px; height: 12px; padding: 0; border-radius: 50%; border: 2px solid #fff; background: transparent; transition: background-color .2s, width .3s var(--al-ease); }
+.tr-dot.is-active { background: var(--tr-gold); border-color: var(--tr-gold); width: 30px; border-radius: 99px; }
+.tr-slider.is-ready .tr-dots { display: flex; }
+@media (min-width: 992px) { .tr-slider.is-ready .tr-arrow { display: grid; } }
+@media (max-width: 767.98px) {
+  .tr-slide-art { display: none; }
+  .tr-slide { min-height: 0; padding: 3rem 0 4.5rem; }
+}
+@keyframes tr-fade { from { opacity: 0; } to { opacity: 1; } }
+.lang-ar .tr-slide h1, .lang-ar .tr-slide h2, .lang-ar .tr-slide-kicker { text-transform: none; letter-spacing: 0; }
+
+/* ---------- Engagements sous le diaporama ---------- */
+.tr-promises { background: #fff; border-bottom: 1px solid var(--al-line); }
+.tr-promise { display: flex; align-items: center; gap: .8rem; padding: 1.2rem 1rem; color: var(--al-forest); font-size: .82rem; }
+.tr-promise svg { flex: none; color: var(--tr-gold-dark); }
+.tr-promise b { display: block; font-size: .95rem; color: var(--al-forest); }
+.tr-promise span { color: var(--al-muted); line-height: 1.35; }
+@media (min-width: 992px) { .tr-promise + .tr-promise { border-inline-start: 1px solid var(--al-line); } }
+
+/* ---------- Titres de section centrés ---------- */
+.tr-title { text-align: center; margin: 0 auto 2.5rem; max-width: 46rem; }
+.tr-title h2 { font-family: var(--al-display); color: var(--al-forest); text-transform: uppercase; letter-spacing: .03em; font-size: clamp(1.8rem, 3.2vw, 2.5rem); margin-bottom: .5rem; }
+.tr-title h2::after { content: ""; display: block; width: 96px; height: 3px; margin: .9rem auto 0; border-radius: 3px; background: linear-gradient(90deg, transparent, var(--tr-gold), transparent); }
+.tr-title p { color: var(--al-muted); font-size: 1.05rem; margin: 0; }
+.tr-title-light h2 { color: #fff; }
+.tr-title-light p { color: rgba(255, 255, 255, .78); }
+.lang-ar .tr-title h2 { text-transform: none; letter-spacing: 0; }
+
+/* ---------- Fond botanique ---------- */
+.tr-botanical { background-image: url("../img/terroir-branch.svg"); background-repeat: no-repeat; background-size: 360px; background-position: left -120px bottom -60px; }
+[dir="rtl"] .tr-botanical { background-position: right -120px bottom -60px; }
+.tr-dark-botanical { background-image: url("../img/terroir-branch.svg"), linear-gradient(var(--al-forest), var(--al-forest)); background-repeat: no-repeat; background-size: 420px, auto; background-position: right -140px top -80px, center; }
+
+/* ---------- Catégories rondes ---------- */
+.tr-cat-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem 1rem; }
+@media (min-width: 576px) { .tr-cat-grid { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 1200px) { .tr-cat-grid { grid-template-columns: repeat(8, 1fr); } }
+.tr-cat { display: flex; flex-direction: column; align-items: center; gap: .75rem; text-align: center; text-decoration: none; color: var(--al-forest); font-weight: 700; font-size: .9rem; }
+.tr-cat-circle { width: 112px; height: 112px; border-radius: 50%; display: grid; place-items: center; color: #fff; border: 4px solid #fff; box-shadow: 0 0 0 2px var(--tr-gold), var(--al-shadow); transition: transform .35s var(--al-ease), box-shadow .35s; }
+.tr-cat:hover { color: var(--tr-gold-dark); }
+.tr-cat:hover .tr-cat-circle { transform: translateY(-6px) scale(1.04); box-shadow: 0 0 0 3px var(--tr-gold), var(--al-shadow-lg); }
+
+/* ---------- Bande « sélection » ---------- */
+.tr-band { background: linear-gradient(180deg, var(--al-forest) 0, var(--al-forest) 58%, var(--al-cream) 58%); }
+
+/* ---------- Cartes coopératives ---------- */
+.tr-coop { position: relative; display: flex; flex-direction: column; height: 100%; padding: 1.75rem 1.5rem 1.5rem; background: #fff; border: 1px solid var(--al-line); border-top: 4px solid var(--tr-gold); border-radius: 6px; color: var(--al-ink); text-decoration: none; transition: transform .3s var(--al-ease), box-shadow .3s; }
+.tr-coop:hover { color: var(--al-ink); transform: translateY(-4px); box-shadow: var(--al-shadow-lg); }
+.tr-coop-logo { width: 72px; height: 72px; border-radius: 50%; overflow: hidden; display: grid; place-items: center; background: var(--al-sand); color: var(--al-forest); margin-bottom: 1rem; }
+.tr-coop-logo img { width: 100%; height: 100%; object-fit: cover; }
+.tr-coop-tag { position: absolute; top: 1.25rem; inset-inline-end: 1.25rem; font-size: .7rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--tr-gold-dark); background: rgba(200, 162, 74, .14); padding: .25rem .6rem; border-radius: 4px; }
+.tr-coop h3 { font-family: var(--al-display); font-size: 1.3rem; color: var(--al-forest); margin-bottom: .35rem; }
+.tr-coop-origin { font-size: .85rem; color: var(--al-muted); margin-bottom: .75rem; }
+.tr-coop-desc { font-size: .93rem; color: var(--al-ink); margin-bottom: 1.25rem; }
+.tr-more { margin-top: auto; align-self: flex-start; font-size: .78rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: #fff; background: var(--al-forest); padding: .55rem 1.1rem; border-radius: 4px; transition: background-color .2s; }
+.tr-coop:hover .tr-more { background: var(--tr-gold); color: var(--al-forest); }
+.lang-ar .tr-more, .lang-ar .tr-coop-tag { text-transform: none; letter-spacing: 0; }
+
+/* ---------- Chiffres ---------- */
+.tr-figures { background: var(--al-sand); border-block: 1px solid var(--al-line); padding: 2.5rem 0; }
+.tr-figures .al-stat strong { color: var(--tr-gold-dark); }
+
+/* ---------- Pied de page ---------- */
+.al-footer { background: var(--tr-deep); border-top: 4px solid var(--tr-gold); }
+.al-footer a:hover { color: var(--tr-gold); }
+.al-footer .al-brand span { color: var(--tr-gold); }
+.al-footer .al-brand span em { color: #fff; }
+
+/* ---------- Ajustements (barre de navigation, couleurs des catégories) ---------- */
+.al-nav .wc-cart-link { color: var(--al-forest); }
+@media (min-width: 992px) and (max-width: 1399.98px) {
+  .al-nav .navbar-collapse { background: transparent; box-shadow: none; padding: 0; margin-top: 0; }
+  .al-nav .nav-link { padding: .45rem .55rem !important; font-size: .92rem; }
+  .al-nav .btn { padding: .5rem .9rem; font-size: .9rem; }
+  .al-nav .al-brand { font-size: 1.2rem; }
+  .al-nav .al-brand img { width: 38px; height: 42px; }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .al-nav .al-brand span { display: none; }
+}
+.tr-cat-circle, .tr-slide-art { background-color: var(--al-forest-2); }
+.wc-ph-dates.tr-cat-circle, .wc-ph-dates.tr-slide-art { background: linear-gradient(145deg, #8a5a2b, #3f220d); }
+.wc-ph-olive.tr-cat-circle, .wc-ph-olive.tr-slide-art { background: linear-gradient(145deg, #8d9c45, #3b4a17); }
+.wc-ph-argan.tr-cat-circle, .wc-ph-argan.tr-slide-art { background: linear-gradient(145deg, #d1a246, #8a5a1c); }
+.wc-ph-honey.tr-cat-circle, .wc-ph-honey.tr-slide-art { background: linear-gradient(145deg, #f2b84f, #c46d10); }
+.wc-ph-nuts.tr-cat-circle, .wc-ph-nuts.tr-slide-art { background: linear-gradient(145deg, #c99b6d, #7d5532); }
+.wc-ph-saffron.tr-cat-circle, .wc-ph-saffron.tr-slide-art { background: linear-gradient(145deg, #c94a3b, #6b1520); }
+.wc-ph-herbs.tr-cat-circle, .wc-ph-herbs.tr-slide-art { background: linear-gradient(145deg, #6fae67, #2d5a2a); }
+.wc-ph-cosmetics.tr-cat-circle, .wc-ph-cosmetics.tr-slide-art { background: linear-gradient(145deg, #dca0ab, #9e5466); }
+.tr-cat-circle svg, .tr-slide-art svg { color: #fff; opacity: .95; }
+.tr-band { background: var(--al-forest); }
+@media (min-width: 992px) and (max-width: 1399.98px) {
+  .al-nav .navbar-nav > .nav-item:nth-child(5) { display: none; }
+  .al-nav .navbar-nav { margin-inline: auto .5rem; }
+}

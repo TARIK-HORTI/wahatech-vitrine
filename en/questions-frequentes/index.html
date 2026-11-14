@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Frequently asked questions — WahaTech</title>
-  <meta name="description" content="Rates, expert verification, data protection: answers to the most common questions about WahaTech.">
+  <meta name="description" content="Orders, delivery, payment, online sales and support: answers to the most frequently asked questions about WahaTech.">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#0f3550">
   <meta name="htmx-config" content='{"includeIndicatorStyles": false}'>
   <meta property="og:title" content="WahaTech">
-  <meta property="og:description" content="Agricultural innovation, from the oases to the world">
+  <meta property="og:description" content="Local products and support for Moroccan cooperatives">
   <meta property="og:type" content="website">
   
   <link rel="alternate" hreflang="fr" href="/fr/questions-frequentes/">
@@ -21,6 +21,8 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="/static/vendor/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="/static/css/wahatech.css">
+  <link rel="stylesheet" href="/static/css/cooperatives.css">
+  <link rel="stylesheet" href="/static/css/terroir.css">
   <script src="/static/js/wahatech.js" defer></script>
   
 </head>
@@ -33,7 +35,14 @@
     <a href="https://wahatech.pythonanywhere.com/en/avis/">Give my feedback</a>
   </div>
   
-<nav class="navbar navbar-expand-xxl al-nav" aria-label="Main navigation">
+<div class="tr-topbar">
+  <div class="container">
+    <span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg> Delivery across Morocco</span>
+    <span class="d-none d-md-inline-flex"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/></svg> Cash on delivery</span>
+    <span class="d-none d-lg-inline-flex"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg> Verified cooperatives</span>
+  </div>
+</div>
+<nav class="navbar navbar-expand-lg al-nav" aria-label="Main navigation">
   <div class="container">
     <a class="al-brand" href="/en/" dir="ltr">
       <img src="/static/img/logo-mark.svg" alt="" width="46" height="51">
@@ -43,39 +52,31 @@
       <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg>
     </button>
     <div class="collapse navbar-collapse" id="alNav">
-      <ul class="navbar-nav mx-auto mb-3 mb-xxl-0">
-        <li class="nav-item"><a class="nav-link" href="/en/consultation-agricole/">Agricultural consulting</a></li>
-        <li class="nav-item"><a class="nav-link" href="/en/cooperatives/">Cooperatives</a></li>
-        <li class="nav-item"><a class="nav-link" href="/en/intrants/">Inputs</a></li>
-        <li class="nav-item"><a class="nav-link" href="/en/foncier/">Land</a></li>
-        <li class="nav-item"><a class="nav-link" href="/en/materiel/">Equipment</a></li>
-        <li class="nav-item"><a class="nav-link" href="/en/emploi/">Jobs</a></li>
+      <ul class="navbar-nav mx-auto mb-3 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="/en/boutique/">Shop</a></li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Info</a>
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Products</a>
           <ul class="dropdown-menu al-dropdown">
-            <li><h6 class="dropdown-header">Tools</h6></li>
-            <li><a class="dropdown-item" href="/en/stress-hydrique/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg> Water stress <span class="hs-beta-inline">Beta</span></a></li>
-            <li><a class="dropdown-item" href="/en/carte/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 4.99-5.54 10.19-7.4 11.8a1 1 0 0 1-1.2 0C9.54 20.19 4 14.99 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg> Map</a></li>
-            <li><a class="dropdown-item" href="/en/calendrier-cultural/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/></svg> Crop calendar</a></li>
+            <li><a class="dropdown-item" href="/en/boutique/?category=argan">Argan</a></li>
+            <li><a class="dropdown-item" href="/en/boutique/?category=honey">Honey and bee products</a></li>
+            <li><a class="dropdown-item" href="/en/boutique/?category=saffron">Saffron</a></li>
+            <li><a class="dropdown-item" href="/en/boutique/?category=dates">Dates and date products</a></li>
+            <li><a class="dropdown-item" href="/en/boutique/?category=olive">Olive oil and olives</a></li>
+            <li><a class="dropdown-item" href="/en/boutique/?category=nuts">Almonds and dried fruit</a></li>
+            <li><a class="dropdown-item" href="/en/boutique/?category=cosmetics">Natural cosmetics</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><h6 class="dropdown-header">Water and climate</h6></li>
-            <li><a class="dropdown-item" href="/en/meteo/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="M20 12h2"/><path d="m19.07 4.93-1.41 1.41"/><path d="M15.95 12.5a4 4 0 0 0-5.93-4.68"/><path d="M13 22H7a5 5 0 1 1 4.9-6H13a3 3 0 0 1 0 6Z"/></svg> Weather</a></li>
-            <li><a class="dropdown-item" href="/en/eau/barrages/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg> Dams</a></li>
-            <li><a class="dropdown-item" href="/en/eau/pluie/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg> Rainfall history</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><h6 class="dropdown-header">Market and advice</h6></li>
-            <li><a class="dropdown-item" href="/en/services/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg> WahaTech services</a></li>
-            <li><a class="dropdown-item" href="/en/prix-du-marche/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m22 7-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/></svg> Prices</a></li>
-            <li><a class="dropdown-item" href="/en/aides-agricoles/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg> Subsidies</a></li>
-            <li><a class="dropdown-item" href="/en/conseil/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></svg> Training and bulletins</a></li>
-            <li><a class="dropdown-item" href="/en/actualites/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg> Farming news</a></li>
+            <li><a class="dropdown-item" href="/en/cooperatives/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg> Professional catalogue</a></li>
           </ul>
         </li>
+        <li class="nav-item"><a class="nav-link" href="/en/boutique/cooperatives/">Cooperatives</a></li>
+        <li class="nav-item"><a class="nav-link" href="/en/accompagnement/">Support</a></li>
+        <li class="nav-item"><a class="nav-link" href="/en/aides-agricoles/">Subsidies</a></li>
+        <li class="nav-item"><a class="nav-link" href="/en/a-propos/">About</a></li>
       </ul>
-      <div class="d-flex flex-wrap flex-xxl-nowrap align-items-center gap-2">
+      <div class="d-flex flex-wrap flex-lg-nowrap align-items-center gap-2">
         
 <form method="post" action="/i18n/setlang/" class="al-lang m-0" aria-label="Site language">
-  <input type="hidden" name="csrfmiddlewaretoken" value="pMveCzANDY2MRYztJWwBgNWf2RMvadbdNVLgeJotlb9UMjXe7i7FhfumUBpyVTSQ">
+  <input type="hidden" name="csrfmiddlewaretoken" value="mftyzQHAB0EMO0WqNtYLcoz7SbDOqGxtzOqvVaQZp77vY8fkeoeZu4kDoMACXDjQ">
   <input type="hidden" name="next" value="/en/questions-frequentes/">
   
   <button type="submit" name="language" value="fr" lang="fr" class=""  title="French">FR</button>
@@ -86,6 +87,9 @@
   
 </form>
 
+        <a class="wc-cart-link" href="/en/boutique/panier/" aria-label="My cart">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+        </a>
         
           <a class="btn btn-al-ghost" href="https://wahatech.pythonanywhere.com/en/compte/connexion/">Log in</a>
           <a class="btn btn-al" href="https://wahatech.pythonanywhere.com/en/avis/">Give my feedback</a>
@@ -96,32 +100,50 @@
 </nav>
 
   
+<div class="al-messages" role="status" aria-live="polite">
+  
+  <div class="al-alert info">
+    <span>Demo version: sign-ups are closed. Use one of the demo accounts below.</span>
+    <button type="button" class="btn-close" aria-label="Close"></button>
+  </div>
+  
+  <div class="al-alert info">
+    <span>Demo version: the passwords of the demo accounts cannot be changed.</span>
+    <button type="button" class="btn-close" aria-label="Close"></button>
+  </div>
+  
+</div>
+
 
   <main id="contenu">
 <section class="al-page-head">
   <div class="container">
     <div class="al-kicker reveal">Help</div>
     <h1 class="reveal" data-delay="80">Frequently asked questions</h1>
-    <p class="al-sub reveal" data-delay="160">Rates, expert verification, data protection: answers to the most common questions about WahaTech.</p>
+    <p class="al-sub reveal" data-delay="160">Orders, delivery, payment, online sales and support: answers to the most frequently asked questions about WahaTech.</p>
   </div>
 </section>
 <div class="container pb-5">
   <div class="row justify-content-center">
     <div class="col-lg-9">
-      <h2 class="al-h-section">For farmers</h2>
+      <h2 class="al-h-section">Shopping in the store</h2>
       <div class="al-faq mb-5">
-        <details><summary>Is registration paid?</summary><p>No. Registration, searching for experts and declaring your farm are free.</p></details>
-        <details><summary>How much does a consultation cost?</summary><p>Each expert sets their own rates and shows them on their profile as a guide. The final price is agreed directly between you and the expert.</p></details>
-        <details><summary>How do I contact an expert?</summary><p>Log in, open their profile and use their phone or WhatsApp if they made them visible.</p></details>
-        <details><summary>Are the experts really qualified?</summary><p>Each expert sends their diploma, CV or professional card. The team checks these documents before the profile appears in the directory.</p></details>
-        <details><summary>Who sees my farm information?</summary><p>Only you. With your consent, it is used anonymously and in aggregate for regional statistics. It is never published or sold.</p></details>
+        <details><summary>Do I need an account to order?</summary><p>No. Just enter your name, phone number and address. With an account, you'll find your purchases in “My orders”.</p></details>
+        <details><summary>How does payment work?</summary><p>We call you to confirm the order, then you pay the courier in cash when you receive the parcel. Card payment is coming soon.</p></details>
+        <details><summary>How much does delivery cost?</summary><p>Delivery costs 35 DH anywhere in Morocco. It is free from 500 DH of purchases.</p></details>
+        <details><summary>How do I track my order?</summary><p>After ordering, you get a reference (WT-…) and a tracking page showing each step: received, confirmation call, preparation by the cooperative, delivery.</p></details>
+        <details><summary>Where do the products come from?</summary><p>Directly from the cooperatives that make them. Each product page shows the cooperative, its region and its story.</p></details>
       </div>
-      <h2 class="al-h-section">For experts</h2>
+      <h2 class="al-h-section">Selling online (cooperatives)</h2>
       <div class="al-faq mb-5">
-        <details><summary>Who can register as an expert?</summary><p>Agronomists, agricultural technicians and agricultural consultants who can prove their training or experience.</p></details>
-        <details><summary>Which documents should I send?</summary><p>A diploma, a detailed CV, or a professional card or employment certificate. PDF, JPG or PNG, 5 MB maximum per document.</p></details>
-        <details><summary>How long does verification take?</summary><p>The team replies within 72 working hours. If a document is missing, you receive a message explaining what to add.</p></details>
-        <details><summary>Are my documents published?</summary><p>No. They are stored in a private space and read only by the WahaTech team.</p></details>
+        <details><summary>How can we sell our products in the store?</summary><p>Create a cooperative account and complete your profile, then turn on “sold in the online shop” for your finished products, with a price and a stock.</p></details>
+        <details><summary>How are orders handled?</summary><p>The WahaTech team confirms each order with the customer, then calls you for pickup. Your sales appear in the “Online sales” tab of your space.</p></details>
+      </div>
+      <h2 class="al-h-section">Support</h2>
+      <div class="al-faq mb-5">
+        <details><summary>What services do you offer?</summary><p>Eleven services across four stages, from setting up the cooperative to selling, plus three packs that bundle them.</p></details>
+        <details><summary>Do I need to have a cooperative already?</summary><p>No. We also support projects: articles of association, founding general meeting and registration file.</p></details>
+        <details><summary>How do I get started?</summary><p>Send a request from the Support page. A WahaTech advisor will contact you within 2 working days for a free first conversation.</p></details>
       </div>
       <div class="al-feedback-cta">
         <p>Can't find your answer?</p>
@@ -140,29 +162,25 @@
           <img src="/static/img/logo-mark.svg" alt="" width="46" height="51">
           <span>Waha<em>Tech</em></span>
         </a>
-        <p class="mt-3 pe-lg-4">Agricultural innovation, from the oases to the world. The platform that brings together the skills, products and needs of farming.</p>
+        <p class="mt-3 pe-lg-4">The platform of Moroccan cooperatives: a local-products shop for customers and full support for cooperatives.</p>
       </div>
       <div class="col-6 col-lg-2 offset-lg-1">
-        <h4>Platform</h4>
+        <h4>Shop</h4>
         <ul>
-          <li><a href="/en/consultation-agricole/">Agricultural consulting</a></li>
-          <li><a href="/en/cooperatives/">Cooperative products</a></li>
-          <li><a href="/en/intrants/">Farm inputs</a></li>
-          <li><a href="/en/foncier/">Land and farms</a></li>
-          <li><a href="/en/materiel/">Equipment and transport</a></li>
-          <li><a href="/en/emploi/">Farm jobs</a></li>
-          <li><a href="/en/services/">WahaTech services</a></li>
-          <li><a href="/en/carte/">Map</a></li>
-          <li><a href="/en/aides-agricoles/">Farm subsidies guide</a></li>
-          <li><a href="/en/prix-du-marche/">Wholesale market prices</a></li>
-          <li><a href="/en/meteo/">Weather and alerts</a></li>
-          <li><a href="/en/eau/barrages/">Dam filling levels</a></li>
-          <li><a href="/en/eau/pluie/">Rainfall history</a></li>
-          <li><a href="/en/conseil/">Training and advisory bulletins</a></li>
-          <li><a href="/en/actualites/">Farming news</a></li>
-          <li><a href="/en/calendrier-cultural/">Crop calendar</a></li>
-          <li><a href="/en/stress-hydrique/">Water stress (HydroStress)</a></li>
-          <li><a href="/en/#marketplace">Marketplace</a></li>
+          <li><a href="/en/boutique/">All products</a></li>
+          <li><a href="/en/boutique/cooperatives/">Our cooperatives</a></li>
+          <li><a href="/en/cooperatives/">Professional catalogue</a></li>
+          <li><a href="/en/boutique/panier/">My cart</a></li>
+          
+        </ul>
+        <h4 class="mt-4">Support</h4>
+        <ul>
+          <li><a href="/en/accompagnement/creation-cooperative/">Set up a cooperative</a></li>
+          <li><a href="/en/accompagnement/business-plan/">Business plan</a></li>
+          <li><a href="/en/accompagnement/financement-subventions/">Funding and grants</a></li>
+          <li><a href="/en/accompagnement/normes-sanitaires-onssa/">ONSSA standards</a></li>
+          <li><a href="/en/accompagnement/vente-en-ligne/">Sell online</a></li>
+          <li><a href="/en/aides-agricoles/">Grants guide</a></li>
         </ul>
       </div>
       <div class="col-6 col-lg-2">
@@ -186,7 +204,7 @@
     </div>
     <div class="al-footer-bottom d-flex flex-column flex-md-row justify-content-between gap-2">
       <span>© <span data-year>2026</span> WahaTech. All rights reserved.</span>
-      <span>Born in Morocco, open to the world.</span>
+      <span>Made in Morocco, for cooperatives.</span>
     </div>
   </div>
 </footer>

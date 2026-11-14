@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Farm subsidies guide — WahaTech</title>
-  <meta name="description" content="The main state subsidies for Moroccan farmers (Agricultural Development Fund): irrigation, planting, equipment, livestock, processing.">
+  <meta name="description" content="State aid for Moroccan farmers, FDA 2026 guide: irrigation, planting, machinery, greenhouses, livestock, processing, exports and aggregation.">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#0f3550">
   <meta name="htmx-config" content='{"includeIndicatorStyles": false}'>
   <meta property="og:title" content="WahaTech">
-  <meta property="og:description" content="Agricultural innovation, from the oases to the world">
+  <meta property="og:description" content="Local products and support for Moroccan cooperatives">
   <meta property="og:type" content="website">
   
   <link rel="alternate" hreflang="fr" href="/fr/aides-agricoles/">
@@ -21,6 +21,8 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="/static/vendor/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="/static/css/wahatech.css">
+  <link rel="stylesheet" href="/static/css/cooperatives.css">
+  <link rel="stylesheet" href="/static/css/terroir.css">
   <script src="/static/js/wahatech.js" defer></script>
   
 </head>
@@ -33,7 +35,14 @@
     <a href="https://wahatech.pythonanywhere.com/en/avis/">Give my feedback</a>
   </div>
   
-<nav class="navbar navbar-expand-xxl al-nav" aria-label="Main navigation">
+<div class="tr-topbar">
+  <div class="container">
+    <span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg> Delivery across Morocco</span>
+    <span class="d-none d-md-inline-flex"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/></svg> Cash on delivery</span>
+    <span class="d-none d-lg-inline-flex"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg> Verified cooperatives</span>
+  </div>
+</div>
+<nav class="navbar navbar-expand-lg al-nav" aria-label="Main navigation">
   <div class="container">
     <a class="al-brand" href="/en/" dir="ltr">
       <img src="/static/img/logo-mark.svg" alt="" width="46" height="51">
@@ -43,39 +52,31 @@
       <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg>
     </button>
     <div class="collapse navbar-collapse" id="alNav">
-      <ul class="navbar-nav mx-auto mb-3 mb-xxl-0">
-        <li class="nav-item"><a class="nav-link" href="/en/consultation-agricole/">Agricultural consulting</a></li>
-        <li class="nav-item"><a class="nav-link" href="/en/cooperatives/">Cooperatives</a></li>
-        <li class="nav-item"><a class="nav-link" href="/en/intrants/">Inputs</a></li>
-        <li class="nav-item"><a class="nav-link" href="/en/foncier/">Land</a></li>
-        <li class="nav-item"><a class="nav-link" href="/en/materiel/">Equipment</a></li>
-        <li class="nav-item"><a class="nav-link" href="/en/emploi/">Jobs</a></li>
+      <ul class="navbar-nav mx-auto mb-3 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="/en/boutique/">Shop</a></li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Info</a>
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Products</a>
           <ul class="dropdown-menu al-dropdown">
-            <li><h6 class="dropdown-header">Tools</h6></li>
-            <li><a class="dropdown-item" href="/en/stress-hydrique/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg> Water stress <span class="hs-beta-inline">Beta</span></a></li>
-            <li><a class="dropdown-item" href="/en/carte/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 4.99-5.54 10.19-7.4 11.8a1 1 0 0 1-1.2 0C9.54 20.19 4 14.99 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg> Map</a></li>
-            <li><a class="dropdown-item" href="/en/calendrier-cultural/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/></svg> Crop calendar</a></li>
+            <li><a class="dropdown-item" href="/en/boutique/?category=argan">Argan</a></li>
+            <li><a class="dropdown-item" href="/en/boutique/?category=honey">Honey and bee products</a></li>
+            <li><a class="dropdown-item" href="/en/boutique/?category=saffron">Saffron</a></li>
+            <li><a class="dropdown-item" href="/en/boutique/?category=dates">Dates and date products</a></li>
+            <li><a class="dropdown-item" href="/en/boutique/?category=olive">Olive oil and olives</a></li>
+            <li><a class="dropdown-item" href="/en/boutique/?category=nuts">Almonds and dried fruit</a></li>
+            <li><a class="dropdown-item" href="/en/boutique/?category=cosmetics">Natural cosmetics</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><h6 class="dropdown-header">Water and climate</h6></li>
-            <li><a class="dropdown-item" href="/en/meteo/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="M20 12h2"/><path d="m19.07 4.93-1.41 1.41"/><path d="M15.95 12.5a4 4 0 0 0-5.93-4.68"/><path d="M13 22H7a5 5 0 1 1 4.9-6H13a3 3 0 0 1 0 6Z"/></svg> Weather</a></li>
-            <li><a class="dropdown-item" href="/en/eau/barrages/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg> Dams</a></li>
-            <li><a class="dropdown-item" href="/en/eau/pluie/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg> Rainfall history</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><h6 class="dropdown-header">Market and advice</h6></li>
-            <li><a class="dropdown-item" href="/en/services/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg> WahaTech services</a></li>
-            <li><a class="dropdown-item" href="/en/prix-du-marche/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m22 7-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/></svg> Prices</a></li>
-            <li><a class="dropdown-item" href="/en/aides-agricoles/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg> Subsidies</a></li>
-            <li><a class="dropdown-item" href="/en/conseil/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></svg> Training and bulletins</a></li>
-            <li><a class="dropdown-item" href="/en/actualites/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg> Farming news</a></li>
+            <li><a class="dropdown-item" href="/en/cooperatives/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg> Professional catalogue</a></li>
           </ul>
         </li>
+        <li class="nav-item"><a class="nav-link" href="/en/boutique/cooperatives/">Cooperatives</a></li>
+        <li class="nav-item"><a class="nav-link" href="/en/accompagnement/">Support</a></li>
+        <li class="nav-item"><a class="nav-link" href="/en/aides-agricoles/">Subsidies</a></li>
+        <li class="nav-item"><a class="nav-link" href="/en/a-propos/">About</a></li>
       </ul>
-      <div class="d-flex flex-wrap flex-xxl-nowrap align-items-center gap-2">
+      <div class="d-flex flex-wrap flex-lg-nowrap align-items-center gap-2">
         
 <form method="post" action="/i18n/setlang/" class="al-lang m-0" aria-label="Site language">
-  <input type="hidden" name="csrfmiddlewaretoken" value="G4s2iHqFKq7w8Znw5f24GfEkgdH51CQo4dI4URelsDeE3kLhtBD8HHcr8Xk8Mix1">
+  <input type="hidden" name="csrfmiddlewaretoken" value="1B20c4RnFpxI7lz9ZnBSp1401AmQWnTSeaZXyo0Mtw0rhtS3qiR6HHPwxbjEtkFf">
   <input type="hidden" name="next" value="/en/aides-agricoles/">
   
   <button type="submit" name="language" value="fr" lang="fr" class=""  title="French">FR</button>
@@ -86,6 +87,9 @@
   
 </form>
 
+        <a class="wc-cart-link" href="/en/boutique/panier/" aria-label="My cart">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+        </a>
         
           <a class="btn btn-al-ghost" href="https://wahatech.pythonanywhere.com/en/compte/connexion/">Log in</a>
           <a class="btn btn-al" href="https://wahatech.pythonanywhere.com/en/avis/">Give my feedback</a>
@@ -102,189 +106,1177 @@
   <div class="container">
     <div class="al-kicker reveal">State aid</div>
     <h1 class="reveal" data-delay="80">Farm subsidies guide</h1>
-    <p class="al-sub reveal" data-delay="160">Agricultural Development Fund (FDA) subsidies explained simply, with the steps to apply.</p>
+    <p class="al-sub reveal" data-delay="160">Agricultural Development Fund (FDA) subsidies, then loans, guarantees and support programmes for businesses, cooperatives and rural projects, explained simply.</p>
     <div class="al-crop-pills reveal" data-delay="240">
       <a class="al-pill-link is-active" href="/en/aides-agricoles/">All subsidies</a>
-      <a class="al-pill-link " href="?categorie=irrigation">Irrigation</a><a class="al-pill-link " href="?categorie=plants">Planting and seeds</a><a class="al-pill-link " href="?categorie=equipment">Equipment and mechanisation</a><a class="al-pill-link " href="?categorie=livestock">Livestock</a><a class="al-pill-link " href="?categorie=value">Processing and export</a><a class="al-pill-link " href="?categorie=other">Other aid</a>
+      <a class="al-pill-link " href="?categorie=irrigation">Irrigation</a><a class="al-pill-link " href="?categorie=plants">Planting and seeds</a><a class="al-pill-link " href="?categorie=equipment">Equipment and mechanisation</a><a class="al-pill-link " href="?categorie=livestock">Livestock</a><a class="al-pill-link " href="?categorie=value">Processing and export</a><a class="al-pill-link " href="?categorie=aggregation">Agricultural aggregation</a><a class="al-pill-link " href="?categorie=other">Other aid</a><a class="al-pill-link " href="?categorie=financing">Loans, guarantees and microcredit</a><a class="al-pill-link " href="?categorie=enterprise">Businesses and cooperatives</a><a class="al-pill-link " href="?categorie=tourism">Rural tourism</a>
     </div>
   </div>
 </section>
 <div class="container pb-5">
-  <div class="alert al-alert-info border-0 rounded-3 reveal"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg> This guide summarises public information. Rates, ceilings and crop lists change: always check with the DPA or ORMVA in your area before investing.</div>
+  <div class="alert al-alert-info border-0 rounded-3 reveal"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg> This guide summarises public information. Rates, ceilings and crop lists change: always check with the DPA or ORMVA in your area before investing. FDA amounts are copied from the Ministry's official guide, 2026 edition.</div>
   <div class="row g-4">
     
     <div class="col-md-6 col-xl-4">
       <article class="al-card al-aid h-100 reveal">
-        <span class="al-aid-cat">Irrigation</span>
+        <span class="al-aid-cat">Irrigation</span> <span class="al-aid-provider" dir="auto">Ministry of Agriculture (FDA)</span>
         <h2 class="h5 mt-2" dir="auto">Localised irrigation (drip)</h2>
-        <p dir="auto">The largest aid of the Agricultural Development Fund (FDA): about 60% of direct subsidies in 2023. A pumping authorisation is required. Some crops (citrus, avocado, watermelon) are on a list of non-eligible crops.</p>
-        
+        <p dir="auto">Well or borehole, pumping, head station, pipes, drippers, automation and storage basin. Order 1323.22, valid until 31/12/2027 or until 350,000 ha are approved. Amounts unchanged in 2026.</p>
+        <p class="small"><strong>Rate and ceiling :</strong><br><span dir="auto">Collective projects: 100%, ceiling 38,000 DH per net equipped ha (+ basin 50 DH/m³, max 12,000 DH/ha).<br>Small farmers: 100%, ceiling 38,000 DH/ha (+ basin max 12,000 DH/ha).<br>Farms over 5 up to 20 ha: 75%, ceiling 28,500 DH/ha (+ basin max 9,000 DH/ha).<br>Over 20 ha: 60%, ceiling 23,000 DH/ha (+ basin max 7,000 DH/ha).</span></p>
         
         <details class="al-faq al-aid-steps">
           <summary>How to apply</summary>
-          <p class="small mb-0" dir="auto">General steps: 1) prior approval file for the project; 2) the farmer carries out and pre-finances the project; 3) subsidy application and on-site check by the ministry; 4) the project must be kept for 5 to 8 years depending on the aid, with possible checks. Rates and ceilings are set by the regulations in force: ask your provincial agriculture department (DPA) or ORMVA before investing.</p>
+          <p class="small mb-0" dir="auto">1) Prior approval BEFORE works; 2) works; 3) subsidy request with original detailed invoices, proof of payment and bank details, within 24 months (30 for collective projects). Water authorisation and drilling authorisation required. Lease: at least 6 years remaining. Equipment to standard NM 12.1.100. File at the one-stop desk (guichet unique) of the DPA or ORMVA for your area, against a dated, signed receipt. Paid by bank transfer.</p>
         </details>
         
         <div class="al-aid-foot">
-          <a href="https://fr.le360.ma/economie/comment-le-fda-encourage-linvestissement-prive-dans-le-secteur-agricole_F5YYGC4SRFG2BPOMEQV5LYLMNY/" target="_blank" rel="noopener nofollow">Source</a> · 
-          <span>Checked on 29 Sep 2024</span>
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Official website</a> · 
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Source</a> · 
+          <span>Checked on 9 Nov 2026</span>
         </div>
       </article>
     </div>
     
     <div class="col-md-6 col-xl-4">
       <article class="al-card al-aid h-100 reveal">
-        <span class="al-aid-cat">Irrigation</span>
+        <span class="al-aid-cat">Irrigation</span> <span class="al-aid-provider" dir="auto">Ministry of Agriculture (FDA)</span>
+        <h2 class="h5 mt-2" dir="auto">Supplementary irrigation (sprinklers)</h2>
+        <p dir="auto">Wells, pumping, sprinklers and basin to supplement rainfall (order 1323.22).</p>
+        <p class="small"><strong>Rate and ceiling :</strong><br><span dir="auto">Collective projects: 100%, ceiling 34,000 DH/ha (+ basin max 10,000 DH/ha).<br>Farms up to 20 ha: 75%, ceiling 25,000 DH/ha (+ basin 35 DH/m³, max 8,000 DH/ha).<br>Over 20 ha: 60%, ceiling 20,000 DH/ha (+ basin 25 DH/m³, max 6,000 DH/ha).</span></p>
+        
+        <details class="al-faq al-aid-steps">
+          <summary>How to apply</summary>
+          <p class="small mb-0" dir="auto">Same steps as drip irrigation: prior approval before works, then the subsidy request within 24 months (30 for collective projects). File at the one-stop desk (guichet unique) of the DPA or ORMVA for your area, against a dated, signed receipt. Paid by bank transfer.</p>
+        </details>
+        
+        <div class="al-aid-foot">
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Official website</a> · 
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Source</a> · 
+          <span>Checked on 9 Nov 2026</span>
+        </div>
+      </article>
+    </div>
+    
+    <div class="col-md-6 col-xl-4">
+      <article class="al-card al-aid h-100 reveal">
+        <span class="al-aid-cat">Irrigation</span> <span class="al-aid-provider" dir="auto">Ministry of Agriculture (FDA)</span>
         <h2 class="h5 mt-2" dir="auto">Solar pumping for irrigation</h2>
-        <p dir="auto">Aid announced for 2024 to replace butane with solar power for localised irrigation.</p>
-        
+        <p dir="auto">Programme (agreement of 19/02/2024, 51,000 ha targeted) to replace butane pumping with a solar kit: panels, controller, pump, structure, water meter. One subsidy per farm.</p>
+        <p class="small"><strong>Rate and ceiling :</strong><br><span dir="auto">30% of kit cost, ceilings: 3,000 DH per irrigated ha, 3,000 DH per installed kWp, 30,000 DH per project.</span></p>
         
         <details class="al-faq al-aid-steps">
           <summary>How to apply</summary>
-          <p class="small mb-0" dir="auto">General steps: 1) prior approval file for the project; 2) the farmer carries out and pre-finances the project; 3) subsidy application and on-site check by the ministry; 4) the project must be kept for 5 to 8 years depending on the aid, with possible checks. Rates and ceilings are set by the regulations in force: ask your provincial agriculture department (DPA) or ORMVA before investing.</p>
+          <p class="small mb-0" dir="auto">A working drip system, current butane pumping and a water meter with a log are required. Qualified installer (certificate 3-1 or 9-1, or Taqa Pro label). Registration in the national farm register (RNA); if leased, at least 12 months remaining. Prior approval, then subsidy request within 3 months with paid invoices, warranties and a 5-year commitment. No direct payment to suppliers. File at the one-stop desk (guichet unique) of the DPA or ORMVA for your area, against a dated, signed receipt. Paid by bank transfer.</p>
         </details>
         
         <div class="al-aid-foot">
-          <a href="https://fr.le360.ma/economie/comment-le-fda-encourage-linvestissement-prive-dans-le-secteur-agricole_F5YYGC4SRFG2BPOMEQV5LYLMNY/" target="_blank" rel="noopener nofollow">Source</a> · 
-          <span>Checked on 29 Sep 2024</span>
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Official website</a> · 
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Source</a> · 
+          <span>Checked on 9 Nov 2026</span>
         </div>
       </article>
     </div>
     
     <div class="col-md-6 col-xl-4">
       <article class="al-card al-aid h-100 reveal">
-        <span class="al-aid-cat">Planting and seeds</span>
-        <h2 class="h5 mt-2" dir="auto">Selected and certified seeds</h2>
-        <p dir="auto">Support for selected seeds. In 2024 it was extended to pulses, forage crops, oilseeds (rapeseed, sunflower), rice, potatoes and cereals.</p>
-        
+        <span class="al-aid-cat">Planting and seeds</span> <span class="al-aid-provider" dir="auto">Ministry of Agriculture (FDA)</span>
+        <h2 class="h5 mt-2" dir="auto">Date palm planting</h2>
+        <p dir="auto">Densifying and rehabilitating palm groves, and extension with vitro-plants (order 3809.15).</p>
+        <p class="small"><strong>Rate and ceiling :</strong><br><span dir="auto">Densification or rehabilitation: 100% of plant cost, given as plants.<br>Extension (at least 100 palms/ha): 70% of plant cost, ceiling 35,000 DH/ha.</span></p>
         
         <details class="al-faq al-aid-steps">
           <summary>How to apply</summary>
-          <p class="small mb-0" dir="auto">General steps: 1) prior approval file for the project; 2) the farmer carries out and pre-finances the project; 3) subsidy application and on-site check by the ministry; 4) the project must be kept for 5 to 8 years depending on the aid, with possible checks. Rates and ceilings are set by the regulations in force: ask your provincial agriculture department (DPA) or ORMVA before investing.</p>
+          <p class="small mb-0" dir="auto">Extension: prior approval, then final vitro-plant invoices and a 5-year commitment, within 12 months. File at the one-stop desk (guichet unique) of the DPA or ORMVA for your area, against a dated, signed receipt. Paid by bank transfer.</p>
         </details>
         
         <div class="al-aid-foot">
-          <a href="https://fr.le360.ma/economie/comment-le-fda-encourage-linvestissement-prive-dans-le-secteur-agricole_F5YYGC4SRFG2BPOMEQV5LYLMNY/" target="_blank" rel="noopener nofollow">Source</a> · 
-          <span>Checked on 29 Sep 2024</span>
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Official website</a> · 
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Source</a> · 
+          <span>Checked on 9 Nov 2026</span>
         </div>
       </article>
     </div>
     
     <div class="col-md-6 col-xl-4">
       <article class="al-card al-aid h-100 reveal">
-        <span class="al-aid-cat">Planting and seeds</span>
-        <h2 class="h5 mt-2" dir="auto">Fruit tree planting</h2>
-        <p dir="auto">Support for fruit tree planting (date palm, olive, almond…).</p>
-        
+        <span class="al-aid-cat">Planting and seeds</span> <span class="al-aid-provider" dir="auto">Ministry of Agriculture (FDA)</span>
+        <h2 class="h5 mt-2" dir="auto">Olive, argan, fig and other trees</h2>
+        <p dir="auto">New plantations with certified plants from approved nurseries (orders 1877.13 and 2397.10).</p>
+        <p class="small"><strong>Rate and ceiling :</strong><br><span dir="auto">Olive: 5,000 DH/ha on drip (at least 285 plants/ha); 3,500 DH/ha irrigated (100-284 plants/ha) or rainfed (at least 100 plants/ha).<br>Argan: 80% of plant cost, ceiling 6,000 DH/ha rainfed (100 plants/ha) or 9,000 DH/ha irrigated (200 plants/ha).<br>60% of plant cost, ceiling per ha: irrigated fig 6,000 (230 plants) or rainfed 3,500 (140 plants), pomegranate 6,000 (200 plants), walnut 10,000 (70 plants), carob 6,000 (100 plants), pistachio 8,000 (200 plants).</span></p>
         
         <details class="al-faq al-aid-steps">
           <summary>How to apply</summary>
-          <p class="small mb-0" dir="auto">General steps: 1) prior approval file for the project; 2) the farmer carries out and pre-finances the project; 3) subsidy application and on-site check by the ministry; 4) the project must be kept for 5 to 8 years depending on the aid, with possible checks. Rates and ceilings are set by the regulations in force: ask your provincial agriculture department (DPA) or ORMVA before investing.</p>
+          <p class="small mb-0" dir="auto">Prior approval (form, ID, link to the land, project sheet), then the subsidy request within 12 months with &quot;certified plants&quot; invoices and a 5-year commitment. File at the one-stop desk (guichet unique) of the DPA or ORMVA for your area, against a dated, signed receipt. Paid by bank transfer.</p>
         </details>
         
         <div class="al-aid-foot">
-          <a href="https://fr.le360.ma/economie/comment-le-fda-encourage-linvestissement-prive-dans-le-secteur-agricole_F5YYGC4SRFG2BPOMEQV5LYLMNY/" target="_blank" rel="noopener nofollow">Source</a> · 
-          <span>Checked on 29 Sep 2024</span>
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Official website</a> · 
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Source</a> · 
+          <span>Checked on 9 Nov 2026</span>
         </div>
       </article>
     </div>
     
     <div class="col-md-6 col-xl-4">
       <article class="al-card al-aid h-100 reveal">
-        <span class="al-aid-cat">Equipment and mechanisation</span>
-        <h2 class="h5 mt-2" dir="auto">Farm equipment</h2>
-        <p dir="auto">Mechanisation, greenhouses and anti-hail nets.</p>
-        
+        <span class="al-aid-cat">Planting and seeds</span> <span class="al-aid-provider" dir="auto">Ministry of Agriculture (FDA)</span>
+        <h2 class="h5 mt-2" dir="auto">Apple, pear, almond and other rosaceae</h2>
+        <p dir="auto">New rosaceae orchards with certified plants. Minimum density required for each species.</p>
+        <p class="small"><strong>Rate and ceiling :</strong><br><span dir="auto">60% of plant cost, ceiling per ha:<br>Apple and pear (400 plants/ha): 17,000 DH.<br>Quince (200 plants/ha): 11,000 DH.<br>Peach, plum and apricot (200 plants/ha): 10,000 DH.<br>Cherry (170 plants/ha): 9,000 DH.<br>Azarole (140 plants/ha): 7,000 DH.<br>Irrigated almond (200 plants/ha): 5,000 DH; rainfed almond (100 plants/ha): 3,500 DH.</span></p>
         
         <details class="al-faq al-aid-steps">
           <summary>How to apply</summary>
-          <p class="small mb-0" dir="auto">General steps: 1) prior approval file for the project; 2) the farmer carries out and pre-finances the project; 3) subsidy application and on-site check by the ministry; 4) the project must be kept for 5 to 8 years depending on the aid, with possible checks. Rates and ceilings are set by the regulations in force: ask your provincial agriculture department (DPA) or ORMVA before investing.</p>
+          <p class="small mb-0" dir="auto">Prior approval, then the request within 12 months. For almond, invoices from an approved nursery marked &quot;certified plants&quot;; for other species, the ONSSA health certificate reference on the invoices. 5-year commitment. File at the one-stop desk (guichet unique) of the DPA or ORMVA for your area, against a dated, signed receipt. Paid by bank transfer.</p>
         </details>
         
         <div class="al-aid-foot">
-          <a href="https://fr.le360.ma/economie/comment-le-fda-encourage-linvestissement-prive-dans-le-secteur-agricole_F5YYGC4SRFG2BPOMEQV5LYLMNY/" target="_blank" rel="noopener nofollow">Source</a> · 
-          <span>Checked on 29 Sep 2024</span>
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Official website</a> · 
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Source</a> · 
+          <span>Checked on 9 Nov 2026</span>
         </div>
       </article>
     </div>
     
     <div class="col-md-6 col-xl-4">
       <article class="al-card al-aid h-100 reveal">
-        <span class="al-aid-cat">Livestock</span>
-        <h2 class="h5 mt-2" dir="auto">Livestock intensification</h2>
-        <p dir="auto">Genetic improvement and livestock buildings.</p>
-        
+        <span class="al-aid-cat">Planting and seeds</span> <span class="al-aid-provider" dir="auto">Ministry of Agriculture (FDA)</span>
+        <h2 class="h5 mt-2" dir="auto">Replanting after fire blight or tristeza</h2>
+        <p dir="auto">For orchards uprooted because of disease, in areas designated by ministerial order.</p>
+        <p class="small"><strong>Rate and ceiling :</strong><br><span dir="auto">Olive: 12,000 DH/ha.<br>Peach, apricot, plum and cherry: 15,000 DH/ha.<br>Citrus (tristeza): no amount in the guide&#x27;s table, ask the DPA.<br>Cannot be combined with the new-planting aid for the same plot.</span></p>
         
         <details class="al-faq al-aid-steps">
           <summary>How to apply</summary>
-          <p class="small mb-0" dir="auto">General steps: 1) prior approval file for the project; 2) the farmer carries out and pre-finances the project; 3) subsidy application and on-site check by the ministry; 4) the project must be kept for 5 to 8 years depending on the aid, with possible checks. Rates and ceilings are set by the regulations in force: ask your provincial agriculture department (DPA) or ORMVA before investing.</p>
+          <p class="small mb-0" dir="auto">ONSSA uprooting and burning certificate, certified plant invoices (citrus: rootstock other than sour orange), 5-year commitment. Request within 24 months of the uprooting certificate. File at the one-stop desk (guichet unique) of the DPA or ORMVA for your area, against a dated, signed receipt. Paid by bank transfer.</p>
         </details>
         
         <div class="al-aid-foot">
-          <a href="https://fr.le360.ma/economie/comment-le-fda-encourage-linvestissement-prive-dans-le-secteur-agricole_F5YYGC4SRFG2BPOMEQV5LYLMNY/" target="_blank" rel="noopener nofollow">Source</a> · 
-          <span>Checked on 29 Sep 2024</span>
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Official website</a> · 
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Source</a> · 
+          <span>Checked on 9 Nov 2026</span>
         </div>
       </article>
     </div>
     
     <div class="col-md-6 col-xl-4">
       <article class="al-card al-aid h-100 reveal">
-        <span class="al-aid-cat">Processing and export</span>
-        <h2 class="h5 mt-2" dir="auto">Processing units</h2>
-        <p dir="auto">Support for agricultural processing units. A siting authorisation is required. Rates were revised in 2024.</p>
-        
+        <span class="al-aid-cat">Planting and seeds</span> <span class="al-aid-provider" dir="auto">Ministry of Agriculture (FDA)</span>
+        <h2 class="h5 mt-2" dir="auto">Certified cereal and pulse seeds</h2>
+        <p dir="auto">The aid is deducted directly from the sale price at approved seed companies (order 2476.25, 2025-2026 season).</p>
+        <p class="small"><strong>Rate and ceiling :</strong><br><span dir="auto">Seeds produced in Morocco, per quintal: soft wheat 255 DH, durum wheat 235 DH, barley 285 DH, oat and triticale 180 DH; faba bean 205 DH, lentil and chickpea 395 DH, forage pea and vetch 180 DH.<br>Imported cereal seeds, per quintal: pre-basic G3 800 DH, basic G4 500 DH, first generation R1 500 DH.</span></p>
         
         <details class="al-faq al-aid-steps">
           <summary>How to apply</summary>
-          <p class="small mb-0" dir="auto">General steps: 1) prior approval file for the project; 2) the farmer carries out and pre-finances the project; 3) subsidy application and on-site check by the ministry; 4) the project must be kept for 5 to 8 years depending on the aid, with possible checks. Rates and ceilings are set by the regulations in force: ask your provincial agriculture department (DPA) or ORMVA before investing.</p>
+          <p class="small mb-0" dir="auto">Nothing to file: buy from an approved dealer, the discount is applied on the invoice. Seed companies also get a storage aid (5 DH per quintal per month, for 9 months).</p>
         </details>
         
         <div class="al-aid-foot">
-          <a href="https://fr.le360.ma/economie/comment-le-fda-encourage-linvestissement-prive-dans-le-secteur-agricole_F5YYGC4SRFG2BPOMEQV5LYLMNY/" target="_blank" rel="noopener nofollow">Source</a> · 
-          <span>Checked on 29 Sep 2024</span>
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Official website</a> · 
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Source</a> · 
+          <span>Checked on 9 Nov 2026</span>
         </div>
       </article>
     </div>
     
     <div class="col-md-6 col-xl-4">
       <article class="al-card al-aid h-100 reveal">
-        <span class="al-aid-cat">Processing and export</span>
-        <h2 class="h5 mt-2" dir="auto">Export and organic certification</h2>
-        <p dir="auto">Support for export promotion and diversification, and for organic certification (plant, animal and bee products).</p>
-        
+        <span class="al-aid-cat">Planting and seeds</span> <span class="al-aid-provider" dir="auto">Ministry of Agriculture (FDA)</span>
+        <h2 class="h5 mt-2" dir="auto">Sugar beet and sugar cane</h2>
+        <p dir="auto">Monogerm sugar beet seed and new sugar cane plantings.</p>
+        <p class="small"><strong>Rate and ceiling :</strong><br><span dir="auto">Monogerm beet seed: 800 DH per unit, deducted from the price (order 2965.14).<br>New sugar cane plantings: 6,000 DH/ha (order 2825.13).</span></p>
         
         <details class="al-faq al-aid-steps">
           <summary>How to apply</summary>
-          <p class="small mb-0" dir="auto">General steps: 1) prior approval file for the project; 2) the farmer carries out and pre-finances the project; 3) subsidy application and on-site check by the ministry; 4) the project must be kept for 5 to 8 years depending on the aid, with possible checks. Rates and ceilings are set by the regulations in force: ask your provincial agriculture department (DPA) or ORMVA before investing.</p>
+          <p class="small mb-0" dir="auto">Beet: nothing to file, the seed company deducts the aid. Cane: growing contract or aggregation certificate with the sugar mill, cuttings delivery receipt and a 5-year commitment; request within 6 months of delivery. File at the one-stop desk (guichet unique) of the DPA or ORMVA for your area, against a dated, signed receipt. Paid by bank transfer.</p>
         </details>
         
         <div class="al-aid-foot">
-          <a href="https://fr.le360.ma/economie/comment-le-fda-encourage-linvestissement-prive-dans-le-secteur-agricole_F5YYGC4SRFG2BPOMEQV5LYLMNY/" target="_blank" rel="noopener nofollow">Source</a> · 
-          <span>Checked on 29 Sep 2024</span>
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Official website</a> · 
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Source</a> · 
+          <span>Checked on 9 Nov 2026</span>
         </div>
       </article>
     </div>
     
     <div class="col-md-6 col-xl-4">
       <article class="al-card al-aid h-100 reveal">
-        <span class="al-aid-cat">Other aid</span>
-        <h2 class="h5 mt-2" dir="auto">Laboratory analyses</h2>
-        <p dir="auto">Support for laboratory analyses (soil, water, plants).</p>
-        
+        <span class="al-aid-cat">Livestock</span> <span class="al-aid-provider" dir="auto">Ministry of Agriculture (FDA)</span>
+        <h2 class="h5 mt-2" dir="auto">Purebred dairy heifers</h2>
+        <p dir="auto">Buying imported heifers or purebred heifers bred in Morocco (order 1902.23). According to the 2026 guide, the aid ends on 30/09/2026, or earlier if the planned number of head is reached: ask the DPA whether it has been extended.</p>
+        <p class="small"><strong>Rate and ceiling :</strong><br><span dir="auto">Imported heifer: 6,000 DH per head (up to 60,000 head).<br>Purebred heifer bred in Morocco: 3,000 DH per head (up to 120,000 head).</span></p>
         
         <details class="al-faq al-aid-steps">
           <summary>How to apply</summary>
-          <p class="small mb-0" dir="auto">General steps: 1) prior approval file for the project; 2) the farmer carries out and pre-finances the project; 3) subsidy application and on-site check by the ministry; 4) the project must be kept for 5 to 8 years depending on the aid, with possible checks. Rates and ceilings are set by the regulations in force: ask your provincial agriculture department (DPA) or ORMVA before investing.</p>
+          <p class="small mb-0" dir="auto">CIAB card, certified pedigree and invoice. Request within 6 months of purchase (imported) or 2 months (national). File at the one-stop desk (guichet unique) of the DPA or ORMVA for your area, against a dated, signed receipt. Paid by bank transfer.</p>
         </details>
         
         <div class="al-aid-foot">
-          <a href="https://fr.le360.ma/economie/comment-le-fda-encourage-linvestissement-prive-dans-le-secteur-agricole_F5YYGC4SRFG2BPOMEQV5LYLMNY/" target="_blank" rel="noopener nofollow">Source</a> · 
-          <span>Checked on 29 Sep 2024</span>
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Official website</a> · 
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Source</a> · 
+          <span>Checked on 9 Nov 2026</span>
+        </div>
+      </article>
+    </div>
+    
+    <div class="col-md-6 col-xl-4">
+      <article class="al-card al-aid h-100 reveal">
+        <span class="al-aid-cat">Livestock</span> <span class="al-aid-provider" dir="auto">Ministry of Agriculture (FDA)</span>
+        <h2 class="h5 mt-2" dir="auto">Selected breeding stock and camels</h2>
+        <p dir="auto">Producing selected sheep, goats and bull calves (order 2719.22, until 31/12/2026), and buying breeding camels (order 3380.15).</p>
+        <p class="small"><strong>Rate and ceiling :</strong><br><span dir="auto">Sheep: 800 DH per male, 700 DH per female (850 / 750 DH for cooperatives or groups).<br>Goats, imported breeds: 700 / 600 DH (750 / 650 DH for groups).<br>Goats, local breeds: 550 / 450 DH (600 / 500 DH for groups).<br>Selected bull calves bred in Morocco: 4,000 DH per head (80,000 head in total).<br>Breeding camels: 5,000 DH per head.</span></p>
+        
+        <details class="al-faq al-aid-steps">
+          <summary>How to apply</summary>
+          <p class="small mb-0" dir="auto">Sheep and goats: prior approval and a contract with ANOC, then the selection report; request within 12 months. Bull calves: CIAB card (SNIT); request within 6 months. Camels: contract with the DPA, 10-year commitment, request within 12 months. File at the one-stop desk (guichet unique) of the DPA or ORMVA for your area, against a dated, signed receipt. Paid by bank transfer.</p>
+        </details>
+        
+        <div class="al-aid-foot">
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Official website</a> · 
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Source</a> · 
+          <span>Checked on 9 Nov 2026</span>
+        </div>
+      </article>
+    </div>
+    
+    <div class="col-md-6 col-xl-4">
+      <article class="al-card al-aid h-100 reveal">
+        <span class="al-aid-cat">Livestock</span> <span class="al-aid-provider" dir="auto">Ministry of Agriculture (FDA)</span>
+        <h2 class="h5 mt-2" dir="auto">Livestock, milking and beekeeping equipment</h2>
+        <p dir="auto">Feed grinders and mixers, silage machines, milking equipment, milk tanks, building cooling and beekeeping equipment (order 3380.15). The number of units depends on herd size.</p>
+        <p class="small"><strong>Rate and ceiling :</strong><br><span dir="auto">30% of the price, ceiling per unit:<br>Feed grinder 6,000 DH; mixer 15,000 DH; on-farm feed unit 60,000 DH.<br>Silage harvester 1 row 16,500 DH, 2 rows 42,000 DH, self-propelled 300,000 DH; unloader-distributor 105,000 DH.<br>Milking parlour 2x4: 60,000 DH (under 50 cows); 10+ stalls: 7,500 DH per stall (max 360,000 DH); mobile milker 3,000 DH; milk tank 15,000 DH.<br>Misting 18,000 DH; poultry pad cooling 30,000 DH (layers 120,000 DH).<br>Stocked hive 300 DH; smoker or honey settling tank 3,000 DH; wax unit 210,000 DH.<br>+10% within an aggregation project.</span></p>
+        
+        <details class="al-faq al-aid-steps">
+          <summary>How to apply</summary>
+          <p class="small mb-0" dir="auto">Prior approval BEFORE buying or building, then the subsidy request with original invoices. Equipment conformity certificate, 5-year commitment; request within 12 months of approval. The same equipment is subsidised once every 10 years. File at the one-stop desk (guichet unique) of the DPA or ORMVA for your area, against a dated, signed receipt. Paid by bank transfer.</p>
+        </details>
+        
+        <div class="al-aid-foot">
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Official website</a> · 
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Source</a> · 
+          <span>Checked on 9 Nov 2026</span>
+        </div>
+      </article>
+    </div>
+    
+    <div class="col-md-6 col-xl-4">
+      <article class="al-card al-aid h-100 reveal">
+        <span class="al-aid-cat">Livestock</span> <span class="al-aid-provider" dir="auto">Ministry of Agriculture (FDA)</span>
+        <h2 class="h5 mt-2" dir="auto">Livestock buildings</h2>
+        <p dir="auto">Building cattle sheds, sheep and goat pens and camel shelters to model plans approved by the Ministry (order 3380.15).</p>
+        <p class="small"><strong>Rate and ceiling :</strong><br><span dir="auto">25% of the cost, ceiling per m²:<br>Modern cattle shed: 200 DH/m² (tied stalls) or 50 DH/m² (loose housing).<br>Traditional shed: 75 DH/m².<br>Modern sheep/goat pen: 80 DH/m²; traditional: 60 DH/m².<br>Camel shelter: 100 DH/m².</span></p>
+        
+        <details class="al-faq al-aid-steps">
+          <summary>How to apply</summary>
+          <p class="small mb-0" dir="auto">Prior approval BEFORE buying or building, then the subsidy request with original invoices. Attach the building plan; request within 24 months of approval, with invoices or a cost estimate from the DPA or ORMVA. File at the one-stop desk (guichet unique) of the DPA or ORMVA for your area, against a dated, signed receipt. Paid by bank transfer.</p>
+        </details>
+        
+        <div class="al-aid-foot">
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Official website</a> · 
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Source</a> · 
+          <span>Checked on 9 Nov 2026</span>
+        </div>
+      </article>
+    </div>
+    
+    <div class="col-md-6 col-xl-4">
+      <article class="al-card al-aid h-100 reveal">
+        <span class="al-aid-cat">Equipment and mechanisation</span> <span class="al-aid-provider" dir="auto">Ministry of Agriculture (FDA)</span>
+        <h2 class="h5 mt-2" dir="auto">Tractors</h2>
+        <p dir="auto">Buying new tractors (order 1051.18). Number subsidised by area: 1 under 5 ha, 2 for 5-10 ha, 3 for 10-20 ha, 4 for 20-50 ha, 5 for 50-100 ha, then 1 per extra 100 ha.</p>
+        <p class="small"><strong>Rate and ceiling :</strong><br><span dir="auto">30% of the price, ceiling by power (under 50 hp / 50 to 70 hp / 70 hp and more):<br>2WD: 52,000 / 62,000 / 72,000 DH.<br>4WD: 60,000 / 70,000 / 80,000 DH.<br>Aggregation project: +10% in the 2nd instalment (17,000 to 27,000 DH).</span></p>
+        
+        <details class="al-faq al-aid-steps">
+          <summary>How to apply</summary>
+          <p class="small mb-0" dir="auto">Prior approval BEFORE buying or building, then the subsidy request with original invoices. Registration card or receipt, commitment to keep the machine 5 years; request within 12 months of approval. Farm service companies (run by an agricultural engineer or technician) can also apply: 1 tractor per 500 ha worked per year, 10 at most. File at the one-stop desk (guichet unique) of the DPA or ORMVA for your area, against a dated, signed receipt. Paid by bank transfer.</p>
+        </details>
+        
+        <div class="al-aid-foot">
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Official website</a> · 
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Source</a> · 
+          <span>Checked on 9 Nov 2026</span>
+        </div>
+      </article>
+    </div>
+    
+    <div class="col-md-6 col-xl-4">
+      <article class="al-card al-aid h-100 reveal">
+        <span class="al-aid-cat">Equipment and mechanisation</span> <span class="al-aid-provider" dir="auto">Ministry of Agriculture (FDA)</span>
+        <h2 class="h5 mt-2" dir="auto">Tillage, sowing and planting</h2>
+        <p dir="auto">Trailed and PTO-driven tools, seed drills and planters (order 1051.18).</p>
+        <p class="small"><strong>Rate and ceiling :</strong><br><span dir="auto">Tillage, 30%: plough 8,000 to 14,000 DH; cultivator or harrow 6,000 DH; chisel 11,000 to 14,000 DH; stubble disc 15,000 DH; roller 10,000 to 14,000 DH; hoe 12,000 to 30,000 DH; subsoiler 11,000 to 17,000 DH.<br>PTO tools, 30%: rotary mower 15,000 DH; residue shredder 20,000 DH; rotary harrow or rotavator 30,000 DH; inter-row weeder 36,000 DH; palm shredder 27,000 DH.<br>Sowing, 50%: seed drill 30,000 to 50,000 DH; precision drill 30,000 to 90,000 DH; direct drill 50,000 to 100,000 DH.<br>Planting, 50%: planter 10,000 to 60,000 DH; transplanter 30,000 to 80,000 DH; auger 10,000 DH.</span></p>
+        
+        <details class="al-faq al-aid-steps">
+          <summary>How to apply</summary>
+          <p class="small mb-0" dir="auto">Prior approval BEFORE buying or building, then the subsidy request with original invoices. The exact ceiling depends on size (width, number of rows or tines). Usually one unit per tractor (two or three for some tools). +10% in the 2nd aggregation instalment. 5-year commitment; request within 12 months. File at the one-stop desk (guichet unique) of the DPA or ORMVA for your area, against a dated, signed receipt. Paid by bank transfer.</p>
+        </details>
+        
+        <div class="al-aid-foot">
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Official website</a> · 
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Source</a> · 
+          <span>Checked on 9 Nov 2026</span>
+        </div>
+      </article>
+    </div>
+    
+    <div class="col-md-6 col-xl-4">
+      <article class="al-card al-aid h-100 reveal">
+        <span class="al-aid-cat">Equipment and mechanisation</span> <span class="al-aid-provider" dir="auto">Ministry of Agriculture (FDA)</span>
+        <h2 class="h5 mt-2" dir="auto">Spreading, spraying and harvesting</h2>
+        <p dir="auto">Spreaders, sprayers, combines, haymaking equipment and specialised harvesters (order 1051.18).</p>
+        <p class="small"><strong>Rate and ceiling :</strong><br><span dir="auto">Spreading, 30%: mineral fertiliser 2,000 to 12,000 DH; manure 45,000 to 55,000 DH.<br>Spraying, 50%: boom sprayer 18,000 to 42,000 DH; air-blast sprayer 31,000 to 70,000 DH; duster 10,000 DH; ULV 20,000 DH.<br>Harvest: combine 20%, 200,000 DH (under 100 hp) or 300,000 DH; tracked rice harvester 30%, 312,000 DH; baler 40,000 DH; mowers 9,000 to 27,000 DH (30%).<br>Specialised harvest, 30%: potato digger 15,000 to 35,000 DH; olive trunk shaker 160,000 DH; straddle olive harvester 480,000 DH; hand-held shaker 6,000 DH (40%); tomato harvester 350,000 DH; beet and cane harvester 720,000 DH.</span></p>
+        
+        <details class="al-faq al-aid-steps">
+          <summary>How to apply</summary>
+          <p class="small mb-0" dir="auto">Prior approval BEFORE buying or building, then the subsidy request with original invoices. Combine: 1 unit for 50-200 ha, 2 for 200-400 ha. Straddle olive harvester: from 40 ha of olives. +10% in the 2nd aggregation instalment. 5-year commitment; request within 12 months. File at the one-stop desk (guichet unique) of the DPA or ORMVA for your area, against a dated, signed receipt. Paid by bank transfer.</p>
+        </details>
+        
+        <div class="al-aid-foot">
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Official website</a> · 
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Source</a> · 
+          <span>Checked on 9 Nov 2026</span>
+        </div>
+      </article>
+    </div>
+    
+    <div class="col-md-6 col-xl-4">
+      <article class="al-card al-aid h-100 reveal">
+        <span class="al-aid-cat">Equipment and mechanisation</span> <span class="al-aid-provider" dir="auto">Ministry of Agriculture (FDA)</span>
+        <h2 class="h5 mt-2" dir="auto">Greenhouses and insect-proof nets</h2>
+        <p dir="auto">Buying and installing production greenhouses (order 1927.20) and insect-proof nets for greenhouse vegetables (order 364.10).</p>
+        <p class="small"><strong>Rate and ceiling :</strong><br><span dir="auto">Greenhouses, 25% of the cost, ceiling per covered m²:<br>Galvanised steel structure: 27 DH/m².<br>Wooden structure: 12 DH/m².<br>Galvanised steel tunnel: 9 DH/m².<br>Plastic film and wires: 3 DH/m².<br>Insect-proof nets: 35%, ceiling 12,000 DH/ha.</span></p>
+        
+        <details class="al-faq al-aid-steps">
+          <summary>How to apply</summary>
+          <p class="small mb-0" dir="auto">Greenhouses: prior approval (project sheet, survey plan; if leased, at least 8 years remaining), then the request within 12 months. Nets: no prior approval, request within 12 months of purchase, 3-year commitment. File at the one-stop desk (guichet unique) of the DPA or ORMVA for your area, against a dated, signed receipt. Paid by bank transfer.</p>
+        </details>
+        
+        <div class="al-aid-foot">
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Official website</a> · 
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Source</a> · 
+          <span>Checked on 9 Nov 2026</span>
+        </div>
+      </article>
+    </div>
+    
+    <div class="col-md-6 col-xl-4">
+      <article class="al-card al-aid h-100 reveal">
+        <span class="al-aid-cat">Equipment and mechanisation</span> <span class="al-aid-provider" dir="auto">Ministry of Agriculture (FDA)</span>
+        <h2 class="h5 mt-2" dir="auto">Hail nets for fruit trees</h2>
+        <p dir="auto">For orchards in hail-prone provinces, including Midelt, Ifrane, Sefrou, El Hajeb, Boulemane, Khénifra, Azilal, Al Haouz, Errachidia and Tinghir (order 1232.21).</p>
+        <p class="small"><strong>Rate and ceiling :</strong><br><span dir="auto">40% of purchase and installation cost, ceiling 50,000 DH/ha.</span></p>
+        
+        <details class="al-faq al-aid-steps">
+          <summary>How to apply</summary>
+          <p class="small mb-0" dir="auto">Prior approval BEFORE buying or building, then the subsidy request with original invoices. Technical file (quote, data sheets, plan); if leased, at least 8 years remaining; request within 12 months, 7-year commitment. Check with the DPA that your province is on the list. File at the one-stop desk (guichet unique) of the DPA or ORMVA for your area, against a dated, signed receipt. Paid by bank transfer.</p>
+        </details>
+        
+        <div class="al-aid-foot">
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Official website</a> · 
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Source</a> · 
+          <span>Checked on 9 Nov 2026</span>
+        </div>
+      </article>
+    </div>
+    
+    <div class="col-md-6 col-xl-4">
+      <article class="al-card al-aid h-100 reveal">
+        <span class="al-aid-cat">Equipment and mechanisation</span> <span class="al-aid-provider" dir="auto">Ministry of Agriculture (FDA)</span>
+        <h2 class="h5 mt-2" dir="auto">Frost and pest control</h2>
+        <p dir="auto">Wind machines against frost, pheromone capsules against Tuta absoluta, attractants against citrus medfly, and date crushers.</p>
+        <p class="small"><strong>Rate and ceiling :</strong><br><span dir="auto">Wind machine: 30%, ceiling 90,000 DH (1 per 5 ha).<br>Pheromone capsules (Tuta absoluta): 60%, ceiling 4,800 DH/ha per year.<br>Medfly attractants (citrus): 40%, ceiling 1,000 DH/ha per year.<br>Date crusher: 30%, ceiling 6,000 DH.</span></p>
+        
+        <details class="al-faq al-aid-steps">
+          <summary>How to apply</summary>
+          <p class="small mb-0" dir="auto">Capsules and attractants: approved products, no prior approval, request within 6 months of purchase. Machines: prior approval, request within 12 months. File at the one-stop desk (guichet unique) of the DPA or ORMVA for your area, against a dated, signed receipt. Paid by bank transfer.</p>
+        </details>
+        
+        <div class="al-aid-foot">
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Official website</a> · 
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Source</a> · 
+          <span>Checked on 9 Nov 2026</span>
+        </div>
+      </article>
+    </div>
+    
+    <div class="col-md-6 col-xl-4">
+      <article class="al-card al-aid h-100 reveal">
+        <span class="al-aid-cat">Processing and export</span> <span class="al-aid-provider" dir="auto">Ministry of Agriculture (FDA)</span>
+        <h2 class="h5 mt-2" dir="auto">Organic certification</h2>
+        <p dir="auto">Covers part of the organic certification cost for plant, animal and bee products (order 2794.19).</p>
+        <p class="small"><strong>Rate and ceiling :</strong><br><span dir="auto">Plant products, 0.5 to under 5 ha: 90%, max 10,000 DH/year.<br>5 to under 10 ha: 70%, max 20,000 DH/year.<br>10 to 20 ha: 70%, max 30,000 DH/year.<br>Over 20 ha: 70%, max 40,000 DH/year.<br>Animal and bee products: 80%, max 25,000 DH/year.</span></p>
+        
+        <details class="al-faq al-aid-steps">
+          <summary>How to apply</summary>
+          <p class="small mb-0" dir="auto">Request within 6 months of the certificate, with the certifier&#x27;s invoices and a 5-year commitment. File at the one-stop desk (guichet unique) of the DPA or ORMVA for your area, against a dated, signed receipt. Paid by bank transfer.</p>
+        </details>
+        
+        <div class="al-aid-foot">
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Official website</a> · 
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Source</a> · 
+          <span>Checked on 9 Nov 2026</span>
+        </div>
+      </article>
+    </div>
+    
+    <div class="col-md-6 col-xl-4">
+      <article class="al-card al-aid h-100 reveal">
+        <span class="al-aid-cat">Processing and export</span> <span class="al-aid-provider" dir="auto">Ministry of Agriculture (FDA)</span>
+        <h2 class="h5 mt-2" dir="auto">Processing units: fruit, vegetables, olives, cereals</h2>
+        <p dir="auto">Building and equipping packing stations, cold stores, olive mills and processing units (order 3285.17).</p>
+        <p class="small"><strong>Rate and ceiling :</strong><br><span dir="auto">Citrus packing station, 30%: 6, 14 or 21 million DH by capacity (under 5,000 t, 5,000-10,000 t, more).<br>Fruit and vegetable station, 30%: 4, 10 or 15 million DH (under 4,000 t, 4,000-10,000 t, more).<br>Processing (canning, freezing, drying, essential oils…), 20%: 2,000,000 DH.<br>Cold storage, 25%: 3,000,000 DH (dates: 800,000 DH).<br>Olive mill, 10%: 2,000,000 DH; oil bottling 1,000,000 DH; pomace 1,500,000 DH.<br>Grain storage, 10%: 3,200,000 DH; seed packing 1,500,000 DH.</span></p>
+        
+        <details class="al-faq al-aid-steps">
+          <summary>How to apply</summary>
+          <p class="small mb-0" dir="auto">Prior approval BEFORE buying or building, then the subsidy request with original invoices. Technical file (quotes, approved plans, permits), ONSSA health approval, 8-year commitment; request within 24 months of approval. File at the one-stop desk (guichet unique) of the DPA or ORMVA for your area, against a dated, signed receipt. Paid by bank transfer.</p>
+        </details>
+        
+        <div class="al-aid-foot">
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Official website</a> · 
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Source</a> · 
+          <span>Checked on 9 Nov 2026</span>
+        </div>
+      </article>
+    </div>
+    
+    <div class="col-md-6 col-xl-4">
+      <article class="al-card al-aid h-100 reveal">
+        <span class="al-aid-cat">Processing and export</span> <span class="al-aid-provider" dir="auto">Ministry of Agriculture (FDA)</span>
+        <h2 class="h5 mt-2" dir="auto">Processing units: milk, meat, eggs, honey</h2>
+        <p dir="auto">Dairies, slaughterhouses, cutting and processing plants, egg and honey units (order 3285.17).</p>
+        <p class="small"><strong>Rate and ceiling :</strong><br><span dir="auto">30%: cheese and dairy products 3,000,000 DH; red-meat slaughterhouse 18,000,000 DH; red-meat cutting or processing 4,500,000 DH; poultry slaughterhouse 12,000,000 DH; poultry manure drying 600,000 DH.<br>10%: poultry cutting 3,000,000 DH; egg packing 600,000 DH; egg processing 2,200,000 DH; bee products 500,000 DH.</span></p>
+        
+        <details class="al-faq al-aid-steps">
+          <summary>How to apply</summary>
+          <p class="small mb-0" dir="auto">Prior approval BEFORE buying or building, then the subsidy request with original invoices. ONSSA health approval, 8-year commitment; request within 24 months of approval. File at the one-stop desk (guichet unique) of the DPA or ORMVA for your area, against a dated, signed receipt. Paid by bank transfer.</p>
+        </details>
+        
+        <div class="al-aid-foot">
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Official website</a> · 
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Source</a> · 
+          <span>Checked on 9 Nov 2026</span>
+        </div>
+      </article>
+    </div>
+    
+    <div class="col-md-6 col-xl-4">
+      <article class="al-card al-aid h-100 reveal">
+        <span class="al-aid-cat">Processing and export</span> <span class="al-aid-provider" dir="auto">Ministry of Agriculture (FDA)</span>
+        <h2 class="h5 mt-2" dir="auto">Milk collection centres</h2>
+        <p dir="auto">For cooperatives: building, cooling tanks, generator or grid connection (order 3380.15).</p>
+        <p class="small"><strong>Rate and ceiling :</strong><br><span dir="auto">30% of the cost, ceilings: building 60,000 DH; tanks 39,000 DH; electricity 60,000 DH. These rates apply to the dairy areas listed in the guide (Rabat-Salé, Casablanca, Fès, Meknès, Kénitra, El Jadida, Settat, Benslimane, Khémisset, Sidi Kacem and other districts). Elsewhere the State can cover the whole cost.</span></p>
+        
+        <details class="al-faq al-aid-steps">
+          <summary>How to apply</summary>
+          <p class="small mb-0" dir="auto">Prior approval BEFORE buying or building, then the subsidy request with original invoices. Plan approved by the DPA, cooperative statutes, 5-year commitment; request within 12 months. File at the one-stop desk (guichet unique) of the DPA or ORMVA for your area, against a dated, signed receipt. Paid by bank transfer.</p>
+        </details>
+        
+        <div class="al-aid-foot">
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Official website</a> · 
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Source</a> · 
+          <span>Checked on 9 Nov 2026</span>
+        </div>
+      </article>
+    </div>
+    
+    <div class="col-md-6 col-xl-4">
+      <article class="al-card al-aid h-100 reveal">
+        <span class="al-aid-cat">Processing and export</span> <span class="al-aid-provider" dir="auto">Ministry of Agriculture (FDA)</span>
+        <h2 class="h5 mt-2" dir="auto">Exports of citrus, tomatoes, strawberries and olive oil</h2>
+        <p dir="auto">Aid per tonne exported to diversify markets (orders 330.25, 1281.25 and 3284.17).</p>
+        <p class="small"><strong>Rate and ceiling :</strong><br><span dir="auto">Citrus (except Nadorcott) to the European Union, the United Kingdom and Africa: 1,000 DH/t, 2024 to 2028 seasons, within set quantities.<br>Tomatoes outside the EU, UK and Africa, above the 2010-2020 average: 750 DH/t.<br>Strawberries outside the EU and UK: 500 DH/t.<br>Olive oil (except lamp oil): 2,000 DH/t.<br>Hatching eggs and day-old chicks: 1 DH/kg.</span></p>
+        
+        <details class="al-faq al-aid-steps">
+          <summary>How to apply</summary>
+          <p class="small mb-0" dir="auto">Filed by the exporting unit after the season, with the EACCE certificate and the unit&#x27;s approval: 6 months for citrus, 12 months for other products. File at the one-stop desk (guichet unique) of the DPA or ORMVA for your area, against a dated, signed receipt. Paid by bank transfer.</p>
+        </details>
+        
+        <div class="al-aid-foot">
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Official website</a> · 
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Source</a> · 
+          <span>Checked on 9 Nov 2026</span>
+        </div>
+      </article>
+    </div>
+    
+    <div class="col-md-6 col-xl-4">
+      <article class="al-card al-aid h-100 reveal">
+        <span class="al-aid-cat">Processing and export</span> <span class="al-aid-provider" dir="auto">Ministry of Agriculture (FDA)</span>
+        <h2 class="h5 mt-2" dir="auto">Air freight of fruit, vegetables and flowers</h2>
+        <p dir="auto">Aid for air shipping of fruit, vegetables, cut flowers and ornamental plants (order 1588.96).</p>
+        <p class="small"><strong>Rate and ceiling :</strong><br><span dir="auto">1 DH/kg to Western Europe (except Scandinavia), from 1 October to 30 November and from 1 March to 30 June.<br>4.5 DH/kg to Scandinavia, North America, the Middle East, Japan and Eastern Europe, all year (except tomatoes to Canada).</span></p>
+        
+        <details class="al-faq al-aid-steps">
+          <summary>How to apply</summary>
+          <p class="small mb-0" dir="auto">Only flights by airlines other than Royal Air Maroc qualify. File with the Casablanca DPA: exporters within 12 months, airlines within 24 months.</p>
+        </details>
+        
+        <div class="al-aid-foot">
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Official website</a> · 
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Source</a> · 
+          <span>Checked on 9 Nov 2026</span>
+        </div>
+      </article>
+    </div>
+    
+    <div class="col-md-6 col-xl-4">
+      <article class="al-card al-aid h-100 reveal">
+        <span class="al-aid-cat">Agricultural aggregation</span> <span class="al-aid-provider" dir="auto">Ministry of Agriculture (FDA)</span>
+        <h2 class="h5 mt-2" dir="auto">Aggregation: irrigation with a bonus</h2>
+        <p dir="auto">Farmers linked to an aggregator (processing unit) get a 2nd aid instalment on their irrigation (orders 2411.19 and 559.23).</p>
+        <p class="small"><strong>Rate and ceiling :</strong><br><span dir="auto">Drip: 1st instalment at normal rates (75% up to 20 ha, 60% above) then a 2nd instalment of 20%, ceiling 7,600 DH/ha (+ basin 9 DH/m³, max 2,400 DH/ha).<br>Supplementary irrigation: 2nd instalment of 20%, ceiling 6,700 DH/ha (+ basin max 2,000 DH/ha).<br>Farm and livestock equipment: 2nd instalment of 10%.</span></p>
+        
+        <details class="al-faq al-aid-steps">
+          <summary>How to apply</summary>
+          <p class="small mb-0" dir="auto">Aggregation certificate required. The 2nd instalment is requested at least 12 months after the 1st, once the crop is delivered to the aggregator (receipt from the aggregator and a DRA certificate). File at the one-stop desk (guichet unique) of the DPA or ORMVA for your area, against a dated, signed receipt. Paid by bank transfer.</p>
+        </details>
+        
+        <div class="al-aid-foot">
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Official website</a> · 
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Source</a> · 
+          <span>Checked on 9 Nov 2026</span>
+        </div>
+      </article>
+    </div>
+    
+    <div class="col-md-6 col-xl-4">
+      <article class="al-card al-aid h-100 reveal">
+        <span class="al-aid-cat">Agricultural aggregation</span> <span class="al-aid-provider" dir="auto">Ministry of Agriculture (FDA)</span>
+        <h2 class="h5 mt-2" dir="auto">Aggregation: flat-rate premium by sector</h2>
+        <p dir="auto">Premium paid to the aggregator per hectare, head or tonne delivered, higher for small aggregated farms (order 2411.19).</p>
+        <p class="small"><strong>Rate and ceiling :</strong><br><span dir="auto">Per ha (small / medium / large farms): vegetables and red fruit 5,250 / 3,500 / 1,750 DH; saffron and rose 7,500 / 5,000 / 2,500 DH; date palm 4,500 / 3,000 / 1,500 DH; citrus, fruit trees and grapes 2,250 / 1,500 / 750 DH; irrigated olive 1,650 / 1,100 / 550 DH; rainfed cereals 600 / 400 / 200 DH.<br>Per head: dairy cow 420 / 280 / 140 DH; beef cattle 525 / 350 / 175 DH; sheep or goat 150 / 100 / 50 DH; camel 1,200 / 800 / 400 DH.<br>Per tonne delivered: honey 11,250 / 7,500 / 3,750 DH; poultry 1,500 / 1,000 / 500 DH; argan 500 DH.</span></p>
+        
+        <details class="al-faq al-aid-steps">
+          <summary>How to apply</summary>
+          <p class="small mb-0" dir="auto">Requested by the aggregator from the regional agriculture directorate, each instalment within its year, with the aggregation certificate, list of aggregated farmers and delivery and payment proof certified by an accountant. 5-year commitment. Small / medium / large thresholds vary by sector (e.g. vegetables: up to 5 ha, 5-20 ha, over 20 ha): see the guide.</p>
+        </details>
+        
+        <div class="al-aid-foot">
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Official website</a> · 
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Source</a> · 
+          <span>Checked on 9 Nov 2026</span>
+        </div>
+      </article>
+    </div>
+    
+    <div class="col-md-6 col-xl-4">
+      <article class="al-card al-aid h-100 reveal">
+        <span class="al-aid-cat">Other aid</span> <span class="al-aid-provider" dir="auto">Ministry of Agriculture (FDA)</span>
+        <h2 class="h5 mt-2" dir="auto">Young farmers on collective land</h2>
+        <p dir="auto">For rights-holders receiving a plot through melkisation, and tenants of collective land (order 3017.23). Until 31/12/2030, up to 20 ha per project.</p>
+        <p class="small"><strong>Rate and ceiling :</strong><br><span dir="auto">Investment, ages 18-40 and tenants (annual / tree crops): level 1 new crops 2,000 / 3,000 DH/ha; level 2 with land works or a farm building 4,000 / 5,000 DH/ha; level 3 with irrigation, machinery, livestock building or processing unit 6,000 / 7,000 DH/ha. Over 40: 1,000 / 2,000, 3,000 / 4,000 and 4,000 / 5,000 DH/ha.<br>Rent: 70% of the rent, max 2,500 DH/ha/year, 50,000 DH/year and 150,000 DH per project.<br>Top-up on other subsidies: +25% irrigation, +33% equipment, +60% livestock buildings, +17% rosaceae and other fruit trees, +14% date palm, +10% olive.</span></p>
+        
+        <details class="al-faq al-aid-steps">
+          <summary>How to apply</summary>
+          <p class="small mb-0" dir="auto">Request within 12 months of the release certificate (or last rent payment), with a sworn statement, land documents and bank details. File at the one-stop desk (guichet unique) of the DPA or ORMVA for your area, against a dated, signed receipt. Paid by bank transfer.</p>
+        </details>
+        
+        <div class="al-aid-foot">
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Official website</a> · 
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Source</a> · 
+          <span>Checked on 9 Nov 2026</span>
+        </div>
+      </article>
+    </div>
+    
+    <div class="col-md-6 col-xl-4">
+      <article class="al-card al-aid h-100 reveal">
+        <span class="al-aid-cat">Other aid</span> <span class="al-aid-provider" dir="auto">Ministry of Agriculture (FDA)</span>
+        <h2 class="h5 mt-2" dir="auto">Soil, water and plant analyses</h2>
+        <p dir="auto">The approved laboratory deducts the aid directly from your bill (order 1060.90).</p>
+        <p class="small"><strong>Rate and ceiling :</strong><br><span dir="auto">50% of the analysis cost.</span></p>
+        
+        <details class="al-faq al-aid-steps">
+          <summary>How to apply</summary>
+          <p class="small mb-0" dir="auto">Nothing to file: ask the laboratory whether it applies the FDA subsidy.</p>
+        </details>
+        
+        <div class="al-aid-foot">
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Official website</a> · 
+          <a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow">Source</a> · 
+          <span>Checked on 9 Nov 2026</span>
+        </div>
+      </article>
+    </div>
+    
+    <div class="col-md-6 col-xl-4">
+      <article class="al-card al-aid h-100 reveal">
+        <span class="al-aid-cat">Loans, guarantees and microcredit</span> <span class="al-aid-provider" dir="auto">Tamwilcom and banks</span>
+        <h2 class="h5 mt-2" dir="auto">Intelaka: low-rate loan</h2>
+        <p dir="auto">State-guaranteed bank loan to start or grow a small business, a farm project or a rural project.</p>
+        <p class="small"><strong>Rate and ceiling :</strong><br><span dir="auto">Rate: 2% in towns, 1.75% in rural areas.<br>Amount: up to 1,200,000 DH (investment), over 7 years.<br>State guarantee (Damane Intelak): 80%.<br>Own contribution: at least 10%.</span></p>
+        
+        <details class="al-faq al-aid-steps">
+          <summary>How to apply</summary>
+          <p class="small mb-0" dir="auto">From age 18, turnover up to 10 million DH, no payment incident in the last 36 months. Apply at a bank branch (Crédit Agricole du Maroc for rural projects, and other banks).</p>
+        </details>
+        
+        <div class="al-aid-foot">
+          <a href="https://www.tamwilcom.ma/" target="_blank" rel="noopener nofollow">Official website</a> · 
+          <a href="https://wafir.ma/fr/guide/intelaka-tout-savoir-maroc-2026" target="_blank" rel="noopener nofollow">Source</a> · 
+          <span>Checked on 9 Nov 2026</span>
+        </div>
+      </article>
+    </div>
+    
+    <div class="col-md-6 col-xl-4">
+      <article class="al-card al-aid h-100 reveal">
+        <span class="al-aid-cat">Loans, guarantees and microcredit</span> <span class="al-aid-provider" dir="auto">Tamwilcom</span>
+        <h2 class="h5 mt-2" dir="auto">Damane loan guarantees</h2>
+        <p dir="auto">Tamwilcom guarantees part of your bank loan so the bank needs less collateral: Damane Istitmar (investment), Damane Atassyir (operating), Damane Express.</p>
+        <p class="small"><strong>Rate and ceiling :</strong><br><span dir="auto">Open to Moroccan companies in all sectors. Guarantee rate depends on the product.</span></p>
+        
+        <details class="al-faq al-aid-steps">
+          <summary>How to apply</summary>
+          <p class="small mb-0" dir="auto">Ask your bank: it requests the guarantee from Tamwilcom.</p>
+        </details>
+        
+        <div class="al-aid-foot">
+          <a href="https://www.tamwilcom.ma/" target="_blank" rel="noopener nofollow">Official website</a> · 
+          <a href="https://www.tamwilcom.ma/nos-solutions/petites-et-moyennes-entreprises" target="_blank" rel="noopener nofollow">Source</a> · 
+          <span>Checked on 9 Nov 2026</span>
+        </div>
+      </article>
+    </div>
+    
+    <div class="col-md-6 col-xl-4">
+      <article class="al-card al-aid h-100 reveal">
+        <span class="al-aid-cat">Loans, guarantees and microcredit</span> <span class="al-aid-provider" dir="auto">Microcredit associations</span>
+        <h2 class="h5 mt-2" dir="auto">Microcredit</h2>
+        <p dir="auto">Small loans with support for very small projects, self-employed people and small farm activities (Al Amana, Attawfiq, Ardi, FONDEP…).</p>
+        <p class="small"><strong>Rate and ceiling :</strong><br><span dir="auto">Ceiling raised from 50,000 to 150,000 DH by law 50-20 (2021), depending on the project. Rates and terms vary by institution.</span></p>
+        
+        <details class="al-faq al-aid-steps">
+          <summary>How to apply</summary>
+          <p class="small mb-0" dir="auto">Go directly to a branch in your area with your ID and a description of your activity.</p>
+        </details>
+        
+        <div class="al-aid-foot">
+          
+          <a href="https://ecoactu.ma/microcredits-microfinance-loi-50-20/" target="_blank" rel="noopener nofollow">Source</a> · 
+          <span>Checked on 9 Nov 2026</span>
+        </div>
+      </article>
+    </div>
+    
+    <div class="col-md-6 col-xl-4">
+      <article class="al-card al-aid h-100 reveal">
+        <span class="al-aid-cat">Businesses and cooperatives</span> <span class="al-aid-provider" dir="auto">Regional investment centres (CRI)</span>
+        <h2 class="h5 mt-2" dir="auto">Investment grant for small and medium businesses</h2>
+        <p dir="auto">New grant under the Investment Charter (decree 2.25.342 of 12/06/2025). Priority sectors include agri-food processing and aquaculture.</p>
+        <p class="small"><strong>Rate and ceiling :</strong><br><span dir="auto">Up to 30% of the investment, combining: stable jobs 5 to 10%, province 10 or 15% (15% e.g. in Zagora, Figuig, Tata), priority sector 10%.<br>Investment of 1 to 50 million DH.</span></p>
+        
+        <details class="al-faq al-aid-steps">
+          <summary>How to apply</summary>
+          <p class="small mb-0" dir="auto">Existing company with turnover of 1 to 200 million DH, at least 10% own funds, at least one stable job per million invested. Apply online at CRI-invest.ma; reviewed by the regional unified investment commission.</p>
+        </details>
+        
+        <div class="al-aid-foot">
+          <a href="https://www.cri-invest.ma/" target="_blank" rel="noopener nofollow">Official website</a> · 
+          <a href="https://fr.hespress.com/449569-449569.html" target="_blank" rel="noopener nofollow">Source</a> · 
+          <span>Checked on 9 Nov 2026</span>
+        </div>
+      </article>
+    </div>
+    
+    <div class="col-md-6 col-xl-4">
+      <article class="al-card al-aid h-100 reveal">
+        <span class="al-aid-cat">Businesses and cooperatives</span> <span class="al-aid-provider" dir="auto">Forsa programme (State)</span>
+        <h2 class="h5 mt-2" dir="auto">Forsa: honour loan for project holders</h2>
+        <p dir="auto">Public programme for people with an idea or project: training, mentoring and an interest-free honour loan. Terms change from one edition to the next.</p>
+        <p class="small"><strong>Rate and ceiling :</strong><br><span dir="auto">2022 edition: up to 100,000 DH interest-free, including a 10,000 DH grant, repayable over 10 years with a 2-year grace period. Check the amounts of the current edition.</span></p>
+        
+        <details class="al-faq al-aid-steps">
+          <summary>How to apply</summary>
+          <p class="small mb-0" dir="auto">Register online during the call for applications, then selection, training and funding.</p>
+        </details>
+        
+        <div class="al-aid-foot">
+          
+          <a href="https://h24info.ma/economie/programme-forsa-125-milliard-dh-au-service-des-projets-innovants/" target="_blank" rel="noopener nofollow">Source</a> · 
+          <span>Checked on 9 Nov 2026</span>
+        </div>
+      </article>
+    </div>
+    
+    <div class="col-md-6 col-xl-4">
+      <article class="al-card al-aid h-100 reveal">
+        <span class="al-aid-cat">Businesses and cooperatives</span> <span class="al-aid-provider" dir="auto">Maroc PME</span>
+        <h2 class="h5 mt-2" dir="auto">Maroc PME programmes (Tatwir, Istitmar, Moussanada)</h2>
+        <p dir="auto">Grants for existing companies that invest, modernise or hire consultants, including agri-food.</p>
+        <p class="small"><strong>Rate and ceiling :</strong><br><span dir="auto">Rates and ceilings depend on the programme: check the official website before applying.</span></p>
+        
+        <details class="al-faq al-aid-steps">
+          <summary>How to apply</summary>
+          <p class="small mb-0" dir="auto">Apply online on the Maroc PME website during calls for projects.</p>
+        </details>
+        
+        <div class="al-aid-foot">
+          <a href="https://www.marocpme.gov.ma/" target="_blank" rel="noopener nofollow">Official website</a> · 
+          <a href="https://wafir.ma/fr/entreprises/maroc-pme-forsa" target="_blank" rel="noopener nofollow">Source</a> · 
+          <span>Checked on 9 Nov 2026</span>
+        </div>
+      </article>
+    </div>
+    
+    <div class="col-md-6 col-xl-4">
+      <article class="al-card al-aid h-100 reveal">
+        <span class="al-aid-cat">Rural tourism</span> <span class="al-aid-provider" dir="auto">SMIT (Ministry of Tourism)</span>
+        <h2 class="h5 mt-2" dir="auto">Go Siyaha: tourism projects</h2>
+        <p dir="auto">Grants and technical support for innovative tourism projects: rural guesthouses, craft cooperatives, activity centres. Since July 2025 there is no minimum investment.</p>
+        <p class="small"><strong>Rate and ceiling :</strong><br><span dir="auto">Rates and ceilings: check with SMIT.</span></p>
+        
+        <details class="al-faq al-aid-steps">
+          <summary>How to apply</summary>
+          <p class="small mb-0" dir="auto">Apply to SMIT. Technical support starts at the seed stage.</p>
+        </details>
+        
+        <div class="al-aid-foot">
+          <a href="https://www.smit.gov.ma/" target="_blank" rel="noopener nofollow">Official website</a> · 
+          <a href="https://lematin.ma/economie/go-siyaha-desormais-accessible-a-tous-les-projets-touristiques/291327" target="_blank" rel="noopener nofollow">Source</a> · 
+          <span>Checked on 9 Nov 2026</span>
         </div>
       </article>
     </div>
     
   </div>
+  <section class="mt-5 reveal" id="guichets">
+    <h2 class="h4">Where to file: one-stop desks</h2>
+    <p class="text-secondary">Phone numbers of the agriculture directorates and ORMVAs, as published on the last page of the FDA 2026 guide. Call before you travel.</p>
+    <div class="al-faq al-guichets">
+      
+      <details>
+        <summary dir="auto">Tanger-Tétouan-Al Hoceïma</summary>
+        <ul class="list-unstyled small mb-3">
+          
+          <li class="al-guichet">
+            <span dir="auto">Regional agriculture directorate</span>
+            <a href="tel:+212539343413" dir="ltr">05 39 34 34 13</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">Provincial agriculture directorate · Chefchaouen</span>
+            <a href="tel:+212539986636" dir="ltr">05 39 98 66 36</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">Provincial agriculture directorate · Al Hoceïma</span>
+            <a href="tel:+212539982940" dir="ltr">05 39 98 29 40</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">Provincial agriculture directorate · Ouezzane</span>
+            <a href="tel:+212537908676" dir="ltr">05 37 90 86 76</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">Provincial agriculture directorate · Tanger</span>
+            <a href="tel:+212539940294" dir="ltr">05 39 94 02 94</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">Provincial agriculture directorate · Tétouan</span>
+            <a href="tel:+212539965436" dir="ltr">05 39 96 54 36</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">ORMVA · Loukkos</span>
+            <a href="tel:+212539918676" dir="ltr">05 39 91 86 76</a>
+          </li>
+          
+        </ul>
+      </details>
+      
+      <details>
+        <summary dir="auto">Oriental</summary>
+        <ul class="list-unstyled small mb-3">
+          
+          <li class="al-guichet">
+            <span dir="auto">Regional agriculture directorate</span>
+            <a href="tel:+212536702018" dir="ltr">05 36 70 20 18</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">Provincial agriculture directorate · Figuig</span>
+            <a href="tel:+212536798165" dir="ltr">05 36 79 81 65</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">Provincial agriculture directorate · Nador</span>
+            <a href="tel:+212536606413" dir="ltr">05 36 60 64 13</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">Provincial agriculture directorate · Oujda</span>
+            <a href="tel:+212536684902" dir="ltr">05 36 68 49 02</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">Provincial agriculture directorate · Taourirt</span>
+            <a href="tel:+212536699422" dir="ltr">05 36 69 94 22</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">Provincial agriculture directorate · Guercif</span>
+            <a href="tel:+212536676294" dir="ltr">05 36 67 62 94</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">Provincial agriculture directorate · Jerada</span>
+            <a href="tel:+212536821396" dir="ltr">05 36 82 13 96</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">Provincial agriculture directorate · Driouch</span>
+            <a href="tel:+212536606413" dir="ltr">05 36 60 64 13</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">ORMVA · Moulouya</span>
+            <a href="tel:+212536613468" dir="ltr">05 36 61 34 68</a>
+          </li>
+          
+        </ul>
+      </details>
+      
+      <details>
+        <summary dir="auto">Fès-Meknès</summary>
+        <ul class="list-unstyled small mb-3">
+          
+          <li class="al-guichet">
+            <span dir="auto">Regional agriculture directorate</span>
+            <a href="tel:+212535515662" dir="ltr">05 35 51 56 62</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">Provincial agriculture directorate · Boulemane</span>
+            <a href="tel:+212535585458" dir="ltr">05 35 58 54 58</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">Provincial agriculture directorate · Fès</span>
+            <a href="tel:+212535625742" dir="ltr">05 35 62 57 42</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">Provincial agriculture directorate · El Hajeb</span>
+            <a href="tel:+212535543303" dir="ltr">05 35 54 33 03</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">Provincial agriculture directorate · Ifrane</span>
+            <a href="tel:+212535562187" dir="ltr">05 35 56 21 87</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">Provincial agriculture directorate · Meknès</span>
+            <a href="tel:+212535520014" dir="ltr">05 35 52 00 14</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">Provincial agriculture directorate · Sefrou</span>
+            <a href="tel:+212535682673" dir="ltr">05 35 68 26 73</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">Provincial agriculture directorate · Taounate</span>
+            <a href="tel:+212535627692" dir="ltr">05 35 62 76 92</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">Provincial agriculture directorate · Taza</span>
+            <a href="tel:+212535673232" dir="ltr">05 35 67 32 32</a>
+          </li>
+          
+        </ul>
+      </details>
+      
+      <details>
+        <summary dir="auto">Rabat-Salé-Kénitra</summary>
+        <ul class="list-unstyled small mb-3">
+          
+          <li class="al-guichet">
+            <span dir="auto">Regional agriculture directorate</span>
+            <a href="tel:+212537363022" dir="ltr">05 37 36 30 22</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">Provincial agriculture directorate · Khémisset</span>
+            <a href="tel:+212537552913" dir="ltr">05 37 55 29 13</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">Provincial agriculture directorate · Rabat et Salé</span>
+            <a href="tel:+212537631360" dir="ltr">05 37 63 13 60</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">ORMVA · Gharb</span>
+            <a href="tel:+212537374502" dir="ltr">05 37 37 45 02</a>
+          </li>
+          
+        </ul>
+      </details>
+      
+      <details>
+        <summary dir="auto">Béni Mellal-Khénifra</summary>
+        <ul class="list-unstyled small mb-3">
+          
+          <li class="al-guichet">
+            <span dir="auto">Regional agriculture directorate</span>
+            <a href="tel:+212523424955" dir="ltr">05 23 42 49 55</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">Provincial agriculture directorate · Azilal</span>
+            <a href="tel:+212523458398" dir="ltr">05 23 45 83 98</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">Provincial agriculture directorate · Béni Mellal</span>
+            <a href="tel:+212523482576" dir="ltr">05 23 48 25 76</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">Provincial agriculture directorate · Khénifra</span>
+            <a href="tel:+212535586710" dir="ltr">05 35 58 67 10</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">Provincial agriculture directorate · Khouribga</span>
+            <a href="tel:+212523562668" dir="ltr">05 23 56 26 68</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">ORMVA · Tadla</span>
+            <a href="tel:+212523435048" dir="ltr">05 23 43 50 48</a>
+          </li>
+          
+        </ul>
+      </details>
+      
+      <details>
+        <summary dir="auto">Casablanca-Settat</summary>
+        <ul class="list-unstyled small mb-3">
+          
+          <li class="al-guichet">
+            <span dir="auto">Regional agriculture directorate</span>
+            <a href="tel:+212523394020" dir="ltr">05 23 39 40 20</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">Provincial agriculture directorate · Benslimane</span>
+            <a href="tel:+212523291112" dir="ltr">05 23 29 11 12</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">Provincial agriculture directorate · Casablanca</span>
+            <a href="tel:+212522278871" dir="ltr">05 22 27 88 71</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">Provincial agriculture directorate · El Jadida</span>
+            <a href="tel:+212523342990" dir="ltr">05 23 34 29 90</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">Provincial agriculture directorate · Settat</span>
+            <a href="tel:+212523402287" dir="ltr">05 23 40 22 87</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">Provincial agriculture directorate · Berrechid</span>
+            <a href="tel:+212522030603" dir="ltr">05 22 03 06 03</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">ORMVA · Doukkala</span>
+            <a href="tel:+212523342270" dir="ltr">05 23 34 22 70</a>
+          </li>
+          
+        </ul>
+      </details>
+      
+      <details>
+        <summary dir="auto">Marrakech-Safi</summary>
+        <ul class="list-unstyled small mb-3">
+          
+          <li class="al-guichet">
+            <span dir="auto">Regional agriculture directorate</span>
+            <a href="tel:+212524457368" dir="ltr">05 24 45 73 68</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">Provincial agriculture directorate · Chichaoua</span>
+            <a href="tel:+212524353086" dir="ltr">05 24 35 30 86</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">Provincial agriculture directorate · Essaouira</span>
+            <a href="tel:+212524784112" dir="ltr">05 24 78 41 12</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">Provincial agriculture directorate · Marrakech</span>
+            <a href="tel:+212524431059" dir="ltr">05 24 43 10 59</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">Provincial agriculture directorate · Rehamna</span>
+            <a href="tel:+212524323437" dir="ltr">05 24 32 34 37</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">Provincial agriculture directorate · Safi</span>
+            <a href="tel:+212524623188" dir="ltr">05 24 62 31 88</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">ORMVA · Haouz</span>
+            <a href="tel:+212524449650" dir="ltr">05 24 44 96 50</a>
+          </li>
+          
+        </ul>
+      </details>
+      
+      <details>
+        <summary dir="auto">Drâa-Tafilalet</summary>
+        <ul class="list-unstyled small mb-3">
+          
+          <li class="al-guichet">
+            <span dir="auto">Regional agriculture directorate</span>
+            <a href="tel:+212535570400" dir="ltr">05 35 57 04 00</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">ORMVA · Ouarzazate</span>
+            <a href="tel:+212524882614" dir="ltr">05 24 88 26 14</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">ORMVA · Tafilalet</span>
+            <a href="tel:+212535570400" dir="ltr">05 35 57 04 00</a>
+          </li>
+          
+        </ul>
+      </details>
+      
+      <details>
+        <summary dir="auto">Souss-Massa</summary>
+        <ul class="list-unstyled small mb-3">
+          
+          <li class="al-guichet">
+            <span dir="auto">Regional agriculture directorate</span>
+            <a href="tel:+212528827131" dir="ltr">05 28 82 71 31</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">Provincial agriculture directorate · Tata</span>
+            <a href="tel:+212528802058" dir="ltr">05 28 80 20 58</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">Provincial agriculture directorate · Tiznit</span>
+            <a href="tel:+212528862076" dir="ltr">05 28 86 20 76</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">Provincial agriculture directorate · Agadir</span>
+            <a href="tel:+212528840063" dir="ltr">05 28 84 00 63</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">ORMVA · Souss-Massa</span>
+            <a href="tel:+212528840827" dir="ltr">05 28 84 08 27</a>
+          </li>
+          
+        </ul>
+      </details>
+      
+      <details>
+        <summary dir="auto">Guelmim-Oued Noun</summary>
+        <ul class="list-unstyled small mb-3">
+          
+          <li class="al-guichet">
+            <span dir="auto">Regional agriculture directorate</span>
+            <a href="tel:+212528772096" dir="ltr">05 28 77 20 96</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">Provincial agriculture directorate · Assa-Zag</span>
+            <a href="tel:+212528700642" dir="ltr">05 28 70 06 42</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">Provincial agriculture directorate · Guelmim</span>
+            <a href="tel:+212528872502" dir="ltr">05 28 87 25 02</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">Provincial agriculture directorate · Tan-Tan</span>
+            <a href="tel:+212528877544" dir="ltr">05 28 87 75 44</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">Provincial agriculture directorate · Sidi Ifni</span>
+            <a href="tel:+212528780664" dir="ltr">05 28 78 06 64</a>
+          </li>
+          
+        </ul>
+      </details>
+      
+      <details>
+        <summary dir="auto">Laâyoune-Sakia El Hamra</summary>
+        <ul class="list-unstyled small mb-3">
+          
+          <li class="al-guichet">
+            <span dir="auto">Regional agriculture directorate</span>
+            <a href="tel:+212528993304" dir="ltr">05 28 99 33 04</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">Provincial agriculture directorate · Boujdour</span>
+            <a href="tel:+212528896095" dir="ltr">05 28 89 60 95</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">Provincial agriculture directorate · Laâyoune</span>
+            <a href="tel:+212528893953" dir="ltr">05 28 89 39 53</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">Provincial agriculture directorate · Smara</span>
+            <a href="tel:+212528899811" dir="ltr">05 28 89 98 11</a>
+          </li>
+          
+        </ul>
+      </details>
+      
+      <details>
+        <summary dir="auto">Dakhla-Oued Ed-Dahab</summary>
+        <ul class="list-unstyled small mb-3">
+          
+          <li class="al-guichet">
+            <span dir="auto">Regional agriculture directorate</span>
+            <a href="tel:+212528931698" dir="ltr">05 28 93 16 98</a>
+          </li>
+          
+          <li class="al-guichet">
+            <span dir="auto">Provincial agriculture directorate · Dakhla</span>
+            <a href="tel:+212528897059" dir="ltr">05 28 89 70 59</a>
+          </li>
+          
+        </ul>
+      </details>
+      
+    </div>
+  </section>
+  <section class="mt-5 reveal" id="sources">
+    <h2 class="h4">Sources</h2>
+    <p class="text-secondary">Each card also links to its own source. Figures outside the FDA come from press articles when the official site cannot be read: check them before applying.</p>
+    <ul class="small">
+      <li><a href="https://www.agriculture.gov.ma/fda" target="_blank" rel="noopener nofollow" dir="auto">FDA guide “State financial aid for agricultural investment”, 2026 edition</a></li><li><a href="https://www.tamwilcom.ma/" target="_blank" rel="noopener nofollow" dir="auto">Tamwilcom (guarantees and Intelaka)</a></li><li><a href="https://www.cri-invest.ma/" target="_blank" rel="noopener nofollow" dir="auto">Regional investment centres (Investment Charter)</a></li><li><a href="https://www.marocpme.gov.ma/" target="_blank" rel="noopener nofollow" dir="auto">Maroc PME</a></li><li><a href="https://www.smit.gov.ma/" target="_blank" rel="noopener nofollow" dir="auto">SMIT (Go Siyaha)</a></li>
+      <li><a href="https://ecoactu.ma/microcredits-microfinance-loi-50-20/" target="_blank" rel="noopener nofollow" dir="ltr">https://ecoactu.ma/microcredits-microfinance-loi-50-20/</a></li><li><a href="https://fr.hespress.com/449569-449569.html" target="_blank" rel="noopener nofollow" dir="ltr">https://fr.hespress.com/449569-449569.html</a></li><li><a href="https://h24info.ma/economie/programme-forsa-125-milliard-dh-au-service-des-projets-innovants/" target="_blank" rel="noopener nofollow" dir="ltr">https://h24info.ma/economie/programme-forsa-125-milliard-dh-au-service-des-projets-innovants/</a></li><li><a href="https://lematin.ma/economie/go-siyaha-desormais-accessible-a-tous-les-projets-touristiques/291327" target="_blank" rel="noopener nofollow" dir="ltr">https://lematin.ma/economie/go-siyaha-desormais-accessible-a-tous-les-projets-touristiques/291327</a></li><li><a href="https://wafir.ma/fr/entreprises/maroc-pme-forsa" target="_blank" rel="noopener nofollow" dir="ltr">https://wafir.ma/fr/entreprises/maroc-pme-forsa</a></li><li><a href="https://wafir.ma/fr/guide/intelaka-tout-savoir-maroc-2026" target="_blank" rel="noopener nofollow" dir="ltr">https://wafir.ma/fr/guide/intelaka-tout-savoir-maroc-2026</a></li><li><a href="https://www.tamwilcom.ma/nos-solutions/petites-et-moyennes-entreprises" target="_blank" rel="noopener nofollow" dir="ltr">https://www.tamwilcom.ma/nos-solutions/petites-et-moyennes-entreprises</a></li>
+    </ul>
+  </section>
   <div class="al-card al-feedback-cta mt-5 reveal">
     <div>
       <h2 class="h5 mb-1">Need help preparing your application?</h2>
@@ -303,29 +1295,25 @@
           <img src="/static/img/logo-mark.svg" alt="" width="46" height="51">
           <span>Waha<em>Tech</em></span>
         </a>
-        <p class="mt-3 pe-lg-4">Agricultural innovation, from the oases to the world. The platform that brings together the skills, products and needs of farming.</p>
+        <p class="mt-3 pe-lg-4">The platform of Moroccan cooperatives: a local-products shop for customers and full support for cooperatives.</p>
       </div>
       <div class="col-6 col-lg-2 offset-lg-1">
-        <h4>Platform</h4>
+        <h4>Shop</h4>
         <ul>
-          <li><a href="/en/consultation-agricole/">Agricultural consulting</a></li>
-          <li><a href="/en/cooperatives/">Cooperative products</a></li>
-          <li><a href="/en/intrants/">Farm inputs</a></li>
-          <li><a href="/en/foncier/">Land and farms</a></li>
-          <li><a href="/en/materiel/">Equipment and transport</a></li>
-          <li><a href="/en/emploi/">Farm jobs</a></li>
-          <li><a href="/en/services/">WahaTech services</a></li>
-          <li><a href="/en/carte/">Map</a></li>
-          <li><a href="/en/aides-agricoles/">Farm subsidies guide</a></li>
-          <li><a href="/en/prix-du-marche/">Wholesale market prices</a></li>
-          <li><a href="/en/meteo/">Weather and alerts</a></li>
-          <li><a href="/en/eau/barrages/">Dam filling levels</a></li>
-          <li><a href="/en/eau/pluie/">Rainfall history</a></li>
-          <li><a href="/en/conseil/">Training and advisory bulletins</a></li>
-          <li><a href="/en/actualites/">Farming news</a></li>
-          <li><a href="/en/calendrier-cultural/">Crop calendar</a></li>
-          <li><a href="/en/stress-hydrique/">Water stress (HydroStress)</a></li>
-          <li><a href="/en/#marketplace">Marketplace</a></li>
+          <li><a href="/en/boutique/">All products</a></li>
+          <li><a href="/en/boutique/cooperatives/">Our cooperatives</a></li>
+          <li><a href="/en/cooperatives/">Professional catalogue</a></li>
+          <li><a href="/en/boutique/panier/">My cart</a></li>
+          
+        </ul>
+        <h4 class="mt-4">Support</h4>
+        <ul>
+          <li><a href="/en/accompagnement/creation-cooperative/">Set up a cooperative</a></li>
+          <li><a href="/en/accompagnement/business-plan/">Business plan</a></li>
+          <li><a href="/en/accompagnement/financement-subventions/">Funding and grants</a></li>
+          <li><a href="/en/accompagnement/normes-sanitaires-onssa/">ONSSA standards</a></li>
+          <li><a href="/en/accompagnement/vente-en-ligne/">Sell online</a></li>
+          <li><a href="/en/aides-agricoles/">Grants guide</a></li>
         </ul>
       </div>
       <div class="col-6 col-lg-2">
@@ -349,7 +1337,7 @@
     </div>
     <div class="al-footer-bottom d-flex flex-column flex-md-row justify-content-between gap-2">
       <span>© <span data-year>2026</span> WahaTech. All rights reserved.</span>
-      <span>Born in Morocco, open to the world.</span>
+      <span>Made in Morocco, for cooperatives.</span>
     </div>
   </div>
 </footer>

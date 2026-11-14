@@ -256,7 +256,7 @@ a:hover { color: var(--al-forest); }
 .al-progress span { display: block; height: 100%; background: var(--al-lime); border-radius: 99px; width: 0; transition: width 1.2s var(--al-ease); }
 
 /* Simple pages */
-.al-page { padding: 4rem 0 6rem; }
+.al-page { padding-top: 4rem; padding-bottom: 6rem; }  /* garde les marges latérales de .container */
 .al-page h1 { color: var(--al-forest); font-size: clamp(2rem, 4vw, 3rem); }
 .al-error { min-height: 70vh; display: grid; place-items: center; text-align: center; padding: 3rem 1rem; }
 .al-error .code { font-family: var(--al-display); font-size: clamp(5rem, 16vw, 9rem); color: var(--al-forest); line-height: 1; }
@@ -789,3 +789,36 @@ html, body { overflow-x: clip; }
 .al-job-ico { flex: 0 0 auto; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 12px; background: var(--al-sand); color: var(--al-leaf); }
 .al-job-tags { display: flex; flex-wrap: wrap; gap: .35rem .75rem; align-items: center; margin-top: .35rem; font-size: .82rem; color: var(--al-ink); }
 .al-job-tags > span { display: inline-flex; align-items: center; gap: .25rem; }
+
+/* Mise en relation par l'équipe WahaTech (à la place des coordonnées des membres) */
+.al-relay { background: var(--al-sand, #f6f1e7); border-radius: 14px; padding: 1rem 1.1rem; }
+.al-relay .al-phone { font-size: 1.2rem; }
+[dir="rtl"] .al-relay p[dir="ltr"] { text-align: right; }
+.al-title-verified { display: inline-flex; align-items: center; gap: .2rem; font-size: .75rem; font-weight: 600; color: #1f7a45; background: #e6f4ec; border-radius: 999px; padding: .05rem .5rem; white-space: nowrap; vertical-align: middle; }
+/* Annonce à la une (payée, activée par l'équipe) */
+.al-featured { position: absolute; top: .6rem; inset-inline-end: .6rem; display: inline-flex; align-items: center; gap: .25rem; font-size: .72rem; font-weight: 700; padding: .2rem .6rem; border-radius: 999px; background: #f2b632; color: #3b2a00; box-shadow: var(--al-shadow); }
+.al-featured-inline { position: static; align-self: flex-start; width: fit-content; margin: .15rem 0; box-shadow: none; }
+.al-aid-provider { display: block; margin-top: .35rem; font-size: .8rem; color: var(--al-muted, #5b6b78); }
+
+/* Guichets uniques du guide des aides */
+.al-guichet { display: flex; justify-content: space-between; gap: 1rem; padding: .45rem 0; border-top: 1px solid var(--al-line); }
+.al-guichet a { white-space: nowrap; font-weight: 600; }
+#sources ul { overflow-wrap: anywhere; }
+
+
+
+
+/* Prix des marchés de gros : lisible sur téléphone (fourchette sous le produit, tendance en %) */
+.al-market-select { display: flex; gap: .5rem; }
+.al-market-select .form-select { flex: 1; min-width: 0; }
+.al-prices th[scope="row"] { font-weight: 400; }
+.al-price-name { font-weight: 700; }
+.al-price-unit { font-size: .85rem; color: var(--al-muted); }
+.al-price-range { display: block; font-size: .8rem; color: var(--al-muted); margin-top: .1rem; }
+[dir="rtl"] .al-price-range { text-align: right; }
+.al-prices .al-trend { white-space: nowrap; }
+.al-prices .num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+@media (max-width: 767.98px) {
+  .al-prices .al-col-range { display: none; }
+  .al-prices th, .al-prices td { padding-inline: .35rem; }
+}

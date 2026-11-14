@@ -9,7 +9,7 @@
   <meta name="theme-color" content="#0f3550">
   <meta name="htmx-config" content='{"includeIndicatorStyles": false}'>
   <meta property="og:title" content="WahaTech">
-  <meta property="og:description" content="Agricultural innovation, from the oases to the world">
+  <meta property="og:description" content="Local products and support for Moroccan cooperatives">
   <meta property="og:type" content="website">
   
   <link rel="alternate" hreflang="fr" href="/fr/stress-hydrique/exemple/">
@@ -21,6 +21,8 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="/static/vendor/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="/static/css/wahatech.css">
+  <link rel="stylesheet" href="/static/css/cooperatives.css">
+  <link rel="stylesheet" href="/static/css/terroir.css">
   <script src="/static/js/wahatech.js" defer></script>
   <link rel="stylesheet" href="/static/vendor/leaflet/leaflet.css">
 <script src="/static/vendor/leaflet/leaflet.js" defer></script>
@@ -38,7 +40,14 @@
     <a href="https://wahatech.pythonanywhere.com/en/avis/">Give my feedback</a>
   </div>
   
-<nav class="navbar navbar-expand-xxl al-nav" aria-label="Main navigation">
+<div class="tr-topbar">
+  <div class="container">
+    <span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg> Delivery across Morocco</span>
+    <span class="d-none d-md-inline-flex"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/></svg> Cash on delivery</span>
+    <span class="d-none d-lg-inline-flex"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg> Verified cooperatives</span>
+  </div>
+</div>
+<nav class="navbar navbar-expand-lg al-nav" aria-label="Main navigation">
   <div class="container">
     <a class="al-brand" href="/en/" dir="ltr">
       <img src="/static/img/logo-mark.svg" alt="" width="46" height="51">
@@ -48,39 +57,31 @@
       <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg>
     </button>
     <div class="collapse navbar-collapse" id="alNav">
-      <ul class="navbar-nav mx-auto mb-3 mb-xxl-0">
-        <li class="nav-item"><a class="nav-link" href="/en/consultation-agricole/">Agricultural consulting</a></li>
-        <li class="nav-item"><a class="nav-link" href="/en/cooperatives/">Cooperatives</a></li>
-        <li class="nav-item"><a class="nav-link" href="/en/intrants/">Inputs</a></li>
-        <li class="nav-item"><a class="nav-link" href="/en/foncier/">Land</a></li>
-        <li class="nav-item"><a class="nav-link" href="/en/materiel/">Equipment</a></li>
-        <li class="nav-item"><a class="nav-link" href="/en/emploi/">Jobs</a></li>
+      <ul class="navbar-nav mx-auto mb-3 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="/en/boutique/">Shop</a></li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Info</a>
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Products</a>
           <ul class="dropdown-menu al-dropdown">
-            <li><h6 class="dropdown-header">Tools</h6></li>
-            <li><a class="dropdown-item" href="/en/stress-hydrique/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg> Water stress <span class="hs-beta-inline">Beta</span></a></li>
-            <li><a class="dropdown-item" href="/en/carte/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 4.99-5.54 10.19-7.4 11.8a1 1 0 0 1-1.2 0C9.54 20.19 4 14.99 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg> Map</a></li>
-            <li><a class="dropdown-item" href="/en/calendrier-cultural/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/></svg> Crop calendar</a></li>
+            <li><a class="dropdown-item" href="/en/boutique/?category=argan">Argan</a></li>
+            <li><a class="dropdown-item" href="/en/boutique/?category=honey">Honey and bee products</a></li>
+            <li><a class="dropdown-item" href="/en/boutique/?category=saffron">Saffron</a></li>
+            <li><a class="dropdown-item" href="/en/boutique/?category=dates">Dates and date products</a></li>
+            <li><a class="dropdown-item" href="/en/boutique/?category=olive">Olive oil and olives</a></li>
+            <li><a class="dropdown-item" href="/en/boutique/?category=nuts">Almonds and dried fruit</a></li>
+            <li><a class="dropdown-item" href="/en/boutique/?category=cosmetics">Natural cosmetics</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><h6 class="dropdown-header">Water and climate</h6></li>
-            <li><a class="dropdown-item" href="/en/meteo/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="M20 12h2"/><path d="m19.07 4.93-1.41 1.41"/><path d="M15.95 12.5a4 4 0 0 0-5.93-4.68"/><path d="M13 22H7a5 5 0 1 1 4.9-6H13a3 3 0 0 1 0 6Z"/></svg> Weather</a></li>
-            <li><a class="dropdown-item" href="/en/eau/barrages/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg> Dams</a></li>
-            <li><a class="dropdown-item" href="/en/eau/pluie/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg> Rainfall history</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><h6 class="dropdown-header">Market and advice</h6></li>
-            <li><a class="dropdown-item" href="/en/services/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg> WahaTech services</a></li>
-            <li><a class="dropdown-item" href="/en/prix-du-marche/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m22 7-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/></svg> Prices</a></li>
-            <li><a class="dropdown-item" href="/en/aides-agricoles/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg> Subsidies</a></li>
-            <li><a class="dropdown-item" href="/en/conseil/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></svg> Training and bulletins</a></li>
-            <li><a class="dropdown-item" href="/en/actualites/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg> Farming news</a></li>
+            <li><a class="dropdown-item" href="/en/cooperatives/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg> Professional catalogue</a></li>
           </ul>
         </li>
+        <li class="nav-item"><a class="nav-link" href="/en/boutique/cooperatives/">Cooperatives</a></li>
+        <li class="nav-item"><a class="nav-link" href="/en/accompagnement/">Support</a></li>
+        <li class="nav-item"><a class="nav-link" href="/en/aides-agricoles/">Subsidies</a></li>
+        <li class="nav-item"><a class="nav-link" href="/en/a-propos/">About</a></li>
       </ul>
-      <div class="d-flex flex-wrap flex-xxl-nowrap align-items-center gap-2">
+      <div class="d-flex flex-wrap flex-lg-nowrap align-items-center gap-2">
         
 <form method="post" action="/i18n/setlang/" class="al-lang m-0" aria-label="Site language">
-  <input type="hidden" name="csrfmiddlewaretoken" value="wp0LM1OG4obnTwr1g30dpdpcFdL8Kquwm5KvnxgUmPSsH55BTb2n4ZVtlFnCV4SK">
+  <input type="hidden" name="csrfmiddlewaretoken" value="UUHOGSMFSfvrfqOGWjoXH8t0r7qU4DGJEf0qofGfYuFKsYKIMGYYxrOHTElzS1Kp">
   <input type="hidden" name="next" value="/en/stress-hydrique/exemple/">
   
   <button type="submit" name="language" value="fr" lang="fr" class=""  title="French">FR</button>
@@ -91,6 +92,9 @@
   
 </form>
 
+        <a class="wc-cart-link" href="/en/boutique/panier/" aria-label="My cart">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+        </a>
         
           <a class="btn btn-al-ghost" href="https://wahatech.pythonanywhere.com/en/compte/connexion/">Log in</a>
           <a class="btn btn-al" href="https://wahatech.pythonanywhere.com/en/avis/">Give my feedback</a>
@@ -144,51 +148,51 @@
       <form class="al-card hs-form" method="post" action="/en/stress-hydrique/analyser/"
            
            >
-        <input type="hidden" name="csrfmiddlewaretoken" value="wp0LM1OG4obnTwr1g30dpdpcFdL8Kquwm5KvnxgUmPSsH55BTb2n4ZVtlFnCV4SK">
+        <input type="hidden" name="csrfmiddlewaretoken" value="UUHOGSMFSfvrfqOGWjoXH8t0r7qU4DGJEf0qofGfYuFKsYKIMGYYxrOHTElzS1Kp">
         <h2 class="al-h-section"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></svg> Your plot</h2>
         <input type="hidden" name="coordinates" id="id_coordinates">
         <p class="hs-parcel-info" data-hs-area>No plot drawn yet.</p>
         <div class="mb-3">
           <label class="form-label" for="id_crop">Crop</label>
           <select name="crop" class="form-select" id="id_crop">
-  <option value="Agrumes">Agrumes</option>
+  <option value="Agrumes">Citrus</option>
 
-  <option value="Canne à sucre">Canne à sucre</option>
+  <option value="Canne à sucre">Sugar cane</option>
 
-  <option value="Betterave sucrière">Betterave sucrière</option>
+  <option value="Betterave sucrière">Sugar beet</option>
 
-  <option value="Riz">Riz</option>
+  <option value="Riz">Rice</option>
 
-  <option value="Céréales (blé / orge)">Céréales (blé / orge)</option>
+  <option value="Céréales (blé / orge)">Cereals (wheat / barley)</option>
 
-  <option value="Maraîchage">Maraîchage</option>
+  <option value="Maraîchage">Vegetables</option>
 
-  <option value="Olivier">Olivier</option>
+  <option value="Olivier">Olive tree</option>
 
-  <option value="Vigne">Vigne</option>
+  <option value="Vigne">Vine</option>
 
-  <option value="Arboriculture (pommier, prunier)">Arboriculture (pommier, prunier)</option>
+  <option value="Arboriculture (pommier, prunier)">Fruit trees (apple, plum)</option>
 
-  <option value="Luzerne">Luzerne</option>
+  <option value="Luzerne">Alfalfa</option>
 
-  <option value="Légumineuses">Légumineuses</option>
+  <option value="Légumineuses">Legumes</option>
 
-  <option value="Maraîchage sous serre">Maraîchage sous serre</option>
+  <option value="Maraîchage sous serre">Greenhouse vegetables</option>
 
-  <option value="Arganier">Arganier</option>
+  <option value="Arganier">Argan tree</option>
 
-  <option value="Bananier">Bananier</option>
+  <option value="Bananier">Banana</option>
 
-  <option value="Palmier dattier" selected>Palmier dattier</option>
+  <option value="Palmier dattier" selected>Date palm</option>
 
-  <option value="Rosier à parfum">Rosier à parfum</option>
+  <option value="Rosier à parfum">Damask rose</option>
 
 </select>
         </div>
         <div class="row g-3 mb-3">
           <div class="col-sm-6">
             <label class="form-label" for="id_analysis_date">Date to analyse</label>
-            <input type="date" name="analysis_date" value="2026-10-03" min="2019-01-01" max="2026-11-02" class="form-control" required id="id_analysis_date">
+            <input type="date" name="analysis_date" value="2026-10-09" min="2019-01-01" max="2026-11-08" class="form-control" required id="id_analysis_date">
           </div>
           <div class="col-sm-6">
             <label class="form-label" for="id_lookback_days">Observed period</label>
@@ -228,8 +232,8 @@
   <div class="hs-report-head">
     <div>
       <div class="al-kicker mb-1">Analysis report</div>
-      <h2 class="hs-report-title">Errachidia – Tafilalet · Palmier dattier</h2>
-      <p class="text-secondary mb-0">Date analysed : <strong dir="ltr">03/10/2026</strong> · 3.81 ha · near Erfoud (Tafilalet)</p>
+      <h2 class="hs-report-title">Errachidia – Tafilalet · Date palm</h2>
+      <p class="text-secondary mb-0">Date analysed : <strong dir="ltr">09/10/2026</strong> · 3.81 ha · near <bdi>Erfoud (Tafilalet)</bdi></p>
     </div>
     <div class="d-flex flex-wrap gap-2">
       <a class="btn btn-al" href="/en/stress-hydrique/exemple/rapport.html"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 12h-6l-2 3h-4l-2-3H2"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg> Download the report</a>
@@ -242,16 +246,16 @@
 
   <div class="row g-4">
     <div class="col-lg-5">
-      <div class="hs-status hs-status-normal">
-        <span class="hs-status-ico"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg></span>
+      <div class="hs-status hs-status-moderate">
+        <span class="hs-status-ico"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></span>
         <div>
           <span class="hs-status-label">Water stress level</span>
-          <strong class="hs-status-value">Normal</strong>
-          <span class="hs-status-conf">Confidence <b dir="ltr">52 %</b></span>
+          <strong class="hs-status-value">Moderate</strong>
+          <span class="hs-status-conf">Confidence <b dir="ltr">66 %</b></span>
         </div>
       </div>
       <p class="hs-status-text">
-        The plot shows no marked water stress.
+        Moderate water stress: adjust irrigation and monitor the plot.
         
       </p>
       <h3 class="hs-h3">Probabilities</h3>
@@ -259,29 +263,29 @@
         
         <div class="hs-prob">
           <span>Normal</span>
-          <svg viewBox="0 0 100 8" preserveAspectRatio="none" role="img" aria-label="Normal 52 %">
+          <svg viewBox="0 0 100 8" preserveAspectRatio="none" role="img" aria-label="Normal 17 %">
             <rect x="0" y="0" width="100" height="8" rx="4" class="hs-prob-bg"/>
-            <rect x="0" y="0" width="52.2" height="8" rx="4" class="hs-prob-normal"/>
+            <rect x="0" y="0" width="17.09" height="8" rx="4" class="hs-prob-normal"/>
           </svg>
-          <b dir="ltr">52 %</b>
+          <b dir="ltr">17 %</b>
         </div>
         
         <div class="hs-prob">
           <span>Moderate</span>
-          <svg viewBox="0 0 100 8" preserveAspectRatio="none" role="img" aria-label="Moderate 45 %">
+          <svg viewBox="0 0 100 8" preserveAspectRatio="none" role="img" aria-label="Moderate 66 %">
             <rect x="0" y="0" width="100" height="8" rx="4" class="hs-prob-bg"/>
-            <rect x="0" y="0" width="44.52" height="8" rx="4" class="hs-prob-moderate"/>
+            <rect x="0" y="0" width="66.29" height="8" rx="4" class="hs-prob-moderate"/>
           </svg>
-          <b dir="ltr">45 %</b>
+          <b dir="ltr">66 %</b>
         </div>
         
         <div class="hs-prob">
           <span>Severe</span>
-          <svg viewBox="0 0 100 8" preserveAspectRatio="none" role="img" aria-label="Severe 3 %">
+          <svg viewBox="0 0 100 8" preserveAspectRatio="none" role="img" aria-label="Severe 17 %">
             <rect x="0" y="0" width="100" height="8" rx="4" class="hs-prob-bg"/>
-            <rect x="0" y="0" width="3.28" height="8" rx="4" class="hs-prob-severe"/>
+            <rect x="0" y="0" width="16.62" height="8" rx="4" class="hs-prob-severe"/>
           </svg>
-          <b dir="ltr">3 %</b>
+          <b dir="ltr">17 %</b>
         </div>
         
       </div>
@@ -290,23 +294,23 @@
     <div class="col-lg-7">
       
       <div class="hs-kpis">
-        <div class="hs-kpi"><span>NDVI</span><b dir="ltr">0.4059</b><small>vegetation vigour</small></div>
-        <div class="hs-kpi"><span>NDWI</span><b dir="ltr">0.0633</b><small>water in the leaves</small></div>
-        <div class="hs-kpi"><span>MSI</span><b dir="ltr">0.8598</b><small>water stress (higher = drier)</small></div>
-        <div class="hs-kpi"><span>Rain 30 d</span><b dir="ltr">40.2 mm</b><small>of which last 7 days : 0.0 mm</small></div>
-        <div class="hs-kpi"><span>Max temp.</span><b dir="ltr">31.2 °C</b><small>mean 19.4 °C</small></div>
-        <div class="hs-kpi"><span>Dry days</span><b dir="ltr">13</b><small>in a row at most</small></div>
+        <div class="hs-kpi"><span>NDVI</span><b dir="ltr">0.2928</b><small>vegetation vigour</small></div>
+        <div class="hs-kpi"><span>NDWI</span><b dir="ltr">-0.1019</b><small>water in the leaves</small></div>
+        <div class="hs-kpi"><span>MSI</span><b dir="ltr">1.2552</b><small>water stress (higher = drier)</small></div>
+        <div class="hs-kpi"><span>Rain 30 d</span><b dir="ltr">74.8 mm</b><small>of which last 7 days : 0.0 mm</small></div>
+        <div class="hs-kpi"><span>Max temp.</span><b dir="ltr">31.1 °C</b><small>mean 19.9 °C</small></div>
+        <div class="hs-kpi"><span>Dry days</span><b dir="ltr">14</b><small>in a row at most</small></div>
       </div>
       
       
       <h3 class="hs-h3 mt-4">Rain and temperatures</h3>
       <svg class="hs-chart" dir="ltr" viewBox="0 0 640 220" role="img" aria-label="Daily rain and temperatures over the period">
         <line x1="34" x2="606" y1="194" y2="194" class="hs-axis"/>
-        <rect x="36.9" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-04 : 0.0 mm</title></rect><rect x="55.9" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-05 : 0.0 mm</title></rect><rect x="75.0" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-06 : 0.0 mm</title></rect><rect x="94.1" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-07 : 0.0 mm</title></rect><rect x="113.1" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-08 : 0.0 mm</title></rect><rect x="132.2" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-09 : 0.0 mm</title></rect><rect x="151.3" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-10 : 0.0 mm</title></rect><rect x="170.3" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-11 : 0.0 mm</title></rect><rect x="189.4" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-12 : 0.0 mm</title></rect><rect x="208.5" y="58.0" width="13.3" height="136.0" class="hs-bar"><title>2026-09-13 : 12.4 mm</title></rect><rect x="227.5" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-14 : 0.0 mm</title></rect><rect x="246.6" y="71.2" width="13.3" height="122.8" class="hs-bar"><title>2026-09-15 : 11.2 mm</title></rect><rect x="265.7" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-16 : 0.0 mm</title></rect><rect x="284.7" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-17 : 0.0 mm</title></rect><rect x="303.8" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-18 : 0.0 mm</title></rect><rect x="322.9" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-19 : 0.0 mm</title></rect><rect x="341.9" y="12.0" width="13.3" height="182.0" class="hs-bar"><title>2026-09-20 : 16.6 mm</title></rect><rect x="361.0" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-21 : 0.0 mm</title></rect><rect x="380.1" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-22 : 0.0 mm</title></rect><rect x="399.1" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-23 : 0.0 mm</title></rect><rect x="418.2" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-24 : 0.0 mm</title></rect><rect x="437.3" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-25 : 0.0 mm</title></rect><rect x="456.3" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-26 : 0.0 mm</title></rect><rect x="475.4" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-27 : 0.0 mm</title></rect><rect x="494.5" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-28 : 0.0 mm</title></rect><rect x="513.5" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-29 : 0.0 mm</title></rect><rect x="532.6" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-30 : 0.0 mm</title></rect><rect x="551.7" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-10-01 : 0.0 mm</title></rect><rect x="570.7" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-10-02 : 0.0 mm</title></rect><rect x="589.8" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-10-03 : 0.0 mm</title></rect>
-        <polyline points="43.5,59.3 62.6,37.5 81.7,41.7 100.7,42.3 119.8,61.7 138.9,35.1 157.9,64.8 177.0,73.3 196.1,54.5 215.1,63.6 234.2,63.6 253.3,70.8 272.3,53.9 291.4,80.6 310.5,75.7 329.5,42.9 348.6,59.3 367.7,58.7 386.7,69.0 405.8,67.2 424.9,72.1 443.9,44.8 463.0,41.7 482.1,63.0 501.1,75.7 520.2,76.9 539.3,52.6 558.3,57.5 577.4,84.2 596.5,67.8" class="hs-line-max"/>
-        <polyline points="43.5,133.3 62.6,142.4 81.7,146.7 100.7,129.7 119.8,155.2 138.9,143.0 157.9,169.1 177.0,164.3 196.1,150.3 215.1,147.3 234.2,155.2 253.3,168.5 272.3,149.1 291.4,163.7 310.5,156.4 329.5,143.0 348.6,158.8 367.7,164.9 386.7,147.9 405.8,161.2 424.9,157.6 443.9,140.0 463.0,147.9 482.1,160.0 501.1,164.9 520.2,164.9 539.3,128.5 558.3,150.9 577.4,169.7 596.5,167.9" class="hs-line-min"/>
-        <text x="43.5" y="214" class="hs-tick" text-anchor="middle">04/09</text><text x="138.9" y="214" class="hs-tick" text-anchor="middle">09/09</text><text x="234.2" y="214" class="hs-tick" text-anchor="middle">14/09</text><text x="329.5" y="214" class="hs-tick" text-anchor="middle">19/09</text><text x="424.9" y="214" class="hs-tick" text-anchor="middle">24/09</text><text x="520.2" y="214" class="hs-tick" text-anchor="middle">29/09</text>
-        <text x="4" y="20" class="hs-tick">17 mm</text>
+        <rect x="36.9" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-10 : 0.0 mm</title></rect><rect x="55.9" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-11 : 0.0 mm</title></rect><rect x="75.0" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-12 : 0.0 mm</title></rect><rect x="94.1" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-13 : 0.0 mm</title></rect><rect x="113.1" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-14 : 0.0 mm</title></rect><rect x="132.2" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-15 : 0.0 mm</title></rect><rect x="151.3" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-16 : 0.0 mm</title></rect><rect x="170.3" y="12.0" width="13.3" height="182.0" class="hs-bar"><title>2026-09-17 : 38.6 mm</title></rect><rect x="189.4" y="81.8" width="13.3" height="112.2" class="hs-bar"><title>2026-09-18 : 23.8 mm</title></rect><rect x="208.5" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-19 : 0.0 mm</title></rect><rect x="227.5" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-20 : 0.0 mm</title></rect><rect x="246.6" y="183.2" width="13.3" height="10.8" class="hs-bar"><title>2026-09-21 : 2.3 mm</title></rect><rect x="265.7" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-22 : 0.0 mm</title></rect><rect x="284.7" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-23 : 0.0 mm</title></rect><rect x="303.8" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-24 : 0.0 mm</title></rect><rect x="322.9" y="146.4" width="13.3" height="47.6" class="hs-bar"><title>2026-09-25 : 10.1 mm</title></rect><rect x="341.9" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-26 : 0.0 mm</title></rect><rect x="361.0" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-27 : 0.0 mm</title></rect><rect x="380.1" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-28 : 0.0 mm</title></rect><rect x="399.1" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-29 : 0.0 mm</title></rect><rect x="418.2" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-09-30 : 0.0 mm</title></rect><rect x="437.3" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-10-01 : 0.0 mm</title></rect><rect x="456.3" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-10-02 : 0.0 mm</title></rect><rect x="475.4" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-10-03 : 0.0 mm</title></rect><rect x="494.5" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-10-04 : 0.0 mm</title></rect><rect x="513.5" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-10-05 : 0.0 mm</title></rect><rect x="532.6" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-10-06 : 0.0 mm</title></rect><rect x="551.7" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-10-07 : 0.0 mm</title></rect><rect x="570.7" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-10-08 : 0.0 mm</title></rect><rect x="589.8" y="194.0" width="13.3" height="0.0" class="hs-bar"><title>2026-10-09 : 0.0 mm</title></rect>
+        <polyline points="43.5,67.8 62.6,50.2 81.7,59.9 100.7,37.5 119.8,59.9 138.9,50.2 157.9,58.7 177.0,35.7 196.1,81.8 215.1,50.2 234.2,59.3 253.3,58.7 272.3,46.6 291.4,68.4 310.5,63.6 329.5,54.5 348.6,93.9 367.7,61.7 386.7,42.3 405.8,39.3 424.9,53.9 443.9,68.4 463.0,54.5 482.1,53.3 501.1,71.5 520.2,53.9 539.3,59.3 558.3,53.3 577.4,52.6 596.5,66.6" class="hs-line-max"/>
+        <polyline points="43.5,158.8 62.6,149.1 81.7,157.6 100.7,121.2 119.8,161.2 138.9,141.8 157.9,155.2 177.0,126.1 196.1,174.6 215.1,142.4 234.2,147.3 253.3,160.6 272.3,138.8 291.4,166.1 310.5,162.5 329.5,147.9 348.6,177.0 367.7,150.9 386.7,134.5 405.8,143.6 424.9,143.6 443.9,144.3 463.0,141.2 482.1,151.5 501.1,164.3 520.2,143.0 539.3,155.8 558.3,152.1 577.4,132.7 596.5,156.4" class="hs-line-min"/>
+        <text x="43.5" y="214" class="hs-tick" text-anchor="middle">10/09</text><text x="138.9" y="214" class="hs-tick" text-anchor="middle">15/09</text><text x="234.2" y="214" class="hs-tick" text-anchor="middle">20/09</text><text x="329.5" y="214" class="hs-tick" text-anchor="middle">25/09</text><text x="424.9" y="214" class="hs-tick" text-anchor="middle">30/09</text><text x="520.2" y="214" class="hs-tick" text-anchor="middle">05/10</text>
+        <text x="4" y="20" class="hs-tick">39 mm</text>
         <text x="636" y="20" class="hs-tick" text-anchor="end">35 °C</text>
         <text x="636" y="194" class="hs-tick" text-anchor="end">5 °C</text>
       </svg>
@@ -317,9 +321,9 @@
 
   <div class="row g-4 mt-1">
     <div class="col-lg-6">
-      <h3 class="hs-h3">Recommendations <span class="hs-priority hs-priority-low">low priority</span></h3>
-      <p class="fw-semibold mb-2" lang="fr" dir="ltr">Stress hydrique normal</p>
-      <ul class="hs-actions" lang="fr" dir="ltr"><li>Maintenir le calendrier d&#x27;irrigation actuel.</li><li>Continuer le suivi des indices toutes les 1 à 2 semaines (revisite Sentinel-2 : 5 jours).</li><li>Anticiper les périodes chaudes (juin-septembre) : les besoins en eau augmentent fortement.</li></ul>
+      <h3 class="hs-h3">Recommendations <span class="hs-priority hs-priority-medium">medium priority</span></h3>
+      <p class="fw-semibold mb-2">Moderate water stress detected</p>
+      <ul class="hs-actions"><li>Water more often: +20 to 30% more water, preferably early in the morning or in the evening.</li><li>Check the irrigation network (clogged drippers, pressure, leaks, state of the channels).</li><li>Mulch the soil (crop residues, straw) to limit evaporation.</li><li>Check the plot every 2 to 3 days.</li><li>Date palm: irrigate in a basin at the foot, especially during fruit set and date sizing (April–September).</li></ul>
     </div>
     <div class="col-lg-6">
       <h3 class="hs-h3">Spectral indices</h3>
@@ -328,19 +332,19 @@
           <thead><tr><th>Index</th><th>Value</th><th>Normal range</th><th>Status</th></tr></thead>
           <tbody>
           
-          <tr><td>NDVI</td><td dir="ltr">0.4059</td><td dir="ltr">0.25 – 0.8</td>
+          <tr><td>NDVI</td><td dir="ltr">0.2928</td><td dir="ltr">0.25 – 0.8</td>
             <td><span class="hs-tag hs-tag-healthy">Normal</span></td></tr>
           
-          <tr><td>NDWI</td><td dir="ltr">0.0633</td><td dir="ltr">0.0 – 0.5</td>
+          <tr><td>NDWI</td><td dir="ltr">-0.1019</td><td dir="ltr">0.0 – 0.5</td>
+            <td><span class="hs-tag hs-tag-low">Low</span></td></tr>
+          
+          <tr><td>MSI</td><td dir="ltr">1.2552</td><td dir="ltr">0.0 – 1.0</td>
+            <td><span class="hs-tag hs-tag-high">High</span></td></tr>
+          
+          <tr><td>SAVI</td><td dir="ltr">0.1931</td><td dir="ltr">0.18 – 0.65</td>
             <td><span class="hs-tag hs-tag-healthy">Normal</span></td></tr>
           
-          <tr><td>MSI</td><td dir="ltr">0.8598</td><td dir="ltr">0.0 – 1.0</td>
-            <td><span class="hs-tag hs-tag-healthy">Normal</span></td></tr>
-          
-          <tr><td>SAVI</td><td dir="ltr">0.303</td><td dir="ltr">0.18 – 0.65</td>
-            <td><span class="hs-tag hs-tag-healthy">Normal</span></td></tr>
-          
-          <tr><td>EVI</td><td dir="ltr">0.2119</td><td dir="ltr">0.15 – 0.6</td>
+          <tr><td>EVI</td><td dir="ltr">0.1649</td><td dir="ltr">0.15 – 0.6</td>
             <td><span class="hs-tag hs-tag-healthy">Normal</span></td></tr>
           
           </tbody>
@@ -348,7 +352,7 @@
       </div>
     </div>
   </div>
-  <p class="small text-secondary mb-0">Model : Random Forest · data synthetic · pred_20261108_140750_174813 · Sentinel-2 : 6 image(s)</p>
+  <p class="small text-secondary mb-0">Model : Random Forest · data synthetic · pred_20261114_011035_528064 · Sentinel-2 : 6 image(s)</p>
 </section>
 
   </div>
@@ -359,9 +363,9 @@
     <ul class="hs-recent">
       
       <li><a href="/en/stress-hydrique/exemple/">
-        <span class="hs-dot hs-dot-0" aria-hidden="true"></span>
-        <strong>Normal</strong> · Errachidia – Tafilalet · Palmier dattier · 3.81 ha
-        <span class="text-secondary">· 3 Oct 2026 · demo</span>
+        <span class="hs-dot hs-dot-1" aria-hidden="true"></span>
+        <strong>Moderate</strong> · Errachidia – Tafilalet · Date palm · 3.81 ha
+        <span class="text-secondary">· 9 Oct 2026 · demo</span>
       </a></li>
       
     </ul>
@@ -385,29 +389,25 @@
           <img src="/static/img/logo-mark.svg" alt="" width="46" height="51">
           <span>Waha<em>Tech</em></span>
         </a>
-        <p class="mt-3 pe-lg-4">Agricultural innovation, from the oases to the world. The platform that brings together the skills, products and needs of farming.</p>
+        <p class="mt-3 pe-lg-4">The platform of Moroccan cooperatives: a local-products shop for customers and full support for cooperatives.</p>
       </div>
       <div class="col-6 col-lg-2 offset-lg-1">
-        <h4>Platform</h4>
+        <h4>Shop</h4>
         <ul>
-          <li><a href="/en/consultation-agricole/">Agricultural consulting</a></li>
-          <li><a href="/en/cooperatives/">Cooperative products</a></li>
-          <li><a href="/en/intrants/">Farm inputs</a></li>
-          <li><a href="/en/foncier/">Land and farms</a></li>
-          <li><a href="/en/materiel/">Equipment and transport</a></li>
-          <li><a href="/en/emploi/">Farm jobs</a></li>
-          <li><a href="/en/services/">WahaTech services</a></li>
-          <li><a href="/en/carte/">Map</a></li>
-          <li><a href="/en/aides-agricoles/">Farm subsidies guide</a></li>
-          <li><a href="/en/prix-du-marche/">Wholesale market prices</a></li>
-          <li><a href="/en/meteo/">Weather and alerts</a></li>
-          <li><a href="/en/eau/barrages/">Dam filling levels</a></li>
-          <li><a href="/en/eau/pluie/">Rainfall history</a></li>
-          <li><a href="/en/conseil/">Training and advisory bulletins</a></li>
-          <li><a href="/en/actualites/">Farming news</a></li>
-          <li><a href="/en/calendrier-cultural/">Crop calendar</a></li>
-          <li><a href="/en/stress-hydrique/">Water stress (HydroStress)</a></li>
-          <li><a href="/en/#marketplace">Marketplace</a></li>
+          <li><a href="/en/boutique/">All products</a></li>
+          <li><a href="/en/boutique/cooperatives/">Our cooperatives</a></li>
+          <li><a href="/en/cooperatives/">Professional catalogue</a></li>
+          <li><a href="/en/boutique/panier/">My cart</a></li>
+          
+        </ul>
+        <h4 class="mt-4">Support</h4>
+        <ul>
+          <li><a href="/en/accompagnement/creation-cooperative/">Set up a cooperative</a></li>
+          <li><a href="/en/accompagnement/business-plan/">Business plan</a></li>
+          <li><a href="/en/accompagnement/financement-subventions/">Funding and grants</a></li>
+          <li><a href="/en/accompagnement/normes-sanitaires-onssa/">ONSSA standards</a></li>
+          <li><a href="/en/accompagnement/vente-en-ligne/">Sell online</a></li>
+          <li><a href="/en/aides-agricoles/">Grants guide</a></li>
         </ul>
       </div>
       <div class="col-6 col-lg-2">
@@ -431,7 +431,7 @@
     </div>
     <div class="al-footer-bottom d-flex flex-column flex-md-row justify-content-between gap-2">
       <span>© <span data-year>2026</span> WahaTech. All rights reserved.</span>
-      <span>Born in Morocco, open to the world.</span>
+      <span>Made in Morocco, for cooperatives.</span>
     </div>
   </div>
 </footer>

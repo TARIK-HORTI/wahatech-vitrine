@@ -173,4 +173,9 @@
   document.querySelectorAll("[data-year]").forEach(function (el) {
     el.textContent = new Date().getFullYear();
   });
+  // Panier : la quantité est enregistrée dès qu'on la change (le bouton reste pour les navigateurs sans JS)
+  document.querySelectorAll("form[data-autosubmit] input[type=number]").forEach(function (input) {
+    input.addEventListener("change", function () { input.form.submit(); });
+  });
+
 })();
