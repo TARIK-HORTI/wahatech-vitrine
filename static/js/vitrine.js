@@ -7,11 +7,6 @@
     ar: "نسخة عرض: لتجربة هذه الخاصية، اضغط على «حسابات التجربة» أعلى الصفحة (النسخة التجريبية الكاملة).",
     en: "Showcase version: to try this feature, click “Test accounts” at the top of the page (full demo)."
   };
-  var EXAMPLE = {
-    fr: "Version vitrine : voici un exemple de rapport d'analyse.",
-    ar: "نسخة عرض: هذا مثال لتقرير تحليل.",
-    en: "Showcase version: here is a sample analysis report."
-  };
 
   function toast(message) {
     var box = document.createElement("div");
@@ -32,12 +27,6 @@
       window.location.href = alt ? alt.getAttribute("href") : "/" + e.submitter.value + "/";
       return;
     }
-    // HydroStress : montrer le rapport d'exemple
-    if (form.classList.contains("hs-form")) {
-      try { sessionStorage.setItem("vitrine-example", "1"); } catch (err) { /* stockage indisponible */ }
-      window.location.href = "/" + lang + "/stress-hydrique/exemple/#rapport";
-      return;
-    }
     toast(TEXT[lang] || TEXT.fr);
   }, true);
 
@@ -49,9 +38,4 @@
     toast(TEXT[lang] || TEXT.fr);
   }, true);
 
-  document.addEventListener("DOMContentLoaded", function () {
-    var flag = null;
-    try { flag = sessionStorage.getItem("vitrine-example"); sessionStorage.removeItem("vitrine-example"); } catch (err) { /* ignore */ }
-    if (flag) toast(EXAMPLE[lang] || EXAMPLE.fr);
-  });
 })();

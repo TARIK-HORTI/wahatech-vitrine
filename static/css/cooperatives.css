@@ -170,7 +170,7 @@
 .wc-track li.is-done { color: var(--al-forest); border-color: var(--al-leaf); }
 .wc-track li.is-done::before { background: var(--al-leaf); color: #fff; }
 .wc-status { display: inline-block; font-size: .78rem; font-weight: 700; padding: .3rem .7rem; border-radius: 999px; background: var(--al-sand); color: var(--al-forest); white-space: nowrap; }
-.wc-status-new { background: #e8f1fb; color: #1d4f91; }
+.wc-status-new, .wc-status-sent { background: #e8f1fb; color: #1d4f91; }
 .wc-status-confirmed, .wc-status-preparing { background: #fff4dc; color: #8a5300; }
 .wc-status-shipped { background: #efe9fb; color: #5b3aa6; }
 .wc-status-delivered { background: rgba(47, 143, 58, .14); color: #1f6b2a; }
@@ -280,3 +280,27 @@
 .wc-sub-price small { font-size: 1rem; font-weight: 400; opacity: .8; }
 .wc-checklist-dark { color: inherit; }
 div.wc-service { height: 100%; }
+
+/* Demandes de commande (modèle A) : une carte par coopérative */
+.wc-request { background: #fff; border: 1px solid var(--al-line); border-radius: 14px; padding: 1.1rem 1.25rem; margin-bottom: 1rem; }
+.wc-request-head { display: flex; flex-wrap: wrap; gap: .5rem 1rem; align-items: center; justify-content: space-between; margin-bottom: .75rem; }
+.wc-request-head h2, .wc-request-head h3 { font-size: 1.05rem; margin: 0; }
+.wc-request-client { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: .35rem 1rem; margin: .75rem 0; font-size: .92rem; }
+.wc-request-client dt { font-weight: 600; color: var(--al-muted); font-size: .8rem; }
+.wc-request-client dd { margin: 0; }
+.wc-request-actions { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; }
+.wc-request-actions form { margin: 0; }
+.wc-notice { padding: .8rem 1rem; border-radius: 12px; background: var(--al-sand); color: var(--al-forest); font-size: .9rem; }
+.wc-cart-coop { padding: .6rem 1.25rem; background: var(--al-sand); font-weight: 700; color: var(--al-forest); font-size: .9rem; }
+
+/* Accueil : trois parcours (consommateur, coopérative, agriculteur) */
+.wc-paths-section { padding-top: 3rem; }
+.wc-path { height: 100%; display: flex; flex-direction: column; gap: .6rem; padding: 1.6rem; background: #fff; border: 1px solid var(--al-line); border-radius: 18px; border-top: 4px solid var(--al-leaf); }
+.wc-path-coop { border-top-color: var(--al-forest); }
+.wc-path-farmer { border-top-color: #c9a227; }
+.wc-path h3 { font-size: 1.25rem; margin: 0; color: var(--al-forest); }
+.wc-path p { margin: 0; color: var(--al-muted); }
+.wc-path ul { list-style: none; padding: 0; margin: .25rem 0 .5rem; display: grid; gap: .4rem; font-size: .93rem; }
+.wc-path li { display: flex; gap: .45rem; align-items: flex-start; }
+.wc-path-ico { width: 52px; height: 52px; border-radius: 50%; display: grid; place-items: center; background: var(--al-sand); color: var(--al-forest); }
+.wc-path-actions { margin-top: auto; display: flex; flex-wrap: wrap; gap: .5rem; }
