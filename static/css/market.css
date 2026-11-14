@@ -1,0 +1,255 @@
+/* ==========================================================================
+   WahaTech — thème « marketplace des coopératives »
+   Terre cuite + vert olive, titres sans serif en deux couleurs, en-tête blanc,
+   bannière à bord arrondi, cartes secteurs et produits, pied de page sombre.
+   Chargé en dernier : il redéfinit les variables et habille les composants.
+   ========================================================================== */
+:root {
+  --mk-primary: #c8641e;
+  --mk-primary-dark: #a94f12;
+  --mk-primary-soft: #fbeee2;
+  --mk-olive: #6f8a2a;
+  --mk-olive-dark: #566c1d;
+  --mk-olive-soft: #eef2e2;
+  --mk-dark: #1f1b17;
+  --mk-text: #2b2621;
+  --mk-muted: #7a7068;
+  --mk-line: #eee6dc;
+  --mk-bg: #ffffff;
+  --mk-cream: #fdf7f1;
+  --mk-radius: 16px;
+  --mk-shadow: 0 1px 2px rgba(31, 27, 23, .05), 0 10px 30px rgba(31, 27, 23, .07);
+
+  /* Les anciennes variables pointent vers la nouvelle palette */
+  --al-forest: var(--mk-text);
+  --al-forest-2: #3a322b;
+  --al-leaf: var(--mk-olive);
+  --al-lime: var(--mk-primary);
+  --al-sun: var(--mk-primary);
+  --al-clay: var(--mk-primary);
+  --al-sand: var(--mk-cream);
+  --al-cream: var(--mk-bg);
+  --al-ink: var(--mk-text);
+  --al-muted: var(--mk-muted);
+  --al-line: var(--mk-line);
+  --al-radius: var(--mk-radius);
+  --al-shadow: var(--mk-shadow);
+  --tr-gold: var(--mk-primary);
+  --tr-gold-dark: var(--mk-primary-dark);
+  --tr-deep: var(--mk-dark);
+  --al-display: var(--al-font);
+}
+
+body { background: var(--mk-bg); color: var(--mk-text); }
+h1, h2, h3, .al-display { font-family: var(--al-font); font-weight: 800; letter-spacing: -.02em; }
+.lang-ar h1, .lang-ar h2, .lang-ar h3 { letter-spacing: 0; }
+a { color: var(--mk-primary); }
+a:hover { color: var(--mk-primary-dark); }
+::selection { background: var(--mk-primary); color: #fff; }
+:focus-visible { outline-color: var(--mk-primary); }
+
+/* ---------- Boutons ---------- */
+.btn-al, .tr-btn-gold { background: var(--mk-primary); color: #fff; border: 0; border-radius: 999px; font-weight: 700; text-transform: none; letter-spacing: 0; }
+.btn-al:hover, .btn-al:focus-visible, .tr-btn-gold:hover, .tr-btn-gold:focus-visible { background: var(--mk-primary-dark); color: #fff; box-shadow: 0 10px 22px rgba(200, 100, 30, .28); }
+.btn-al-ghost, .tr-btn-outline { background: #fff; color: var(--mk-olive); border: 1.5px solid var(--mk-olive); border-radius: 999px; font-weight: 700; text-transform: none; letter-spacing: 0; }
+.btn-al-ghost:hover, .tr-btn-outline:hover { background: var(--mk-olive); color: #fff; border-color: var(--mk-olive); }
+.btn-al-accent { background: var(--mk-olive); color: #fff; border-radius: 999px; }
+.btn-al-accent:hover { background: var(--mk-olive-dark); color: #fff; }
+.btn-al-light { border-radius: 999px; }
+.mk-btn-whatsapp { display: inline-flex; align-items: center; justify-content: center; gap: .45rem; width: 100%; padding: .55rem 1rem; border-radius: 12px; background: var(--mk-olive-soft); color: var(--mk-olive-dark); border: 1px solid #dfe6c9; font-weight: 700; font-size: .92rem; text-decoration: none; }
+.mk-btn-whatsapp:hover { background: var(--mk-olive); color: #fff; }
+
+/* ---------- Bandeau de contact ---------- */
+.mk-topbar { background: var(--mk-primary); color: #fff; font-size: .85rem; }
+.mk-topbar .container { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 42px; }
+.mk-topbar-contact { display: flex; flex-wrap: wrap; gap: .3rem 1.5rem; }
+.mk-topbar a { color: #fff; text-decoration: none; display: inline-flex; align-items: center; gap: .4rem; }
+.mk-topbar a:hover { color: #fff; text-decoration: underline; }
+.mk-topbar .al-lang { background: rgba(255, 255, 255, .18); border-radius: 999px; padding: 3px; }
+.mk-topbar .al-lang button { color: #fff; border-radius: 999px; font-weight: 700; font-size: .78rem; min-width: 38px; }
+.mk-topbar .al-lang button.is-active { background: #fff; color: var(--mk-primary); }
+
+/* ---------- En-tête blanc ---------- */
+.al-nav, .al-nav.is-scrolled { background: #fff; box-shadow: 0 1px 0 var(--mk-line); backdrop-filter: none; -webkit-backdrop-filter: none; }
+.al-nav.is-scrolled { box-shadow: 0 6px 24px rgba(31, 27, 23, .08); }
+.al-nav .al-brand, .al-nav .al-brand span { color: var(--mk-primary); }
+.al-nav .al-brand span em { color: var(--mk-olive); }
+.al-nav .nav-link { color: var(--mk-text); font-weight: 500; letter-spacing: 0; position: relative; }
+.al-nav .nav-link:hover, .al-nav .nav-link:focus-visible, .al-nav .nav-link.show { color: var(--mk-primary); background: transparent; }
+.al-nav .nav-link.is-active { color: var(--mk-primary); }
+.al-nav .nav-link.is-active::after { content: ""; position: absolute; inset-inline: .75rem; bottom: .15rem; height: 2px; border-radius: 2px; background: var(--mk-primary); }
+.al-nav .navbar-toggler, .al-nav .wc-cart-link, .al-nav .btn-link { color: var(--mk-text); }
+.al-nav .btn-al { background: var(--mk-primary); color: #fff; }
+.al-nav .btn-al-ghost { background: #fff; color: var(--mk-olive); border-color: var(--mk-olive); }
+.al-nav .btn-al-ghost:hover { background: var(--mk-olive); color: #fff; }
+.al-nav .dropdown-menu { border: 1px solid var(--mk-line); border-top: 3px solid var(--mk-primary); border-radius: 0 0 14px 14px; box-shadow: var(--mk-shadow); }
+.al-nav .dropdown-item:hover { background: var(--mk-primary-soft); color: var(--mk-primary-dark); }
+.mk-icon-btn { display: inline-grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; color: var(--mk-text); text-decoration: none; }
+.mk-icon-btn:hover { background: var(--mk-primary-soft); color: var(--mk-primary); }
+.mk-account { display: inline-flex; align-items: center; gap: .5rem; padding: .25rem .8rem .25rem .25rem; border-radius: 999px; border: 1px solid var(--mk-line); color: var(--mk-text); text-decoration: none; font-weight: 600; font-size: .92rem; }
+.mk-account:hover { border-color: var(--mk-primary); color: var(--mk-primary); }
+@media (max-width: 1399.98px) {
+  .al-nav .navbar-collapse { background: #fff; box-shadow: var(--mk-shadow); }
+}
+
+/* ---------- Bannière (diaporama) ---------- */
+.tr-slider { background: var(--mk-dark); }
+.tr-slide { min-height: clamp(440px, 68vh, 620px); padding: 4rem 0 7rem; }
+.tr-slide::before { opacity: .12; filter: grayscale(1) brightness(3); }
+.tr-slide-1 { background: radial-gradient(900px 500px at 85% 30%, rgba(200, 100, 30, .55), transparent 60%), linear-gradient(120deg, #2a1a10 0%, #4a2a16 50%, #7a3f17 100%); }
+.tr-slide-2 { background: radial-gradient(900px 500px at 85% 30%, rgba(111, 138, 42, .55), transparent 60%), linear-gradient(120deg, #1d2410 0%, #34401a 50%, #5a6b24 100%); }
+.tr-slide-3 { background: radial-gradient(900px 500px at 85% 30%, rgba(200, 100, 30, .45), transparent 60%), linear-gradient(120deg, #1f1b17 0%, #3a2a1e 55%, #6b4423 100%); }
+.tr-slide-kicker { color: #ffd9b8; border-bottom-color: var(--mk-primary); letter-spacing: .14em; }
+.tr-slide h1, .tr-slide h2 { font-family: var(--al-font); font-weight: 800; text-transform: none; letter-spacing: -.02em; font-size: clamp(2.1rem, 4.6vw, 3.6rem); }
+.tr-slide h1 span, .tr-slide h2 span { color: #ffb37a; }
+.tr-slide-art { border-color: rgba(255, 255, 255, .55); box-shadow: 0 0 0 14px rgba(255, 255, 255, .08), var(--mk-shadow); }
+.mk-hero-actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+.mk-hero-actions .btn-al-ghost { background: transparent; color: #fff; border-color: rgba(255, 255, 255, .7); }
+.mk-hero-actions .btn-al-ghost:hover { background: #fff; color: var(--mk-text); }
+/* Bord inférieur arrondi, comme une colline */
+.mk-curve { position: relative; }
+.mk-curve::after { content: ""; position: absolute; left: -5%; right: -5%; bottom: -1px; height: 90px; background: #fff; border-radius: 50% 50% 0 0 / 100% 100% 0 0; z-index: 2; }
+.tr-dots { bottom: 5.2rem; }
+.tr-dot.is-active { background: var(--mk-primary); border-color: var(--mk-primary); }
+.tr-arrow:hover { background: var(--mk-primary); color: #fff; }
+
+/* Recherche sous la bannière */
+.mk-search { position: relative; z-index: 3; margin-top: -2.2rem; }
+.mk-search form { display: flex; gap: .5rem; max-width: 760px; margin: 0 auto; padding: .5rem; background: #fff; border-radius: 999px; box-shadow: 0 18px 40px rgba(31, 27, 23, .14); border: 1px solid var(--mk-line); }
+.mk-search input { flex: 1; border: 0; outline: 0; padding: .6rem 1.1rem; font-size: 1rem; background: transparent; min-width: 0; }
+.mk-search button { flex: none; }
+
+/* ---------- Titres en deux couleurs ---------- */
+.mk-title { text-align: center; margin: 0 auto 2.6rem; max-width: 50rem; }
+.mk-title h2 { font-size: clamp(1.9rem, 3.4vw, 2.7rem); color: var(--mk-text); margin-bottom: .7rem; }
+.mk-title h2 span { color: var(--mk-primary); }
+.mk-title p { color: var(--mk-muted); font-size: 1.05rem; margin: 0; }
+.mk-section { padding: 4.5rem 0; }
+.mk-section-cream { background: var(--mk-cream); }
+.mk-deco { position: relative; overflow: hidden; }
+.mk-deco::before { content: ""; position: absolute; inset-inline-end: -60px; top: 20px; width: 260px; height: 260px; background: url("../img/terroir-branch.svg") no-repeat center / contain; opacity: .08; pointer-events: none; }
+
+/* Les anciens titres de section prennent le même style */
+.tr-title h2 { font-family: var(--al-font); font-weight: 800; text-transform: none; letter-spacing: -.02em; color: var(--mk-text); }
+.tr-title h2::after { display: none; }
+
+/* ---------- Chiffres ---------- */
+.mk-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; max-width: 980px; margin: 2.5rem auto 0; }
+@media (min-width: 768px) { .mk-stats { grid-template-columns: repeat(4, 1fr); } }
+.mk-stat { text-align: center; padding: 1.1rem; border-radius: var(--mk-radius); background: #fff; border: 1px solid var(--mk-line); }
+.mk-stat strong { display: block; font-size: 2rem; font-weight: 800; color: var(--mk-primary); line-height: 1.1; }
+.mk-stat span { color: var(--mk-muted); font-size: .9rem; }
+
+/* ---------- Cartes « secteurs » ---------- */
+.mk-sectors { display: grid; gap: 1.25rem; grid-template-columns: 1fr; max-width: 1080px; margin: 0 auto; }
+@media (min-width: 768px) { .mk-sectors { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1200px) { .mk-sectors { grid-template-columns: repeat(3, 1fr); } }
+.mk-sector { position: relative; display: flex; gap: 1.1rem; padding: 1.4rem 1.4rem 1.2rem; background: #fff; border: 1px solid var(--mk-line); border-radius: var(--mk-radius); color: var(--mk-text); text-decoration: none; overflow: hidden; transition: transform .25s var(--al-ease), box-shadow .25s; }
+.mk-sector::before { content: ""; position: absolute; inset-block: 0; inset-inline-start: 0; width: 4px; background: linear-gradient(var(--mk-primary), var(--mk-olive)); }
+.mk-sector:hover { transform: translateY(-4px); box-shadow: var(--mk-shadow); color: var(--mk-text); }
+.mk-sector-ico { flex: none; width: 56px; height: 56px; border-radius: 14px; display: grid; place-items: center; background: var(--mk-primary-soft); color: var(--mk-primary); }
+.mk-sector h3 { font-size: 1.15rem; margin: 0 0 .3rem; }
+.mk-sector p { color: var(--mk-muted); font-size: .93rem; margin: 0 0 .7rem; }
+.mk-sector-meta { display: flex; flex-wrap: wrap; gap: .3rem 1rem; align-items: center; font-size: .86rem; }
+.mk-sector-meta b { color: var(--mk-text); }
+.mk-sector-meta .mk-more { color: var(--mk-primary); font-weight: 700; }
+
+/* ---------- Cartes produits ---------- */
+.wc-card { background: #fff; border: 1px solid var(--mk-line); border-radius: 14px; overflow: hidden; box-shadow: none; position: relative; display: flex; flex-direction: column; height: 100%; }
+.wc-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px; z-index: 1; background: linear-gradient(90deg, var(--mk-primary), var(--mk-olive)); }
+.wc-card:hover { box-shadow: var(--mk-shadow); transform: translateY(-3px); }
+.wc-card-media { background: #faf7f3; }
+.wc-card-body { display: flex; flex-direction: column; gap: .35rem; padding: .9rem 1rem 1rem; flex: 1; text-align: center; }
+.wc-card-coop { align-self: center; display: inline-block; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding: .2rem .65rem; border-radius: 999px; background: var(--mk-olive-soft); color: var(--mk-olive-dark); font-size: .74rem; font-weight: 800; text-transform: uppercase; letter-spacing: .03em; text-decoration: none; }
+.wc-card-coop:hover { background: var(--mk-olive); color: #fff; }
+.wc-card h3 { font-size: 1.02rem; font-weight: 700; margin: .2rem 0 0; }
+.wc-card h3 a { color: var(--mk-text); text-decoration: none; }
+.wc-card h3 a:hover { color: var(--mk-primary); }
+.wc-card-origin { font-size: .8rem; color: var(--mk-muted); margin: 0; }
+.mk-price { color: var(--mk-primary); font-weight: 800; font-size: .98rem; margin: .2rem 0 .4rem; }
+.mk-price small { font-weight: 600; color: var(--mk-muted); }
+.mk-card-actions { margin-top: auto; display: grid; gap: .45rem; }
+.mk-card-actions form { margin: 0; }
+.mk-card-actions .btn { width: 100%; border-radius: 12px; padding: .5rem; font-size: .9rem; }
+.wc-badge-label { background: var(--mk-primary); color: #fff; }
+.mk-badge-onssa { background: #fff; color: var(--mk-olive-dark); border: 1px solid #dfe6c9; }
+
+/* Liste compacte « produits populaires » */
+.mk-popular { display: grid; gap: .9rem; grid-template-columns: 1fr; }
+@media (min-width: 768px) { .mk-popular { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1200px) { .mk-popular { grid-template-columns: repeat(3, 1fr); } }
+.mk-pop { display: flex; align-items: center; gap: 1rem; padding: .8rem; border-radius: 14px; background: #f7f5f2; color: var(--mk-text); text-decoration: none; transition: background-color .2s; }
+.mk-pop:hover { background: var(--mk-primary-soft); color: var(--mk-text); }
+.mk-pop-media { flex: none; width: 76px; height: 76px; border-radius: 12px; overflow: hidden; background: #fff; display: grid; place-items: center; color: var(--mk-muted); }
+.mk-pop-media img { width: 100%; height: 100%; object-fit: cover; }
+.mk-pop-body { min-width: 0; }
+.mk-pop-body .wc-card-coop { font-size: .68rem; }
+.mk-pop-body b { display: block; margin: .25rem 0 .1rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.mk-pop-body span { color: var(--mk-primary); font-weight: 800; font-size: .92rem; }
+
+/* ---------- Régions ---------- */
+.mk-regions { border-radius: 24px; padding: 2.5rem; background: radial-gradient(600px 300px at 90% 0%, rgba(255, 255, 255, .18), transparent 60%), linear-gradient(120deg, var(--mk-primary-dark), var(--mk-primary) 60%, #e08a4a); color: #fff; }
+.mk-regions h2 { color: #fff; }
+.mk-regions p { color: rgba(255, 255, 255, .85); }
+.mk-region-grid { display: grid; gap: .8rem; grid-template-columns: repeat(2, 1fr); margin-top: 1.5rem; }
+@media (min-width: 768px) { .mk-region-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 1200px) { .mk-region-grid { grid-template-columns: repeat(4, 1fr); } }
+.mk-region { display: block; padding: 1rem 1.1rem; border-radius: 14px; background: rgba(255, 255, 255, .14); border: 1px solid rgba(255, 255, 255, .22); color: #fff; text-decoration: none; transition: background-color .2s; }
+.mk-region:hover { background: rgba(255, 255, 255, .26); color: #fff; }
+.mk-region b { display: block; font-size: 1rem; }
+.mk-region span { font-size: .82rem; opacity: .9; }
+
+/* ---------- Coopératives ---------- */
+.tr-coop { border-radius: var(--mk-radius); border: 1px solid var(--mk-line); background: #fff; }
+.tr-coop:hover { border-color: var(--mk-primary); }
+.tr-coop-tag { background: var(--mk-olive-soft); color: var(--mk-olive-dark); }
+.tr-more { color: var(--mk-primary); }
+
+/* ---------- Deux publics (acheteurs / coopératives) ---------- */
+.mk-cta-grid { display: grid; gap: 1.25rem; grid-template-columns: 1fr; }
+@media (min-width: 992px) { .mk-cta-grid { grid-template-columns: repeat(2, 1fr); } }
+.mk-cta { display: flex; flex-direction: column; gap: .7rem; padding: 2rem; border-radius: 20px; background: #fff; border: 1px solid var(--mk-line); }
+.mk-cta-buyers { background: var(--mk-primary-soft); border-color: #f3dcc6; }
+.mk-cta-coops { background: var(--mk-olive-soft); border-color: #dfe6c9; }
+.mk-cta h3 { font-size: 1.5rem; margin: 0; }
+.mk-cta h3 span { color: var(--mk-primary); }
+.mk-cta-coops h3 span { color: var(--mk-olive); }
+.mk-cta p { color: var(--mk-muted); margin: 0; }
+.mk-cta ul { list-style: none; padding: 0; margin: .3rem 0 .6rem; display: grid; gap: .45rem; }
+.mk-cta li { display: flex; gap: .5rem; align-items: flex-start; }
+.mk-cta li svg { flex: none; color: var(--mk-olive); margin-top: .2rem; }
+.mk-cta-actions { margin-top: auto; display: flex; flex-wrap: wrap; gap: .6rem; }
+
+/* ---------- Bandeau de confiance ---------- */
+.tr-promises { background: #fff; border-bottom: 0; }
+.tr-promise svg { color: var(--mk-primary); }
+.tr-promise b { color: var(--mk-text); }
+
+/* ---------- Pages intérieures ---------- */
+.al-page-head { background: radial-gradient(900px 260px at 85% -10%, rgba(200, 100, 30, .14), transparent 60%), var(--mk-cream); border-bottom: 1px solid var(--mk-line); }
+.al-page-head h1 { color: var(--mk-text); }
+.al-kicker { color: var(--mk-primary); }
+.wc-shop-head { background: var(--mk-cream); }
+.wc-panel { border-color: var(--mk-line); border-radius: var(--mk-radius); }
+.wc-status-sent { background: var(--mk-primary-soft); color: var(--mk-primary-dark); }
+.al-pill-link.is-active { background: var(--mk-primary); border-color: var(--mk-primary); color: #fff; }
+
+/* ---------- Pied de page sombre ---------- */
+.al-footer { background: var(--mk-dark); color: rgba(255, 255, 255, .72); }
+.al-footer h4 { color: #fff; font-family: var(--al-font); font-weight: 700; }
+.al-footer a { color: rgba(255, 255, 255, .72); }
+.al-footer a:hover { color: #ffb37a; }
+.al-footer .al-brand span { color: var(--mk-primary); }
+.al-footer .al-brand span em { color: #c6d68f; }
+.mk-footer-contact { list-style: none; padding: 0; margin: 1rem 0 0; display: grid; gap: .45rem; }
+.mk-footer-contact li { display: flex; gap: .5rem; align-items: center; }
+.al-footer-bottom { border-top-color: rgba(255, 255, 255, .1); }
+.al-footer-disclaimer { border-top-color: rgba(255, 255, 255, .1); }
+
+/* ---------- Bouton « haut de page » ---------- */
+.mk-top { position: fixed; inset-inline-end: 1.25rem; bottom: 1.25rem; z-index: 1000; width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center; background: var(--mk-primary); color: #fff; box-shadow: 0 10px 24px rgba(200, 100, 30, .35); text-decoration: none; font-size: 1.2rem; }
+.mk-top:hover { background: var(--mk-primary-dark); color: #fff; }
+
+/* Bouton « Voir plus » des cartes coopératives */
+.tr-coop .tr-more { background: transparent; color: var(--mk-primary); border: 1.5px solid var(--mk-primary); border-radius: 999px; text-transform: none; letter-spacing: 0; font-weight: 700; }
+.tr-coop:hover .tr-more { background: var(--mk-primary); color: #fff; }

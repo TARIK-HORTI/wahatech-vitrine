@@ -173,6 +173,6 @@
 .tr-cat-circle svg, .tr-slide-art svg { color: #fff; opacity: .95; }
 .tr-band { background: var(--al-forest); }
 @media (min-width: 992px) and (max-width: 1399.98px) {
-  .al-nav .navbar-nav > .nav-item:nth-child(5) { display: none; }
+  .al-nav .navbar-nav > .nav-item:nth-child(7) { display: none; } /* « Contact » : aussi dans le pied de page */
   .al-nav .navbar-nav { margin-inline: auto .5rem; }
 }
