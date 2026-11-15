@@ -1,9 +1,9 @@
-/* Fond d'écran : une photo du Maroc différente à chaque page ouverte (8 photos, très pâles).
+/* Fond d'écran : une photo du Maroc différente à chaque page ouverte (12 photos, très pâles).
    Chargé dans <head> sans « defer » pour éviter un changement de fond visible après l'affichage.
    Aucun style en ligne (politique de sécurité du site) : on pose seulement data-fond sur <html>. */
 (function () {
   "use strict";
-  var COUNT = 8;
+  var COUNT = 12;
   var last = -1;
   try { last = parseInt(window.sessionStorage.getItem("wahatech-fond") || "-1", 10); } catch (e) { /* stockage indisponible */ }
   // Tirage au hasard, jamais deux fois de suite le même paysage

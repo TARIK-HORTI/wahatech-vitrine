@@ -103,6 +103,13 @@ h1, h2, .mk-title h2, .tz-hero h1 { font-family: var(--tz-serif); font-weight: 6
 .tz-tile-dates { --tz-tile-bg: linear-gradient(165deg, #B66A3C, #6E3420); }
 .tz-tile-saffron { --tz-tile-bg: linear-gradient(165deg, #8E4A86, #C85A32); }
 .tz-tile-olive { --tz-tile-bg: linear-gradient(165deg, #5F7F3A, #1B4332); }
+.tz-tile-honey { --tz-tile-bg: linear-gradient(165deg, #E0A33A, #9A5B1E); }
+/* Photos des filières (sans emballage de marque) : l'icône reste en secours si la photo manque */
+.tz-tile-argan .tz-tile-art { background: url("../img/filieres/argan.jpg") center / cover no-repeat, var(--tz-tile-bg); }
+.tz-tile-dates .tz-tile-art { background: url("../img/filieres/dates.jpg") center / cover no-repeat, var(--tz-tile-bg); }
+.tz-tile-olive .tz-tile-art { background: url("../img/filieres/olive.jpg") center / cover no-repeat, var(--tz-tile-bg); }
+.tz-tile-honey .tz-tile-art { background: url("../img/filieres/honey.jpg") center / cover no-repeat, var(--tz-tile-bg); }
+.tz-bento .tz-tile-art svg { display: none; }
 .tz-tile-body { display: flex; flex-direction: column; gap: .35rem; padding-block: .3rem; }
 .tz-tile-origin { display: inline-flex; align-items: center; gap: .3rem; color: var(--tz-terra); font-size: .78rem; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; }
 .lang-ar .tz-tile-origin { letter-spacing: 0; }
@@ -140,6 +147,10 @@ body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-even
 [data-fond="6"] body::before { background-image: url("../img/fonds/06-the-desert.jpg"); }
 [data-fond="7"] body::before { background-image: url("../img/fonds/07-ksar-dattes.jpg"); }
 [data-fond="8"] body::before { background-image: url("../img/fonds/08-maison-ksar.jpg"); }
+[data-fond="9"] body::before { background-image: url("../img/fonds/09-argan.jpg"); }
+[data-fond="10"] body::before { background-image: url("../img/fonds/10-dattes.jpg"); }
+[data-fond="11"] body::before { background-image: url("../img/fonds/11-miel.jpg"); }
+[data-fond="12"] body::before { background-image: url("../img/fonds/12-olives.jpg"); }
 @media (max-width: 767.98px) { body::before { opacity: .12; } }
 @media print { body::before { display: none; } }
 /* Les grandes bandes laissent voir le paysage par transparence */
