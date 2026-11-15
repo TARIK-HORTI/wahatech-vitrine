@@ -22,6 +22,8 @@
   <link rel="stylesheet" href="/static/css/cooperatives.css">
   <link rel="stylesheet" href="/static/css/terroir.css">
   <link rel="stylesheet" href="/static/css/market.css">
+  <link rel="stylesheet" href="/static/css/terroir-contemporain.css">
+  <script src="/static/js/fonds.js"></script>
   <script src="/static/js/wahatech.js" defer></script>
   
 </head>
@@ -40,7 +42,7 @@
     </div>
     
 <form method="post" action="/i18n/setlang/" class="al-lang m-0" aria-label="Site language">
-  <input type="hidden" name="csrfmiddlewaretoken" value="FXddmgavX2Z54EH8BsrWj3wFffJX8Yvw0Mix8NyL3PzKJrEMoYZPzNAY8ORz3Pdm">
+  <input type="hidden" name="csrfmiddlewaretoken" value="86lb0SihD9qYN1EpGxLIX5USlbHEwVCW2dkrnbn5XFu3iylEXOptOarAdSNdOLBa">
   <input type="hidden" name="next" value="/en/">
   
   <button type="submit" name="language" value="fr" lang="fr" class=""  title="French">FR</button>
@@ -100,57 +102,36 @@
   <main id="contenu">
 
 
-<section class="tr-slider mk-curve" data-tr-slider aria-roledescription="carousel" aria-label="Featured">
-  <div class="tr-slide tr-slide-1 is-active" role="group" aria-roledescription="slide" aria-label="1 / 3">
-    <div class="container position-relative">
-      <div class="tr-slide-text">
-        <span class="tr-slide-kicker">Marketplace of Moroccan cooperatives</span>
-        <h1>Why choose a <span>cooperative product?</span></h1>
-        <p>Every request goes straight to a cooperative: you support local producers, authentic know-how and a solidarity economy.</p>
+<section class="tz-hero mk-curve">
+  <div class="container">
+    <div class="tz-hero-grid">
+      <div class="tz-hero-text">
+        <span class="tz-kicker">Marketplace of Moroccan cooperatives</span>
+        <h1>Moroccan terroir, <em>direct from the cooperatives</em></h1>
+        <p>Argan, dates, saffron, olive oil, crafts: products sold directly by verified cooperatives, for individuals, professionals and export.</p>
         <div class="mk-hero-actions">
           <a href="/en/boutique/" class="btn btn-al btn-lg">Discover the products</a>
-          <a href="/en/boutique/cooperatives/" class="btn btn-al-ghost btn-lg">Our cooperatives</a>
+          <a href="/en/devis/" class="btn btn-tz-outline btn-lg">Quote for bulk orders and export</a>
         </div>
+        <a class="tz-hero-coop" href="/en/compte/inscription/?role=cooperative">Are you a cooperative? Showcase your products →</a>
       </div>
-      <div class="tr-slide-art wc-ph-argan" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg></div>
+      <figure class="tz-arch" aria-hidden="true">
+        <img src="/static/img/accueil-palmeraie.jpg" alt="" width="800" height="1000">
+        <figcaption><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg> Every cooperative is verified by our team</figcaption>
+      </figure>
     </div>
-  </div>
-  <div class="tr-slide tr-slide-2" role="group" aria-roledescription="slide" aria-label="2 / 3">
-    <div class="container position-relative">
-      <div class="tr-slide-text">
-        <span class="tr-slide-kicker">Cooperatives</span>
-        <h2>Your cooperative deserves <span>to be known</span></h2>
-        <p>A professional page, your products online and customer requests coming straight to you.</p>
-        <div class="mk-hero-actions">
-          <a href="/en/compte/inscription/?role=cooperative" class="btn btn-al btn-lg"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M12 5v14"/></svg> Register my cooperative</a>
-          <a href="/en/accompagnement/" class="btn btn-al-ghost btn-lg">Our services</a>
-        </div>
-      </div>
-      <div class="tr-slide-art wc-ph-honey" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-    </div>
-  </div>
-  <div class="tr-slide tr-slide-3" role="group" aria-roledescription="slide" aria-label="3 / 3">
-    <div class="container position-relative">
-      <div class="tr-slide-text">
-        <span class="tr-slide-kicker">Professionals and export</span>
-        <h2>Large quantities, <span>one point of contact</span></h2>
-        <p>Importers, distributors, hotels: we consult the cooperatives and send you an offer.</p>
-        <div class="mk-hero-actions">
-          <a href="/en/devis/" class="btn btn-al btn-lg">Request a quote</a>
-          <a href="/en/cooperatives/" class="btn btn-al-ghost btn-lg">Professional catalogue</a>
-        </div>
-      </div>
-      <div class="tr-slide-art wc-ph-saffron" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></div>
-    </div>
-  </div>
-  <button class="tr-arrow tr-prev" type="button" data-tr-prev aria-label="Previous slide"><span class="al-arrow">←</span></button>
-  <button class="tr-arrow tr-next" type="button" data-tr-next aria-label="Next slide"><span class="al-arrow">→</span></button>
-  <div class="tr-dots">
-    <button class="tr-dot is-active" type="button" data-tr-dot="0" aria-label="1"></button>
-    <button class="tr-dot" type="button" data-tr-dot="1" aria-label="2"></button>
-    <button class="tr-dot" type="button" data-tr-dot="2" aria-label="3"></button>
   </div>
 </section>
+
+
+<div class="tz-trust" role="note">
+  <div class="container">
+    <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg> Verified cooperatives</span>
+    <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></svg> Direct sale from the producer</span>
+    <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg> Quote for bulk orders and export</span>
+    <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> العربية · Français · English</span>
+  </div>
+</div>
 
 
 <section class="mk-search">
@@ -165,159 +146,101 @@
 </section>
 
 
-<section class="mk-section mk-deco" id="secteurs">
+<section class="mk-section tz-zellige" id="secteurs">
   <div class="container">
     <div class="mk-title reveal">
-      <h2>Our <span>Sectors</span></h2>
-      <p>Explore the sectors of Moroccan cooperatives, from local produce to crafts.</p>
+      <h2>Terroir <span>sectors</span></h2>
+      <p>Four iconic Moroccan crafts, and every cooperative sector.</p>
     </div>
-    <div class="mk-sectors">
+    <div class="tz-bento">
       
-      <a class="mk-sector reveal" href="/en/boutique/?category=argan">
-        <span class="mk-sector-ico"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg></span>
-        <div>
+      <a class="tz-tile tz-tile-argan reveal" href="/en/boutique/?category=argan">
+        <span class="tz-tile-art" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg></span>
+        <span class="tz-tile-body">
+          <span class="tz-tile-origin"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 4.99-5.54 10.19-7.4 11.8a1 1 0 0 1-1.2 0C9.54 20.19 4 14.99 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg> Souss-Massa</span>
           <h3>Argan and its products</h3>
           <p>Edible and cosmetic oil, amlou: the emblematic know-how of the Souss.</p>
-          <div class="mk-sector-meta">
-            <b class="mk-soon">Coming soon</b>
-            <span class="mk-more">Discover →</span>
-          </div>
-        </div>
+          <span class="tz-tile-meta">Discover →</span>
+        </span>
       </a>
       
-      <a class="mk-sector reveal" href="/en/boutique/?category=dates">
-        <span class="mk-sector-ico"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></span>
-        <div>
+      <a class="tz-tile tz-tile-dates reveal" href="/en/boutique/?category=dates">
+        <span class="tz-tile-art" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></span>
+        <span class="tz-tile-body">
+          <span class="tz-tile-origin"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 4.99-5.54 10.19-7.4 11.8a1 1 0 0 1-1.2 0C9.54 20.19 4 14.99 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg> Drâa-Tafilalet</span>
           <h3>Dates and date products</h3>
           <p>Medjool, Boufeggous, date paste and syrup from the Drâa-Tafilalet oases.</p>
-          <div class="mk-sector-meta">
-            <b class="mk-soon">Coming soon</b>
-            <span class="mk-more">Discover →</span>
-          </div>
-        </div>
+          <span class="tz-tile-meta">Discover →</span>
+        </span>
       </a>
       
-      <a class="mk-sector reveal" href="/en/boutique/?category=olive">
-        <span class="mk-sector-ico"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg></span>
-        <div>
+      <a class="tz-tile tz-tile-olive reveal" href="/en/boutique/?category=olive">
+        <span class="tz-tile-art" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg></span>
+        <span class="tz-tile-body">
+          <span class="tz-tile-origin"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 4.99-5.54 10.19-7.4 11.8a1 1 0 0 1-1.2 0C9.54 20.19 4 14.99 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg> Fès-Meknès and Oriental</span>
           <h3>Olive oil and olives</h3>
           <p>Extra virgin oils and table olives pressed by the cooperatives.</p>
-          <div class="mk-sector-meta">
-            <b class="mk-soon">Coming soon</b>
-            <span class="mk-more">Discover →</span>
-          </div>
-        </div>
+          <span class="tz-tile-meta">Discover →</span>
+        </span>
       </a>
       
-      <a class="mk-sector reveal" href="/en/boutique/?category=honey">
-        <span class="mk-sector-ico"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M11.52 2.3a.53.53 0 0 1 .95 0l2.31 4.68a2.12 2.12 0 0 0 1.6 1.16l5.17.76a.53.53 0 0 1 .3.9l-3.74 3.64a2.12 2.12 0 0 0-.61 1.88l.88 5.14a.53.53 0 0 1-.77.56l-4.62-2.43a2.12 2.12 0 0 0-1.97 0L6.4 21.01a.53.53 0 0 1-.77-.56l.88-5.14a2.12 2.12 0 0 0-.61-1.88L2.16 9.8a.53.53 0 0 1 .3-.9l5.16-.76a2.12 2.12 0 0 0 1.6-1.16z"/></svg></span>
-        <div>
-          <h3>Honey and bee products</h3>
-          <p>Thyme, euphorbia and jujube honeys and other hive products.</p>
-          <div class="mk-sector-meta">
-            <b class="mk-soon">Coming soon</b>
-            <span class="mk-more">Discover →</span>
-          </div>
-        </div>
-      </a>
-      
-      <a class="mk-sector reveal" href="/en/boutique/?category=herbs">
-        <span class="mk-sector-ico"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span>
-        <div>
-          <h3>Aromatic and medicinal plants</h3>
-          <p>Verbena, sage, rosemary, floral waters: the herbal heritage of Moroccan terroir.</p>
-          <div class="mk-sector-meta">
-            <b class="mk-soon">Coming soon</b>
-            <span class="mk-more">Discover →</span>
-          </div>
-        </div>
-      </a>
-      
-      <a class="mk-sector reveal" href="/en/boutique/?category=saffron">
-        <span class="mk-sector-ico"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></svg></span>
-        <div>
+      <a class="tz-tile tz-tile-saffron reveal" href="/en/boutique/?category=saffron">
+        <span class="tz-tile-art" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></svg></span>
+        <span class="tz-tile-body">
+          <span class="tz-tile-origin"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 4.99-5.54 10.19-7.4 11.8a1 1 0 0 1-1.2 0C9.54 20.19 4 14.99 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg> Taliouine</span>
           <h3>Saffron</h3>
           <p>Taliouine saffron, picked and sorted by hand.</p>
-          <div class="mk-sector-meta">
-            <b class="mk-soon">Coming soon</b>
-            <span class="mk-more">Discover →</span>
-          </div>
-        </div>
-      </a>
-      
-      <a class="mk-sector reveal" href="/en/boutique/?category=nuts">
-        <span class="mk-sector-ico"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg></span>
-        <div>
-          <h3>Almonds and dried fruit</h3>
-          <p>Almonds, walnuts and dried fruit from the Atlas valleys.</p>
-          <div class="mk-sector-meta">
-            <b class="mk-soon">Coming soon</b>
-            <span class="mk-more">Discover →</span>
-          </div>
-        </div>
-      </a>
-      
-      <a class="mk-sector reveal" href="/en/boutique/?category=cereals">
-        <span class="mk-sector-ico"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></svg></span>
-        <div>
-          <h3>Cereals, couscous and flours</h3>
-          <p>Hand-rolled couscous, flours and traditional cereal products.</p>
-          <div class="mk-sector-meta">
-            <b class="mk-soon">Coming soon</b>
-            <span class="mk-more">Discover →</span>
-          </div>
-        </div>
-      </a>
-      
-      <a class="mk-sector reveal" href="/en/boutique/?category=cosmetics">
-        <span class="mk-sector-ico"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 2v7.31"/><path d="M14 9.3V2"/><path d="M8.5 2h7"/><path d="M14 9.3a6.5 6.5 0 1 1-4 0"/><path d="M5.52 16h12.96"/></svg></span>
-        <div>
-          <h3>Natural cosmetics</h3>
-          <p>Soaps, oils and natural care made by the cooperatives.</p>
-          <div class="mk-sector-meta">
-            <b class="mk-soon">Coming soon</b>
-            <span class="mk-more">Discover →</span>
-          </div>
-        </div>
-      </a>
-      
-      <a class="mk-sector reveal" href="/en/boutique/?category=crafts">
-        <span class="mk-sector-ico"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg></span>
-        <div>
-          <h3>Crafts</h3>
-          <p>Rugs, pottery, basketry and textiles inspired by Moroccan heritage.</p>
-          <div class="mk-sector-meta">
-            <b class="mk-soon">Coming soon</b>
-            <span class="mk-more">Discover →</span>
-          </div>
-        </div>
-      </a>
-      
-      <a class="mk-sector reveal" href="/en/boutique/?category=dairy">
-        <span class="mk-sector-ico"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .7-1.5l7-6a2 2 0 0 1 2.6 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></span>
-        <div>
-          <h3>Milk and cheese</h3>
-          <p>Goat cheese, lben and dairy products from dairy cooperatives.</p>
-          <div class="mk-sector-meta">
-            <b class="mk-soon">Coming soon</b>
-            <span class="mk-more">Discover →</span>
-          </div>
-        </div>
-      </a>
-      
-      <a class="mk-sector reveal" href="/en/boutique/?category=fruits">
-        <span class="mk-sector-ico"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span>
-        <div>
-          <h3>Fruit and vegetables</h3>
-          <p>Seasonal fruit, dried and processed products.</p>
-          <div class="mk-sector-meta">
-            <b class="mk-soon">Coming soon</b>
-            <span class="mk-more">Discover →</span>
-          </div>
-        </div>
+          <span class="tz-tile-meta">Discover →</span>
+        </span>
       </a>
       
     </div>
+    <nav class="tz-tabs reveal" aria-label="Other sectors">
+      
+      <a class="tz-tab" href="/en/boutique/?category=honey"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M11.52 2.3a.53.53 0 0 1 .95 0l2.31 4.68a2.12 2.12 0 0 0 1.6 1.16l5.17.76a.53.53 0 0 1 .3.9l-3.74 3.64a2.12 2.12 0 0 0-.61 1.88l.88 5.14a.53.53 0 0 1-.77.56l-4.62-2.43a2.12 2.12 0 0 0-1.97 0L6.4 21.01a.53.53 0 0 1-.77-.56l.88-5.14a2.12 2.12 0 0 0-.61-1.88L2.16 9.8a.53.53 0 0 1 .3-.9l5.16-.76a2.12 2.12 0 0 0 1.6-1.16z"/></svg> Honey and bee products</a>
+      
+      <a class="tz-tab" href="/en/boutique/?category=herbs"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg> Aromatic and medicinal plants</a>
+      
+      <a class="tz-tab" href="/en/boutique/?category=nuts"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg> Almonds and dried fruit</a>
+      
+      <a class="tz-tab" href="/en/boutique/?category=cereals"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></svg> Cereals, couscous and flours</a>
+      
+      <a class="tz-tab" href="/en/boutique/?category=cosmetics"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 2v7.31"/><path d="M14 9.3V2"/><path d="M8.5 2h7"/><path d="M14 9.3a6.5 6.5 0 1 1-4 0"/><path d="M5.52 16h12.96"/></svg> Natural cosmetics</a>
+      
+      <a class="tz-tab" href="/en/boutique/?category=crafts"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg> Crafts</a>
+      
+      <a class="tz-tab" href="/en/boutique/?category=dairy"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .7-1.5l7-6a2 2 0 0 1 2.6 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg> Milk and cheese</a>
+      
+      <a class="tz-tab" href="/en/boutique/?category=fruits"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg> Fruit and vegetables</a>
+      
+    </nav>
+  </div>
+</section>
+
+
+<section class="mk-section tz-checks">
+  <div class="container">
+    <div class="mk-title reveal">
+      <h2>How we <span>verify</span> each cooperative</h2>
+      <p>Before a cooperative appears on WahaTech, our team checks its file.</p>
+    </div>
+    <ol class="tz-steps">
+      <li class="reveal">
+        <span class="tz-step-n">1</span>
+        <h3>An official file</h3>
+        <p>Certificate of registration in the cooperatives register and the identity of its representative.</p>
+      </li>
+      <li class="reveal" data-delay="100">
+        <span class="tz-step-n">2</span>
+        <h3>Checked documents</h3>
+        <p>The ONSSA health authorisation and labels (organic, PGI) are only displayed if provided and valid.</p>
+      </li>
+      <li class="reveal" data-delay="200">
+        <span class="tz-step-n">3</span>
+        <h3>A signed commitment</h3>
+        <p>Contract, quality charter and complaint follow-up: a cooperative that breaks its commitments is suspended.</p>
+      </li>
+    </ol>
   </div>
 </section>
 
@@ -389,7 +312,6 @@
   </div>
 </section>
 
-<script src="/static/js/terroir-slider.js" defer></script>
 </main>
   
 <footer class="al-footer">

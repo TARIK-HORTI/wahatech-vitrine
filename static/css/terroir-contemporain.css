@@ -1,0 +1,149 @@
+/* ==========================================================================
+   WahaTech — direction artistique « Terroir marocain contemporain » (2026)
+   Vert oasis, terracotta, sable, fond ivoire ; titres à empattements (Fraunces) ;
+   arches, motif zellige discret. Chargé après market.css : redéfinit la palette
+   pour tout le site et habille l'accueil (hero, filières, contrôle qualité).
+   ========================================================================== */
+:root {
+  --tz-green: #1B4332;
+  --tz-green-2: #24573F;
+  --tz-green-soft: #E4EDE7;
+  --tz-terra: #C85A32;
+  --tz-terra-dark: #A8461F;
+  --tz-terra-soft: #F6E4D9;
+  --tz-sand: #D4A373;
+  --tz-ivory: #FAF7F2;
+  --tz-ivory-2: #F3ECE1;
+  --tz-ink: #1F2421;
+  --tz-serif: "Fraunces", Georgia, "Times New Roman", serif;
+
+  /* La palette du thème marketplace pointe vers la nouvelle */
+  --mk-primary: var(--tz-terra);
+  --mk-primary-dark: var(--tz-terra-dark);
+  --mk-primary-soft: var(--tz-terra-soft);
+  --mk-olive: var(--tz-green);
+  --mk-olive-dark: #12301F;
+  --mk-olive-soft: var(--tz-green-soft);
+  --mk-dark: var(--tz-ink);
+  --mk-text: var(--tz-ink);
+  --mk-muted: #66706A;
+  --mk-line: #E7DED1;
+  --mk-bg: var(--tz-ivory);
+  --mk-cream: var(--tz-ivory-2);
+  --mk-shadow: 0 1px 2px rgba(31, 36, 33, .05), 0 12px 32px rgba(31, 36, 33, .08);
+}
+
+body { background: var(--tz-ivory); }
+
+/* ---------- Titres éditoriaux ---------- */
+h1, h2, .mk-title h2, .tz-hero h1 { font-family: var(--tz-serif); font-weight: 600; letter-spacing: -.01em; }
+.lang-ar h1, .lang-ar h2, .lang-ar .mk-title h2, .lang-ar .tz-hero h1 { font-family: var(--al-font); font-weight: 800; letter-spacing: 0; }
+.mk-title h2 span { color: var(--tz-terra); font-style: italic; }
+.lang-ar .mk-title h2 span { font-style: normal; }
+
+/* ---------- En-tête et bandeau supérieur ---------- */
+.mk-topbar { background: var(--tz-green); }
+.mk-topbar .al-lang button.is-active { color: var(--tz-green); }
+.al-nav, .al-nav.is-scrolled { background: #FFFDF9; }
+.al-nav .al-brand, .al-nav .al-brand span { color: var(--tz-green); }
+.al-nav .al-brand span em { color: var(--tz-terra); }
+.al-nav .btn-al-ghost, .btn-al-ghost { color: var(--tz-green); border-color: var(--tz-green); }
+.btn-al-ghost:hover, .al-nav .btn-al-ghost:hover { background: var(--tz-green); border-color: var(--tz-green); color: #fff; }
+.btn-tz-outline { background: transparent; color: var(--tz-green); border: 1.5px solid var(--tz-green); border-radius: 999px; font-weight: 700; }
+.btn-tz-outline:hover, .btn-tz-outline:focus-visible { background: var(--tz-green); color: #fff; }
+.mk-curve::after { background: var(--tz-ivory); }
+.al-demo-banner { background: var(--tz-green); color: #F2EDE3; }
+.al-demo-banner strong { color: var(--tz-sand); }
+.al-demo-banner span, .al-demo-banner a { color: #F2EDE3; }
+
+/* ---------- Motif zellige discret ---------- */
+.tz-zellige { background-color: var(--tz-ivory); background-image: url("../img/zellige.svg"); background-size: 72px 72px; }
+
+/* ---------- Hero ---------- */
+.tz-hero { padding: 3.5rem 0 6.5rem; background-color: var(--tz-ivory-2); background-image: radial-gradient(700px 420px at 90% 10%, rgba(212, 163, 115, .35), transparent 65%), url("../img/zellige.svg"); background-size: auto, 72px 72px; }
+.tz-hero-grid { display: grid; gap: 2.5rem; align-items: center; }
+@media (min-width: 992px) { .tz-hero-grid { grid-template-columns: 1.15fr .85fr; } }
+.tz-kicker { display: inline-block; margin-bottom: 1rem; padding: .3rem .8rem; border-radius: 999px; background: var(--tz-green-soft); color: var(--tz-green); font-size: .78rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.lang-ar .tz-kicker { letter-spacing: 0; }
+.tz-hero h1 { font-size: clamp(2.3rem, 5vw, 3.9rem); line-height: 1.08; color: var(--tz-green); margin-bottom: 1.1rem; }
+.tz-hero h1 em { color: var(--tz-terra); }
+.lang-ar .tz-hero h1 { line-height: 1.35; }
+.lang-ar .tz-hero h1 em { font-style: normal; }
+.tz-hero p { font-size: 1.12rem; color: #3D4641; max-width: 36rem; margin-bottom: 1.6rem; }
+.tz-hero .mk-hero-actions { margin-bottom: 1.2rem; }
+.tz-hero-coop { color: var(--tz-green); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.tz-hero-coop:hover { color: var(--tz-terra); }
+.tz-arch { position: relative; margin: 0 auto; width: min(100%, 360px); }
+.tz-arch img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 200px 200px 18px 18px; border: 6px solid #FFFDF9; box-shadow: 0 0 0 1px var(--mk-line), 0 30px 60px rgba(27, 67, 50, .22); }
+.tz-arch figcaption { position: absolute; inset-inline: 1.2rem; bottom: -1.1rem; display: flex; align-items: center; justify-content: center; gap: .45rem; padding: .65rem .9rem; border-radius: 999px; background: #FFFDF9; color: var(--tz-green); font-weight: 700; font-size: .86rem; text-align: center; box-shadow: var(--mk-shadow); }
+.tz-arch figcaption svg { flex: none; color: var(--tz-terra); }
+@media (max-width: 991.98px) { .tz-arch { width: min(80%, 300px); } }
+
+/* ---------- Bandeau de confiance ---------- */
+.tz-trust { background: var(--tz-green); color: #F2EDE3; position: relative; z-index: 3; }
+.tz-trust .container { display: flex; flex-wrap: wrap; justify-content: center; gap: .5rem 2rem; padding-block: .85rem; font-size: .9rem; font-weight: 600; }
+.tz-trust span { display: inline-flex; align-items: center; gap: .45rem; }
+.tz-trust svg { color: var(--tz-sand); }
+/* La recherche passe sous le bandeau (plus de chevauchement avec le hero) */
+.tz-trust + .mk-search { margin-top: 0; padding-top: 2rem; }
+
+/* ---------- Grille des filières (bento) ---------- */
+.tz-bento { display: grid; gap: 1.2rem; grid-template-columns: 1fr; }
+@media (min-width: 768px) { .tz-bento { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1200px) {
+  .tz-bento { grid-template-columns: 1.25fr 1fr 1fr; grid-template-rows: auto auto; }
+  .tz-bento .tz-tile:first-child { grid-row: span 2; flex-direction: column; }
+  .tz-bento .tz-tile:first-child .tz-tile-art { width: 100%; height: 260px; border-radius: 160px 160px 14px 14px; }
+  .tz-bento .tz-tile:last-child { grid-column: span 2; }
+}
+.tz-tile { display: flex; gap: 1.2rem; align-items: stretch; padding: 1.1rem; background: #FFFDF9; border: 1px solid var(--mk-line); border-radius: 22px; color: var(--tz-ink); text-decoration: none; transition: transform .25s var(--al-ease), box-shadow .25s; }
+.tz-tile:hover { transform: translateY(-4px); box-shadow: var(--mk-shadow); color: var(--tz-ink); border-color: var(--tz-sand); }
+.tz-tile-art { flex: none; width: 120px; min-height: 150px; display: grid; place-items: center; color: #FFFDF9; border-radius: 70px 70px 12px 12px; background-image: url("../img/zellige.svg"), var(--tz-tile-bg); background-size: 48px 48px, cover; }
+.tz-tile-argan { --tz-tile-bg: linear-gradient(165deg, #E2B866, #A8692F); }
+.tz-tile-dates { --tz-tile-bg: linear-gradient(165deg, #B66A3C, #6E3420); }
+.tz-tile-saffron { --tz-tile-bg: linear-gradient(165deg, #8E4A86, #C85A32); }
+.tz-tile-olive { --tz-tile-bg: linear-gradient(165deg, #5F7F3A, #1B4332); }
+.tz-tile-body { display: flex; flex-direction: column; gap: .35rem; padding-block: .3rem; }
+.tz-tile-origin { display: inline-flex; align-items: center; gap: .3rem; color: var(--tz-terra); font-size: .78rem; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; }
+.lang-ar .tz-tile-origin { letter-spacing: 0; }
+.tz-tile h3 { font-family: var(--tz-serif); font-weight: 600; font-size: 1.35rem; color: var(--tz-green); margin: 0; }
+.lang-ar .tz-tile h3 { font-family: var(--al-font); font-weight: 800; }
+.tz-tile p { color: var(--mk-muted); font-size: .94rem; margin: 0; }
+.tz-tile-meta { margin-top: auto; padding-top: .4rem; color: var(--tz-green); font-weight: 700; font-size: .88rem; }
+
+.tz-tabs { display: flex; flex-wrap: wrap; justify-content: center; gap: .6rem; margin-top: 2rem; }
+.tz-tab { display: inline-flex; align-items: center; gap: .45rem; padding: .55rem 1rem; border-radius: 999px; background: #FFFDF9; border: 1px solid var(--mk-line); color: var(--tz-green); font-weight: 600; font-size: .92rem; text-decoration: none; }
+.tz-tab:hover { background: var(--tz-green); border-color: var(--tz-green); color: #fff; }
+.tz-tab svg { color: var(--tz-terra); }
+.tz-tab:hover svg { color: var(--tz-sand); }
+
+/* ---------- Contrôle avant mise en relation ---------- */
+.tz-checks { background: var(--tz-ivory-2); }
+.tz-steps { list-style: none; padding: 0; margin: 0 auto; max-width: 1080px; display: grid; gap: 1.2rem; grid-template-columns: 1fr; counter-reset: none; }
+@media (min-width: 992px) { .tz-steps { grid-template-columns: repeat(3, 1fr); } }
+.tz-steps li { position: relative; padding: 2rem 1.5rem 1.6rem; background: #FFFDF9; border: 1px solid var(--mk-line); border-radius: 24px; text-align: center; }
+@media (min-width: 992px) { .tz-steps li { padding-top: 2.6rem; border-radius: 140px 140px 22px 22px; } }
+.tz-step-n { display: grid; place-items: center; width: 52px; height: 52px; margin: 0 auto 1rem; border-radius: 50%; background: var(--tz-terra); color: #fff; font-family: var(--tz-serif); font-size: 1.5rem; font-weight: 600; }
+.tz-steps h3 { font-family: var(--tz-serif); font-weight: 600; font-size: 1.25rem; color: var(--tz-green); margin-bottom: .5rem; }
+.lang-ar .tz-steps h3 { font-family: var(--al-font); font-weight: 800; }
+.tz-steps p { color: var(--mk-muted); margin: 0; }
+
+/* ---------- Fonds : photos du Maroc (palmeraies, désert, Atlas, Chefchaouen, ksar), une différente à chaque page (js/fonds.js) ---------- */
+/* Très pâles et fixes derrière le contenu : le texte reste lisible, les cartes gardent leur fond. */
+body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: .13; filter: saturate(.8); background: url("../img/fonds/01-palmeraie.jpg") center / cover no-repeat; }
+[data-fond="1"] body::before { background-image: url("../img/fonds/01-palmeraie.jpg"); }
+[data-fond="2"] body::before { background-image: url("../img/fonds/02-dunes.jpg"); }
+[data-fond="3"] body::before { background-image: url("../img/fonds/03-atlas.jpg"); }
+[data-fond="4"] body::before { background-image: url("../img/fonds/04-chefchaouen.jpg"); }
+[data-fond="5"] body::before { background-image: url("../img/fonds/05-palmiers.jpg"); }
+[data-fond="6"] body::before { background-image: url("../img/fonds/06-the-desert.jpg"); }
+[data-fond="7"] body::before { background-image: url("../img/fonds/07-ksar-dattes.jpg"); }
+[data-fond="8"] body::before { background-image: url("../img/fonds/08-maison-ksar.jpg"); }
+@media (max-width: 767.98px) { body::before { opacity: .1; } }
+@media print { body::before { display: none; } }
+/* Les grandes bandes laissent voir le paysage par transparence */
+.tz-zellige { background-color: transparent; }
+.tz-hero { background-color: rgba(243, 236, 225, .55); }
+.tz-checks, .mk-section-cream { background-color: rgba(243, 236, 225, .6); }
+.wc-shop-head, .al-page-head, .wc-hero-compact { background: rgba(243, 236, 225, .55); }
+.mk-curve::after { background: var(--tz-ivory); opacity: .9; }
