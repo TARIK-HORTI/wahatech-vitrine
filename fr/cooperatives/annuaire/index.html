@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Annuaire des coopératives — WahaTech</title>
   <meta name="description" content="WahaTech : la marketplace des coopératives marocaines. Découvrez leurs produits du terroir et contactez-les directement.">
-  <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#c8641e">
   <meta name="htmx-config" content='{"includeIndicatorStyles": false}'>
   <meta property="og:title" content="WahaTech">
@@ -16,9 +15,8 @@
   <link rel="alternate" hreflang="ar" href="/ar/cooperatives/annuaire/">
   <link rel="alternate" hreflang="en" href="/en/cooperatives/annuaire/">
   <link rel="icon" href="/static/img/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
+  <link rel="preload" href="/static/fonts/plus-jakarta-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/static/css/fonts.css">
   <link rel="stylesheet" href="/static/vendor/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="/static/css/wahatech.css">
   <link rel="stylesheet" href="/static/css/cooperatives.css">
@@ -30,10 +28,8 @@
 <body class="lang-fr ">
   <a class="skip-link" href="#contenu">Aller au contenu</a>
   <div class="al-demo-banner" role="note">
-    <strong>Version de démonstration</strong>
-    <span>Toutes les données sont fictives. Vos idées nous aident à améliorer WahaTech avant son lancement.</span>
-    <a href="https://wahatech.pythonanywhere.com/fr/compte/connexion/">Comptes de test</a>
-    <a href="https://wahatech.pythonanywhere.com/fr/avis/">Donner mon avis</a>
+    <strong>Bientôt en ligne</strong>
+    <span>Vous pouvez parcourir le site. Les inscriptions et les demandes ouvriront au lancement officiel.</span>
   </div>
   
 <div class="mk-topbar">
@@ -44,7 +40,7 @@
     </div>
     
 <form method="post" action="/i18n/setlang/" class="al-lang m-0" aria-label="Langue du site">
-  <input type="hidden" name="csrfmiddlewaretoken" value="EM6UpyqYPcHhOgz8ttHJyHm7uGAbahGYCssWIsCmDBh7il1g27M76EsBiMOR5AVu">
+  <input type="hidden" name="csrfmiddlewaretoken" value="egKbTPmzNUjXAyZI0HypdymS4yifIq4Dz5PvFmKPTHTCflWmNd6itiqbX7qRDhMt">
   <input type="hidden" name="next" value="/fr/cooperatives/annuaire/">
   
   <button type="submit" name="language" value="fr" lang="fr" class="is-active" aria-current="true" title="Français">FR</button>
@@ -90,8 +86,8 @@
           </ul>
         </div>
         
-          <a class="btn btn-al-ghost" href="https://wahatech.pythonanywhere.com/fr/compte/inscription/?role=cooperative" rel="nofollow"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M12 5v14"/></svg> Inscrire ma coopérative</a>
-          <a class="mk-icon-btn" href="https://wahatech.pythonanywhere.com/fr/compte/connexion/" aria-label="Connexion" title="Connexion"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a>
+          <a class="btn btn-al-ghost" href="/fr/compte/inscription/?role=cooperative"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M12 5v14"/></svg> Inscrire ma coopérative</a>
+          <a class="mk-icon-btn" href="/fr/compte/connexion/" aria-label="Connexion" title="Connexion"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a>
         
       </div>
     </div>
@@ -116,77 +112,7 @@
 </section>
 <div class="container pb-5">
   
-  <div class="al-expert-grid">
-    
-    <article class="al-expert">
-      <a class="al-expert-link" href="/fr/cooperatives/cooperative-nakhil-erfoud-5c0ed7/" aria-label="Coopérative Nakhil Erfoud"></a>
-      <div class="d-flex gap-3 align-items-center">
-        <span class="al-avatar al-avatar-lg"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></svg></span>
-        <div class="min-w-0">
-          <h3 dir="auto">Coopérative Nakhil Erfoud <span class="al-verified" title="Coopérative vérifiée"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg></span></h3>
-          <div class="al-expert-role">Erfoud · Drâa-Tafilalet</div>
-        </div>
-      </div>
-      <p class="al-expert-headline" dir="auto">Coopérative de femmes qui trie, conditionne et transforme les dattes de la palmeraie d&#x27;Erfoud : Mejhoul, Boufeggous et …</p>
-      <div class="al-tags">
-        <span class="al-tag al-tag-alt">Coopérative féminine</span>
-        
-      </div>
-      <div class="al-expert-foot"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg> <span>3 produits</span></div>
-    </article>
-    
-    <article class="al-expert">
-      <a class="al-expert-link" href="/fr/cooperatives/cooperative-tifawin-argan-ed4d14/" aria-label="Coopérative Tifawin Argan"></a>
-      <div class="d-flex gap-3 align-items-center">
-        <span class="al-avatar al-avatar-lg"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></svg></span>
-        <div class="min-w-0">
-          <h3 dir="auto">Coopérative Tifawin Argan <span class="al-verified" title="Coopérative vérifiée"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg></span></h3>
-          <div class="al-expert-role">Tiznit · Souss-Massa</div>
-        </div>
-      </div>
-      <p class="al-expert-headline" dir="auto">Extraction traditionnelle et semi-mécanisée de l&#x27;huile d&#x27;argan alimentaire et cosmétique. (Coopérative fictive de démon…</p>
-      <div class="al-tags">
-        <span class="al-tag al-tag-alt">Coopérative féminine</span>
-        <span class="al-tag">Bio (exemple)</span>
-      </div>
-      <div class="al-expert-foot"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg> <span>3 produits</span></div>
-    </article>
-    
-    <article class="al-expert">
-      <a class="al-expert-link" href="/fr/cooperatives/cooperative-zitoun-taounate-9d5bcb/" aria-label="Coopérative Zitoun Taounate"></a>
-      <div class="d-flex gap-3 align-items-center">
-        <span class="al-avatar al-avatar-lg"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></svg></span>
-        <div class="min-w-0">
-          <h3 dir="auto">Coopérative Zitoun Taounate <span class="al-verified" title="Coopérative vérifiée"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg></span></h3>
-          <div class="al-expert-role">Taounate · Fès-Meknès</div>
-        </div>
-      </div>
-      <p class="al-expert-headline" dir="auto">Producteurs d&#x27;olives de la région de Taounate : huile vierge extra et olives de table. (Coopérative fictive de démonstr…</p>
-      <div class="al-tags">
-        
-        
-      </div>
-      <div class="al-expert-foot"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg> <span>3 produits</span></div>
-    </article>
-    
-    <article class="al-expert">
-      <a class="al-expert-link" href="/fr/cooperatives/cooperative-zafrane-taliouine-1f9699/" aria-label="Coopérative Zafrane Taliouine"></a>
-      <div class="d-flex gap-3 align-items-center">
-        <span class="al-avatar al-avatar-lg"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></svg></span>
-        <div class="min-w-0">
-          <h3 dir="auto">Coopérative Zafrane Taliouine <span class="al-verified" title="Coopérative vérifiée"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg></span></h3>
-          <div class="al-expert-role">Taliouine · Souss-Massa</div>
-        </div>
-      </div>
-      <p class="al-expert-headline" dir="auto">Culture et séchage du safran de montagne, récolté à la main en automne. (Coopérative fictive de démonstration.)</p>
-      <div class="al-tags">
-        
-        
-      </div>
-      <div class="al-expert-foot"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg> <span>2 produits</span></div>
-    </article>
-    
-  </div>
+  <div class="al-empty"><h3>Aucune coopérative dans cette sélection pour le moment.</h3></div>
   
 </div>
 </main>
@@ -221,11 +147,11 @@
       <div class="col-6 col-md-3 col-lg-2">
         <h4>Coopératives</h4>
         <ul>
-          <li><a href="https://wahatech.pythonanywhere.com/fr/compte/inscription/?role=cooperative" rel="nofollow">Inscrire ma coopérative</a></li>
+          <li><a href="/fr/compte/inscription/?role=cooperative">Inscrire ma coopérative</a></li>
           <li><a href="/fr/accompagnement/#abonnement">Abonnement annuel</a></li>
           <li><a href="/fr/accompagnement/">Services et accompagnement</a></li>
           <li><a href="/fr/accompagnement/marque-emballage/">Marque et emballage</a></li>
-          <li><a href="https://wahatech.pythonanywhere.com/fr/compte/connexion/">Espace coopérative</a></li>
+          <li><a href="/fr/compte/connexion/">Espace coopérative</a></li>
         </ul>
       </div>
       <div class="col-6 col-md-3 col-lg-2">
@@ -239,9 +165,10 @@
         <ul>
           <li><a href="/fr/a-propos/">Qui sommes-nous</a></li>
           <li><a href="/fr/questions-frequentes/">Questions fréquentes</a></li>
+          <li><a href="/fr/mentions-legales/">Mentions légales</a></li>
           <li><a href="/fr/conditions-utilisation/">Conditions d'utilisation</a></li>
           <li><a href="/fr/confidentialite/">Confidentialité</a></li>
-          <li><a href="https://wahatech.pythonanywhere.com/fr/avis/?depuis=/fr/cooperatives/annuaire/">Suggestions et réclamations</a></li>
+          <li><a href="/fr/avis/?depuis=/fr/cooperatives/annuaire/">Suggestions et réclamations</a></li>
         </ul>
       </div>
     </div>
@@ -256,6 +183,6 @@
   <a class="mk-top" href="#contenu" aria-label="Haut de page">↑</a>
   <script src="/static/vendor/bootstrap/bootstrap.bundle.min.js" defer></script>
   <script src="/static/vendor/htmx/htmx.min.js" defer></script>
-<script src="/static/js/vitrine.js" defer></script>
+<script src="/static/js/vitrine.js" data-mode="launch" defer></script>
 </body>
 </html>

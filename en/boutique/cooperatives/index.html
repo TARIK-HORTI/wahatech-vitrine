@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Our cooperatives — WahaTech</title>
   <meta name="description" content="Meet the Moroccan cooperatives selling on WahaTech: their story, region and products.">
-  <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#c8641e">
   <meta name="htmx-config" content='{"includeIndicatorStyles": false}'>
   <meta property="og:title" content="WahaTech">
@@ -16,9 +15,8 @@
   <link rel="alternate" hreflang="ar" href="/ar/boutique/cooperatives/">
   <link rel="alternate" hreflang="en" href="/en/boutique/cooperatives/">
   <link rel="icon" href="/static/img/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
+  <link rel="preload" href="/static/fonts/plus-jakarta-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/static/css/fonts.css">
   <link rel="stylesheet" href="/static/vendor/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="/static/css/wahatech.css">
   <link rel="stylesheet" href="/static/css/cooperatives.css">
@@ -30,10 +28,8 @@
 <body class="lang-en ">
   <a class="skip-link" href="#contenu">Skip to content</a>
   <div class="al-demo-banner" role="note">
-    <strong>Demo version</strong>
-    <span>All data is fictional. Your ideas help us improve WahaTech before launch.</span>
-    <a href="https://wahatech.pythonanywhere.com/en/compte/connexion/">Test accounts</a>
-    <a href="https://wahatech.pythonanywhere.com/en/avis/">Give my feedback</a>
+    <strong>Coming soon</strong>
+    <span>You can browse the site. Sign-ups and requests will open at the official launch.</span>
   </div>
   
 <div class="mk-topbar">
@@ -44,7 +40,7 @@
     </div>
     
 <form method="post" action="/i18n/setlang/" class="al-lang m-0" aria-label="Site language">
-  <input type="hidden" name="csrfmiddlewaretoken" value="i0xYcA1PxIxMZt5EG1WIMYD87GKlhIRUgGT0vuddl77CtyxMfF16kVJCVMY1c16q">
+  <input type="hidden" name="csrfmiddlewaretoken" value="Yi1uxvuBQRsedPSZVxId0zdFO9g4GMWij76Oj2SRWE2TSCPDI3g6gjhYHIoGBDE8">
   <input type="hidden" name="next" value="/en/boutique/cooperatives/">
   
   <button type="submit" name="language" value="fr" lang="fr" class=""  title="French">FR</button>
@@ -90,8 +86,8 @@
           </ul>
         </div>
         
-          <a class="btn btn-al-ghost" href="https://wahatech.pythonanywhere.com/en/compte/inscription/?role=cooperative" rel="nofollow"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M12 5v14"/></svg> Register my cooperative</a>
-          <a class="mk-icon-btn" href="https://wahatech.pythonanywhere.com/en/compte/connexion/" aria-label="Log in" title="Log in"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a>
+          <a class="btn btn-al-ghost" href="/en/compte/inscription/?role=cooperative"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M12 5v14"/></svg> Register my cooperative</a>
+          <a class="mk-icon-btn" href="/en/compte/connexion/" aria-label="Log in" title="Log in"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a>
         
       </div>
     </div>
@@ -106,7 +102,7 @@
   <div class="container">
     <div class="al-kicker reveal">Cooperatives</div>
     <h1 class="reveal" data-delay="80">Women and men behind every product</h1>
-    <p class="al-sub reveal" data-delay="160">Our team checks every cooperative: registration, health authorisation and a visit when possible.</p>
+    <p class="al-sub reveal" data-delay="160">Every cooperative is verified by our team: registration and, where applicable, ONSSA health authorisation.</p>
     <form method="get" class="wc-inline-filter reveal" data-delay="220">
       <select name="region" class="form-select" aria-label="Region">
         <option value="">All of Morocco</option>
@@ -120,61 +116,22 @@
 <div class="container pb-5">
   <div class="row g-4">
     
-    <div class="col-md-6 col-lg-4">
-      <a class="wc-coop" href="/en/cooperatives/cooperative-nakhil-erfoud-5c0ed7/">
-        <span class="wc-coop-logo"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
-        <h2 class="h5" dir="auto">Coopérative Nakhil Erfoud</h2>
-        <p class="wc-card-origin mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 4.99-5.54 10.19-7.4 11.8a1 1 0 0 1-1.2 0C9.54 20.19 4 14.99 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg> Erfoud · Draa-Tafilalet</p>
-        <p class="small text-muted mb-3" dir="auto">Coopérative de femmes qui trie, conditionne et transforme les dattes de la palmeraie d&#x27;Erfoud : Mejhoul, Boufeggous et pâte de dattes. (Coopérative …</p>
-        <span class="d-flex flex-wrap gap-2">
-          <span class="wc-badge wc-badge-women">Women's coop</span>
-          <span class="wc-badge">Since 2011</span>
-          <span class="wc-badge wc-badge-ok"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg> Verified</span>
-        </span>
-      </a>
-    </div>
-    
-    <div class="col-md-6 col-lg-4">
-      <a class="wc-coop" href="/en/cooperatives/cooperative-tifawin-argan-ed4d14/">
-        <span class="wc-coop-logo"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
-        <h2 class="h5" dir="auto">Coopérative Tifawin Argan</h2>
-        <p class="wc-card-origin mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 4.99-5.54 10.19-7.4 11.8a1 1 0 0 1-1.2 0C9.54 20.19 4 14.99 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg> Tiznit · Souss-Massa</p>
-        <p class="small text-muted mb-3" dir="auto">Extraction traditionnelle et semi-mécanisée de l&#x27;huile d&#x27;argan alimentaire et cosmétique. (Coopérative fictive de démonstration.)</p>
-        <span class="d-flex flex-wrap gap-2">
-          <span class="wc-badge wc-badge-women">Women's coop</span>
-          <span class="wc-badge">Since 2008</span>
-          <span class="wc-badge wc-badge-ok"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg> Verified</span>
-        </span>
-      </a>
-    </div>
-    
-    <div class="col-md-6 col-lg-4">
-      <a class="wc-coop" href="/en/cooperatives/cooperative-zafrane-taliouine-1f9699/">
-        <span class="wc-coop-logo"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
-        <h2 class="h5" dir="auto">Coopérative Zafrane Taliouine</h2>
-        <p class="wc-card-origin mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 4.99-5.54 10.19-7.4 11.8a1 1 0 0 1-1.2 0C9.54 20.19 4 14.99 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg> Taliouine · Souss-Massa</p>
-        <p class="small text-muted mb-3" dir="auto">Culture et séchage du safran de montagne, récolté à la main en automne. (Coopérative fictive de démonstration.)</p>
-        <span class="d-flex flex-wrap gap-2">
-          
-          <span class="wc-badge">Since 2007</span>
-          <span class="wc-badge wc-badge-ok"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg> Verified</span>
-        </span>
-      </a>
-    </div>
-    
-    <div class="col-md-6 col-lg-4">
-      <a class="wc-coop" href="/en/cooperatives/cooperative-zitoun-taounate-9d5bcb/">
-        <span class="wc-coop-logo"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
-        <h2 class="h5" dir="auto">Coopérative Zitoun Taounate</h2>
-        <p class="wc-card-origin mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 4.99-5.54 10.19-7.4 11.8a1 1 0 0 1-1.2 0C9.54 20.19 4 14.99 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg> Taounate · Fez-Meknes</p>
-        <p class="small text-muted mb-3" dir="auto">Producteurs d&#x27;olives de la région de Taounate : huile vierge extra et olives de table. (Coopérative fictive de démonstration.)</p>
-        <span class="d-flex flex-wrap gap-2">
-          
-          <span class="wc-badge">Since 2014</span>
-          <span class="wc-badge wc-badge-ok"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg> Verified</span>
-        </span>
-      </a>
-    </div>
+    <div class="col-12">
+<div class="mk-opening reveal">
+  <span class="mk-opening-ico"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></svg></span>
+  <h2>The marketplace <span>opens soon</span></h2>
+  <p>The first cooperatives are registering and being verified. Their products will appear here as soon as they are approved.</p>
+  <ol class="mk-steps">
+    <li><b>You choose</b><span>local products, with their cooperative, region and labels.</span></li>
+    <li><b>Your request is sent</b><span>directly to the cooperative, with your contact details.</span></li>
+    <li><b>The cooperative contacts you</b><span>to confirm the price, delivery and payment, which are arranged with it.</span></li>
+  </ol>
+  <div class="mk-cta-actions justify-content-center">
+    <a class="btn btn-al" href="/en/compte/inscription/?role=cooperative"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M12 5v14"/></svg> Register my cooperative</a>
+    <a class="btn btn-al-ghost" href="/en/accompagnement/">Discover the offer for cooperatives</a>
+  </div>
+</div>
+</div>
     
   </div>
 </div>
@@ -226,11 +183,11 @@
       <div class="col-6 col-md-3 col-lg-2">
         <h4>Cooperatives</h4>
         <ul>
-          <li><a href="https://wahatech.pythonanywhere.com/en/compte/inscription/?role=cooperative" rel="nofollow">Register my cooperative</a></li>
+          <li><a href="/en/compte/inscription/?role=cooperative">Register my cooperative</a></li>
           <li><a href="/en/accompagnement/#abonnement">Annual subscription</a></li>
           <li><a href="/en/accompagnement/">Services and support</a></li>
           <li><a href="/en/accompagnement/marque-emballage/">Branding and packaging</a></li>
-          <li><a href="https://wahatech.pythonanywhere.com/en/compte/connexion/">Cooperative space</a></li>
+          <li><a href="/en/compte/connexion/">Cooperative space</a></li>
         </ul>
       </div>
       <div class="col-6 col-md-3 col-lg-2">
@@ -244,9 +201,10 @@
         <ul>
           <li><a href="/en/a-propos/">About us</a></li>
           <li><a href="/en/questions-frequentes/">Frequently asked questions</a></li>
+          <li><a href="/en/mentions-legales/">Legal</a></li>
           <li><a href="/en/conditions-utilisation/">Terms of use</a></li>
           <li><a href="/en/confidentialite/">Privacy</a></li>
-          <li><a href="https://wahatech.pythonanywhere.com/en/avis/?depuis=/en/boutique/cooperatives/">Suggestions and complaints</a></li>
+          <li><a href="/en/avis/?depuis=/en/boutique/cooperatives/">Suggestions and complaints</a></li>
         </ul>
       </div>
     </div>
@@ -261,6 +219,6 @@
   <a class="mk-top" href="#contenu" aria-label="Back to top">↑</a>
   <script src="/static/vendor/bootstrap/bootstrap.bundle.min.js" defer></script>
   <script src="/static/vendor/htmx/htmx.min.js" defer></script>
-<script src="/static/js/vitrine.js" defer></script>
+<script src="/static/js/vitrine.js" data-mode="launch" defer></script>
 </body>
 </html>

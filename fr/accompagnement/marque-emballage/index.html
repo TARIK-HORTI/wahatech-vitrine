@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Marque, emballage et photos produits — Accompagnement — WahaTech</title>
   <meta name="description" content="Une image professionnelle qui fait vendre : logo, étiquettes, emballages et photos prêtes pour la boutique en ligne.">
-  <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#c8641e">
   <meta name="htmx-config" content='{"includeIndicatorStyles": false}'>
   <meta property="og:title" content="WahaTech">
@@ -16,9 +15,8 @@
   <link rel="alternate" hreflang="ar" href="/ar/accompagnement/marque-emballage/">
   <link rel="alternate" hreflang="en" href="/en/accompagnement/marque-emballage/">
   <link rel="icon" href="/static/img/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
+  <link rel="preload" href="/static/fonts/plus-jakarta-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/static/css/fonts.css">
   <link rel="stylesheet" href="/static/vendor/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="/static/css/wahatech.css">
   <link rel="stylesheet" href="/static/css/cooperatives.css">
@@ -30,10 +28,8 @@
 <body class="lang-fr ">
   <a class="skip-link" href="#contenu">Aller au contenu</a>
   <div class="al-demo-banner" role="note">
-    <strong>Version de démonstration</strong>
-    <span>Toutes les données sont fictives. Vos idées nous aident à améliorer WahaTech avant son lancement.</span>
-    <a href="https://wahatech.pythonanywhere.com/fr/compte/connexion/">Comptes de test</a>
-    <a href="https://wahatech.pythonanywhere.com/fr/avis/">Donner mon avis</a>
+    <strong>Bientôt en ligne</strong>
+    <span>Vous pouvez parcourir le site. Les inscriptions et les demandes ouvriront au lancement officiel.</span>
   </div>
   
 <div class="mk-topbar">
@@ -44,7 +40,7 @@
     </div>
     
 <form method="post" action="/i18n/setlang/" class="al-lang m-0" aria-label="Langue du site">
-  <input type="hidden" name="csrfmiddlewaretoken" value="t3692RyanwFZQ21eKFppk9zeYQzNOURlrJsblLKybVfPk7tmjjuNS6FIMWNtJd6R">
+  <input type="hidden" name="csrfmiddlewaretoken" value="r5W8Se2ee7P2ClfZaZ03KPQQq5upjJg4MU1sELqukUpHh8cDXvyW0zU9jEC1eAYU">
   <input type="hidden" name="next" value="/fr/accompagnement/marque-emballage/">
   
   <button type="submit" name="language" value="fr" lang="fr" class="is-active" aria-current="true" title="Français">FR</button>
@@ -90,8 +86,8 @@
           </ul>
         </div>
         
-          <a class="btn btn-al-ghost" href="https://wahatech.pythonanywhere.com/fr/compte/inscription/?role=cooperative" rel="nofollow"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M12 5v14"/></svg> Inscrire ma coopérative</a>
-          <a class="mk-icon-btn" href="https://wahatech.pythonanywhere.com/fr/compte/connexion/" aria-label="Connexion" title="Connexion"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a>
+          <a class="btn btn-al-ghost" href="/fr/compte/inscription/?role=cooperative"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M12 5v14"/></svg> Inscrire ma coopérative</a>
+          <a class="mk-icon-btn" href="/fr/compte/connexion/" aria-label="Connexion" title="Connexion"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a>
         
       </div>
     </div>
@@ -181,11 +177,11 @@
       <div class="col-6 col-md-3 col-lg-2">
         <h4>Coopératives</h4>
         <ul>
-          <li><a href="https://wahatech.pythonanywhere.com/fr/compte/inscription/?role=cooperative" rel="nofollow">Inscrire ma coopérative</a></li>
+          <li><a href="/fr/compte/inscription/?role=cooperative">Inscrire ma coopérative</a></li>
           <li><a href="/fr/accompagnement/#abonnement">Abonnement annuel</a></li>
           <li><a href="/fr/accompagnement/">Services et accompagnement</a></li>
           <li><a href="/fr/accompagnement/marque-emballage/">Marque et emballage</a></li>
-          <li><a href="https://wahatech.pythonanywhere.com/fr/compte/connexion/">Espace coopérative</a></li>
+          <li><a href="/fr/compte/connexion/">Espace coopérative</a></li>
         </ul>
       </div>
       <div class="col-6 col-md-3 col-lg-2">
@@ -199,9 +195,10 @@
         <ul>
           <li><a href="/fr/a-propos/">Qui sommes-nous</a></li>
           <li><a href="/fr/questions-frequentes/">Questions fréquentes</a></li>
+          <li><a href="/fr/mentions-legales/">Mentions légales</a></li>
           <li><a href="/fr/conditions-utilisation/">Conditions d'utilisation</a></li>
           <li><a href="/fr/confidentialite/">Confidentialité</a></li>
-          <li><a href="https://wahatech.pythonanywhere.com/fr/avis/?depuis=/fr/accompagnement/marque-emballage/">Suggestions et réclamations</a></li>
+          <li><a href="/fr/avis/?depuis=/fr/accompagnement/marque-emballage/">Suggestions et réclamations</a></li>
         </ul>
       </div>
     </div>
@@ -216,6 +213,6 @@
   <a class="mk-top" href="#contenu" aria-label="Haut de page">↑</a>
   <script src="/static/vendor/bootstrap/bootstrap.bundle.min.js" defer></script>
   <script src="/static/vendor/htmx/htmx.min.js" defer></script>
-<script src="/static/js/vitrine.js" defer></script>
+<script src="/static/js/vitrine.js" data-mode="launch" defer></script>
 </body>
 </html>

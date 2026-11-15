@@ -2,7 +2,13 @@
 (function () {
   "use strict";
   var lang = (document.documentElement.lang || "fr").slice(0, 2);
-  var TEXT = {
+  var script = document.querySelector('script[src$="vitrine.js"]');
+  var LAUNCH = {
+    fr: "WahaTech ouvre bientôt : les inscriptions et les demandes seront possibles au lancement officiel.",
+    ar: "WahaTech تفتح قريبًا: سيصبح التسجيل وإرسال الطلبات ممكنًا عند الإطلاق الرسمي.",
+    en: "WahaTech opens soon: sign-ups and requests will be possible at the official launch."
+  };
+  var TEXT = (script && script.getAttribute("data-mode") === "launch") ? LAUNCH : {
     fr: "Version vitrine : pour essayer cette fonction, cliquez sur « Comptes de test » en haut de la page (démo complète).",
     ar: "نسخة عرض: لتجربة هذه الخاصية، اضغط على «حسابات التجربة» أعلى الصفحة (النسخة التجريبية الكاملة).",
     en: "Showcase version: to try this feature, click “Test accounts” at the top of the page (full demo)."

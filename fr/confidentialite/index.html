@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Confidentialité — WahaTech</title>
   <meta name="description" content="WahaTech : la marketplace des coopératives marocaines. Découvrez leurs produits du terroir et contactez-les directement.">
-  <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#c8641e">
   <meta name="htmx-config" content='{"includeIndicatorStyles": false}'>
   <meta property="og:title" content="WahaTech">
@@ -16,9 +15,8 @@
   <link rel="alternate" hreflang="ar" href="/ar/confidentialite/">
   <link rel="alternate" hreflang="en" href="/en/confidentialite/">
   <link rel="icon" href="/static/img/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
+  <link rel="preload" href="/static/fonts/plus-jakarta-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/static/css/fonts.css">
   <link rel="stylesheet" href="/static/vendor/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="/static/css/wahatech.css">
   <link rel="stylesheet" href="/static/css/cooperatives.css">
@@ -30,10 +28,8 @@
 <body class="lang-fr ">
   <a class="skip-link" href="#contenu">Aller au contenu</a>
   <div class="al-demo-banner" role="note">
-    <strong>Version de démonstration</strong>
-    <span>Toutes les données sont fictives. Vos idées nous aident à améliorer WahaTech avant son lancement.</span>
-    <a href="https://wahatech.pythonanywhere.com/fr/compte/connexion/">Comptes de test</a>
-    <a href="https://wahatech.pythonanywhere.com/fr/avis/">Donner mon avis</a>
+    <strong>Bientôt en ligne</strong>
+    <span>Vous pouvez parcourir le site. Les inscriptions et les demandes ouvriront au lancement officiel.</span>
   </div>
   
 <div class="mk-topbar">
@@ -44,7 +40,7 @@
     </div>
     
 <form method="post" action="/i18n/setlang/" class="al-lang m-0" aria-label="Langue du site">
-  <input type="hidden" name="csrfmiddlewaretoken" value="8bFwEjSXaYb6Yv3SGlxaFmlgsU4ESOsU6R1yXd4lYnLWsAv0fZCydjrKg0ikN7Hq">
+  <input type="hidden" name="csrfmiddlewaretoken" value="I8u0ciKDViQYOLYwuom6JdCgtBpFeUed3XzkYP8T15qDtyVahUUZZXGzmaxh9LW3">
   <input type="hidden" name="next" value="/fr/confidentialite/">
   
   <button type="submit" name="language" value="fr" lang="fr" class="is-active" aria-current="true" title="Français">FR</button>
@@ -90,8 +86,8 @@
           </ul>
         </div>
         
-          <a class="btn btn-al-ghost" href="https://wahatech.pythonanywhere.com/fr/compte/inscription/?role=cooperative" rel="nofollow"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M12 5v14"/></svg> Inscrire ma coopérative</a>
-          <a class="mk-icon-btn" href="https://wahatech.pythonanywhere.com/fr/compte/connexion/" aria-label="Connexion" title="Connexion"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a>
+          <a class="btn btn-al-ghost" href="/fr/compte/inscription/?role=cooperative"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M12 5v14"/></svg> Inscrire ma coopérative</a>
+          <a class="mk-icon-btn" href="/fr/compte/connexion/" aria-label="Connexion" title="Connexion"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a>
         
       </div>
     </div>
@@ -108,11 +104,45 @@
     <h1 class="mb-4">Politique de confidentialité</h1>
     <div class="alert alert-warning border-0 rounded-3">Document provisoire. La version définitive sera rédigée avec un professionnel du droit avant l'ouverture publique de WahaTech.</div>
     
-<p>WahaTech collecte les données nécessaires au service : identité, coordonnées, rôle, région, profil professionnel et, pour les agriculteurs, les informations de l'exploitation (superficie, cultures, irrigation). Les mots de passe sont chiffrés et ne sont jamais lisibles, même par l'équipe WahaTech.</p>
-<p>Les données des exploitations ne sont jamais publiées. Avec votre accord, elles sont utilisées de façon anonyme et agrégée pour produire des statistiques agricoles régionales. Vos données ne sont pas vendues.</p>
-<p>Quand vous envoyez une demande dans la boutique, votre nom, votre téléphone, votre email et votre adresse sont transmis à la coopérative concernée, qui les utilise uniquement pour traiter votre demande. Pour une grande commande, ils sont transmis à l'équipe WahaTech, puis aux coopératives consultées.</p>
-<p>Quand vous cliquez sur « Contacter sur WhatsApp », WahaTech compte le clic (date, coopérative, page) pour mesurer l'audience des coopératives ; le contenu de vos messages WhatsApp n'est jamais connu de WahaTech.</p>
-<p>Vous pouvez demander la modification ou la suppression de vos données à tout moment, conformément à la loi marocaine 09-08 relative à la protection des données personnelles.</p>
+<p>Cette politique explique quelles données WahaTech collecte, pourquoi, à qui elles sont transmises, combien de temps elles sont gardées et comment exercer vos droits, conformément à la loi 09-08 relative à la protection des personnes physiques à l'égard du traitement des données à caractère personnel.</p>
+
+<h2 class="h5 mt-4">1. Responsable du traitement</h2>
+<p>L'éditeur du site wahatech.ma (personne physique). Contact : contact@wahatech.ma. <a href="/fr/mentions-legales/">Mentions légales</a></p>
+
+<h2 class="h5 mt-4">2. Données collectées et finalités</h2>
+<ul>
+  <li><strong>Comptes</strong> : nom, email, téléphone, région, rôle, mot de passe (chiffré, jamais lisible). Finalité : créer et gérer votre espace.</li>
+  <li><strong>Coopératives</strong> : nom de la coopérative, immatriculation, ville, région, description, produits, photos, documents de vérification, nom du responsable. Finalité : vérifier et présenter la coopérative ; gérer son abonnement et ses reçus.</li>
+  <li><strong>Demandes de commande</strong> : nom, téléphone, email, adresse, message et produits demandés. Finalité : transmettre votre demande à la coopérative concernée.</li>
+  <li><strong>Demandes de devis (grandes commandes)</strong> : nom, société, téléphone, email, pays, besoin. Finalité : étudier votre demande et consulter les coopératives.</li>
+  <li><strong>Clics « Contacter sur WhatsApp »</strong> : date, coopérative, page d'origine et, si vous êtes connecté, votre compte. Finalité : mesurer l'audience des coopératives. Le contenu de vos messages WhatsApp n'est jamais connu de WahaTech.</li>
+  <li><strong>Suggestions et réclamations</strong> : votre message et, si vous les donnez, vos coordonnées. Finalité : vous répondre et améliorer le site.</li>
+  <li><strong>Sécurité</strong> : adresse IP et identifiant lors des tentatives de connexion échouées. Finalité : bloquer les tentatives d'intrusion.</li>
+</ul>
+<p>Les champs marqués comme obligatoires sont nécessaires pour traiter votre demande ; sans eux, elle ne peut pas être envoyée.</p>
+
+<h2 class="h5 mt-4">3. Destinataires</h2>
+<p>Vos coordonnées sont transmises uniquement à la coopérative concernée par votre demande (ou, pour une grande commande, à l'équipe WahaTech puis aux coopératives consultées). Elles ne sont jamais vendues, louées ni publiées. L'hébergeur du site et le service d'envoi d'emails y ont accès techniquement, pour le seul fonctionnement du site.</p>
+
+<p>En cas de fraude ou d'escroquerie signalée, les informations nécessaires sur les parties concernées (identité, coordonnées, historique des demandes) peuvent être communiquées aux autorités compétentes sur leur demande ou lors d'une plainte, et à la partie lésée sur demande justifiée, afin de constater, d'exercer ou de défendre un droit en justice. Les conditions d'utilisation le prévoient et chaque acheteur l'accepte avant d'envoyer une demande.</p>
+
+<h2 class="h5 mt-4">4. Durée de conservation</h2>
+<ul>
+  <li>Comptes : jusqu'à la suppression du compte, puis 1 an.</li>
+  <li>Demandes de commande et de devis : 3 ans après la dernière mise à jour.</li>
+  <li>Reçus d'abonnement : 10 ans (obligations comptables).</li>
+  <li>Clics WhatsApp et journaux de sécurité : 13 mois.</li>
+</ul>
+
+<h2 class="h5 mt-4">5. Hébergement et transferts</h2>
+<p>Les données sont hébergées au Maroc. Aucune donnée n'est transférée à l'étranger sans l'autorisation préalable de la CNDP.</p>
+
+<h2 class="h5 mt-4">6. Cookies</h2>
+<p>Le site n'utilise que des cookies techniques nécessaires à son fonctionnement : session de connexion, protection des formulaires (CSRF), langue choisie et contenu de votre demande en cours. Aucun cookie publicitaire ni de mesure d'audience par un tiers n'est utilisé.</p>
+
+<h2 class="h5 mt-4">7. Vos droits</h2>
+<p>Vous disposez d'un droit d'accès, de rectification et d'opposition, pour motifs légitimes, au traitement de vos données (articles 7, 8 et 9 de la loi 09-08). Pour les exercer, écrivez à contact@wahatech.ma en précisant votre demande ; nous répondons dans les meilleurs délais.</p>
+<p>Ce traitement a été notifié à la CNDP sous le n° : à compléter.</p>
 
   </div></div>
 </div>
@@ -148,11 +178,11 @@
       <div class="col-6 col-md-3 col-lg-2">
         <h4>Coopératives</h4>
         <ul>
-          <li><a href="https://wahatech.pythonanywhere.com/fr/compte/inscription/?role=cooperative" rel="nofollow">Inscrire ma coopérative</a></li>
+          <li><a href="/fr/compte/inscription/?role=cooperative">Inscrire ma coopérative</a></li>
           <li><a href="/fr/accompagnement/#abonnement">Abonnement annuel</a></li>
           <li><a href="/fr/accompagnement/">Services et accompagnement</a></li>
           <li><a href="/fr/accompagnement/marque-emballage/">Marque et emballage</a></li>
-          <li><a href="https://wahatech.pythonanywhere.com/fr/compte/connexion/">Espace coopérative</a></li>
+          <li><a href="/fr/compte/connexion/">Espace coopérative</a></li>
         </ul>
       </div>
       <div class="col-6 col-md-3 col-lg-2">
@@ -166,9 +196,10 @@
         <ul>
           <li><a href="/fr/a-propos/">Qui sommes-nous</a></li>
           <li><a href="/fr/questions-frequentes/">Questions fréquentes</a></li>
+          <li><a href="/fr/mentions-legales/">Mentions légales</a></li>
           <li><a href="/fr/conditions-utilisation/">Conditions d'utilisation</a></li>
           <li><a href="/fr/confidentialite/">Confidentialité</a></li>
-          <li><a href="https://wahatech.pythonanywhere.com/fr/avis/?depuis=/fr/confidentialite/">Suggestions et réclamations</a></li>
+          <li><a href="/fr/avis/?depuis=/fr/confidentialite/">Suggestions et réclamations</a></li>
         </ul>
       </div>
     </div>
@@ -183,6 +214,6 @@
   <a class="mk-top" href="#contenu" aria-label="Haut de page">↑</a>
   <script src="/static/vendor/bootstrap/bootstrap.bundle.min.js" defer></script>
   <script src="/static/vendor/htmx/htmx.min.js" defer></script>
-<script src="/static/js/vitrine.js" defer></script>
+<script src="/static/js/vitrine.js" data-mode="launch" defer></script>
 </body>
 </html>

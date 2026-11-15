@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cooperative assessment — Support — WahaTech</title>
   <meta name="description" content="A complete review to know where to start: organisation, products, compliance and sales.">
-  <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#c8641e">
   <meta name="htmx-config" content='{"includeIndicatorStyles": false}'>
   <meta property="og:title" content="WahaTech">
@@ -16,9 +15,8 @@
   <link rel="alternate" hreflang="ar" href="/ar/accompagnement/diagnostic-cooperative/">
   <link rel="alternate" hreflang="en" href="/en/accompagnement/diagnostic-cooperative/">
   <link rel="icon" href="/static/img/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
+  <link rel="preload" href="/static/fonts/plus-jakarta-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/static/css/fonts.css">
   <link rel="stylesheet" href="/static/vendor/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="/static/css/wahatech.css">
   <link rel="stylesheet" href="/static/css/cooperatives.css">
@@ -30,10 +28,8 @@
 <body class="lang-en ">
   <a class="skip-link" href="#contenu">Skip to content</a>
   <div class="al-demo-banner" role="note">
-    <strong>Demo version</strong>
-    <span>All data is fictional. Your ideas help us improve WahaTech before launch.</span>
-    <a href="https://wahatech.pythonanywhere.com/en/compte/connexion/">Test accounts</a>
-    <a href="https://wahatech.pythonanywhere.com/en/avis/">Give my feedback</a>
+    <strong>Coming soon</strong>
+    <span>You can browse the site. Sign-ups and requests will open at the official launch.</span>
   </div>
   
 <div class="mk-topbar">
@@ -44,7 +40,7 @@
     </div>
     
 <form method="post" action="/i18n/setlang/" class="al-lang m-0" aria-label="Site language">
-  <input type="hidden" name="csrfmiddlewaretoken" value="6XlcoVCbUlMZvo5iU9VWiOcFQ9I5WKyk4DHeHPOzIKmPZtxqtN0kQLi9EfWLR3NQ">
+  <input type="hidden" name="csrfmiddlewaretoken" value="NF567BwYIzrNFr4lifjtc44MZVKngvbs8uaqT8UeOm1ske1Z5LRmsO85SuSZbmTi">
   <input type="hidden" name="next" value="/en/accompagnement/diagnostic-cooperative/">
   
   <button type="submit" name="language" value="fr" lang="fr" class=""  title="French">FR</button>
@@ -90,8 +86,8 @@
           </ul>
         </div>
         
-          <a class="btn btn-al-ghost" href="https://wahatech.pythonanywhere.com/en/compte/inscription/?role=cooperative" rel="nofollow"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M12 5v14"/></svg> Register my cooperative</a>
-          <a class="mk-icon-btn" href="https://wahatech.pythonanywhere.com/en/compte/connexion/" aria-label="Log in" title="Log in"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a>
+          <a class="btn btn-al-ghost" href="/en/compte/inscription/?role=cooperative"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M12 5v14"/></svg> Register my cooperative</a>
+          <a class="mk-icon-btn" href="/en/compte/connexion/" aria-label="Log in" title="Log in"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a>
         
       </div>
     </div>
@@ -181,11 +177,11 @@
       <div class="col-6 col-md-3 col-lg-2">
         <h4>Cooperatives</h4>
         <ul>
-          <li><a href="https://wahatech.pythonanywhere.com/en/compte/inscription/?role=cooperative" rel="nofollow">Register my cooperative</a></li>
+          <li><a href="/en/compte/inscription/?role=cooperative">Register my cooperative</a></li>
           <li><a href="/en/accompagnement/#abonnement">Annual subscription</a></li>
           <li><a href="/en/accompagnement/">Services and support</a></li>
           <li><a href="/en/accompagnement/marque-emballage/">Branding and packaging</a></li>
-          <li><a href="https://wahatech.pythonanywhere.com/en/compte/connexion/">Cooperative space</a></li>
+          <li><a href="/en/compte/connexion/">Cooperative space</a></li>
         </ul>
       </div>
       <div class="col-6 col-md-3 col-lg-2">
@@ -199,9 +195,10 @@
         <ul>
           <li><a href="/en/a-propos/">About us</a></li>
           <li><a href="/en/questions-frequentes/">Frequently asked questions</a></li>
+          <li><a href="/en/mentions-legales/">Legal</a></li>
           <li><a href="/en/conditions-utilisation/">Terms of use</a></li>
           <li><a href="/en/confidentialite/">Privacy</a></li>
-          <li><a href="https://wahatech.pythonanywhere.com/en/avis/?depuis=/en/accompagnement/diagnostic-cooperative/">Suggestions and complaints</a></li>
+          <li><a href="/en/avis/?depuis=/en/accompagnement/diagnostic-cooperative/">Suggestions and complaints</a></li>
         </ul>
       </div>
     </div>
@@ -216,6 +213,6 @@
   <a class="mk-top" href="#contenu" aria-label="Back to top">↑</a>
   <script src="/static/vendor/bootstrap/bootstrap.bundle.min.js" defer></script>
   <script src="/static/vendor/htmx/htmx.min.js" defer></script>
-<script src="/static/js/vitrine.js" defer></script>
+<script src="/static/js/vitrine.js" data-mode="launch" defer></script>
 </body>
 </html>

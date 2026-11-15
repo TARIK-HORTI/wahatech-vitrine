@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>سلتي — WahaTech</title>
   <meta name="description" content="WahaTech: سوق التعاونيات المغربية. اكتشفوا منتجاتها المجالية وتواصلوا معها مباشرة.">
-  <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#c8641e">
   <meta name="htmx-config" content='{"includeIndicatorStyles": false}'>
   <meta property="og:title" content="WahaTech">
@@ -16,9 +15,8 @@
   <link rel="alternate" hreflang="ar" href="/ar/boutique/panier/">
   <link rel="alternate" hreflang="en" href="/en/boutique/panier/">
   <link rel="icon" href="/static/img/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
+  <link rel="preload" href="/static/fonts/plus-jakarta-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/static/css/fonts.css">
   <link rel="stylesheet" href="/static/vendor/bootstrap/bootstrap.rtl.min.css">
   <link rel="stylesheet" href="/static/css/wahatech.css">
   <link rel="stylesheet" href="/static/css/cooperatives.css">
@@ -30,10 +28,8 @@
 <body class="lang-ar ">
   <a class="skip-link" href="#contenu">انتقل إلى المحتوى</a>
   <div class="al-demo-banner" role="note">
-    <strong>نسخة تجريبية</strong>
-    <span>جميع المعطيات خيالية. أفكاركم تساعدنا على تحسين WahaTech قبل إطلاقه.</span>
-    <a href="https://wahatech.pythonanywhere.com/ar/compte/connexion/">حسابات التجربة</a>
-    <a href="https://wahatech.pythonanywhere.com/ar/avis/">أعطِ رأيك</a>
+    <strong>قريبًا على الإنترنت</strong>
+    <span>يمكنكم تصفح الموقع. سيُفتح التسجيل والطلبات عند الإطلاق الرسمي.</span>
   </div>
   
 <div class="mk-topbar">
@@ -44,7 +40,7 @@
     </div>
     
 <form method="post" action="/i18n/setlang/" class="al-lang m-0" aria-label="لغة الموقع">
-  <input type="hidden" name="csrfmiddlewaretoken" value="LrmihEmQI3ig5kB1WZjlY5Trq337EMpMJ7IkAyyewsS6zp39vDoJw2ZVe9hNz5Ei">
+  <input type="hidden" name="csrfmiddlewaretoken" value="K03zpYrgr44Srx8yuXt1hM0zdJIY1wl95P8TbvPwxREx6k5cht1Uxw4S6iQAWn3Z">
   <input type="hidden" name="next" value="/ar/boutique/panier/">
   
   <button type="submit" name="language" value="fr" lang="fr" class=""  title="الفرنسية">FR</button>
@@ -90,8 +86,8 @@
           </ul>
         </div>
         
-          <a class="btn btn-al-ghost" href="https://wahatech.pythonanywhere.com/ar/compte/inscription/?role=cooperative" rel="nofollow"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M12 5v14"/></svg> تسجيل تعاونيتي</a>
-          <a class="mk-icon-btn" href="https://wahatech.pythonanywhere.com/ar/compte/connexion/" aria-label="تسجيل الدخول" title="تسجيل الدخول"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a>
+          <a class="btn btn-al-ghost" href="/ar/compte/inscription/?role=cooperative"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M12 5v14"/></svg> تسجيل تعاونيتي</a>
+          <a class="mk-icon-btn" href="/ar/compte/connexion/" aria-label="تسجيل الدخول" title="تسجيل الدخول"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a>
         
       </div>
     </div>
@@ -145,11 +141,11 @@
       <div class="col-6 col-md-3 col-lg-2">
         <h4>التعاونيات</h4>
         <ul>
-          <li><a href="https://wahatech.pythonanywhere.com/ar/compte/inscription/?role=cooperative" rel="nofollow">تسجيل تعاونيتي</a></li>
+          <li><a href="/ar/compte/inscription/?role=cooperative">تسجيل تعاونيتي</a></li>
           <li><a href="/ar/accompagnement/#abonnement">الاشتراك السنوي</a></li>
           <li><a href="/ar/accompagnement/">الخدمات والمواكبة</a></li>
           <li><a href="/ar/accompagnement/marque-emballage/">العلامة والتغليف</a></li>
-          <li><a href="https://wahatech.pythonanywhere.com/ar/compte/connexion/">فضاء التعاونية</a></li>
+          <li><a href="/ar/compte/connexion/">فضاء التعاونية</a></li>
         </ul>
       </div>
       <div class="col-6 col-md-3 col-lg-2">
@@ -163,9 +159,10 @@
         <ul>
           <li><a href="/ar/a-propos/">من نحن</a></li>
           <li><a href="/ar/questions-frequentes/">الأسئلة الشائعة</a></li>
+          <li><a href="/ar/mentions-legales/">البيانات القانونية</a></li>
           <li><a href="/ar/conditions-utilisation/">شروط الاستخدام</a></li>
           <li><a href="/ar/confidentialite/">الخصوصية</a></li>
-          <li><a href="https://wahatech.pythonanywhere.com/ar/avis/?depuis=/ar/boutique/panier/">الاقتراحات والشكايات</a></li>
+          <li><a href="/ar/avis/?depuis=/ar/boutique/panier/">الاقتراحات والشكايات</a></li>
         </ul>
       </div>
     </div>
@@ -180,6 +177,6 @@
   <a class="mk-top" href="#contenu" aria-label="أعلى الصفحة">↑</a>
   <script src="/static/vendor/bootstrap/bootstrap.bundle.min.js" defer></script>
   <script src="/static/vendor/htmx/htmx.min.js" defer></script>
-<script src="/static/js/vitrine.js" defer></script>
+<script src="/static/js/vitrine.js" data-mode="launch" defer></script>
 </body>
 </html>

@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Boutique des coopératives — WahaTech</title>
   <meta name="description" content="Miel, huile d'argan, safran, dattes, amlou, couscous : envoyez votre demande directement aux coopératives vérifiées du Maroc, qui vous livrent elles-mêmes.">
-  <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#c8641e">
   <meta name="htmx-config" content='{"includeIndicatorStyles": false}'>
   <meta property="og:title" content="WahaTech">
@@ -16,9 +15,8 @@
   <link rel="alternate" hreflang="ar" href="/ar/boutique/">
   <link rel="alternate" hreflang="en" href="/en/boutique/">
   <link rel="icon" href="/static/img/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
+  <link rel="preload" href="/static/fonts/plus-jakarta-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/static/css/fonts.css">
   <link rel="stylesheet" href="/static/vendor/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="/static/css/wahatech.css">
   <link rel="stylesheet" href="/static/css/cooperatives.css">
@@ -30,10 +28,8 @@
 <body class="lang-fr ">
   <a class="skip-link" href="#contenu">Aller au contenu</a>
   <div class="al-demo-banner" role="note">
-    <strong>Version de démonstration</strong>
-    <span>Toutes les données sont fictives. Vos idées nous aident à améliorer WahaTech avant son lancement.</span>
-    <a href="https://wahatech.pythonanywhere.com/fr/compte/connexion/">Comptes de test</a>
-    <a href="https://wahatech.pythonanywhere.com/fr/avis/">Donner mon avis</a>
+    <strong>Bientôt en ligne</strong>
+    <span>Vous pouvez parcourir le site. Les inscriptions et les demandes ouvriront au lancement officiel.</span>
   </div>
   
 <div class="mk-topbar">
@@ -44,7 +40,7 @@
     </div>
     
 <form method="post" action="/i18n/setlang/" class="al-lang m-0" aria-label="Langue du site">
-  <input type="hidden" name="csrfmiddlewaretoken" value="xhvWVxeORTkM2IvYTpIVNxs0VVvBydrWvXRYerqcFiUCwNX6s3NjluyuJ1JhtwGs">
+  <input type="hidden" name="csrfmiddlewaretoken" value="WQY6nMc4Fn3R7Ogp4x1rjQwOpsoIcxhOhF3q9jAkLaDwMBd3R3zkzAA7i1wk7oZE">
   <input type="hidden" name="next" value="/fr/boutique/">
   
   <button type="submit" name="language" value="fr" lang="fr" class="is-active" aria-current="true" title="Français">FR</button>
@@ -90,8 +86,8 @@
           </ul>
         </div>
         
-          <a class="btn btn-al-ghost" href="https://wahatech.pythonanywhere.com/fr/compte/inscription/?role=cooperative" rel="nofollow"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M12 5v14"/></svg> Inscrire ma coopérative</a>
-          <a class="mk-icon-btn" href="https://wahatech.pythonanywhere.com/fr/compte/connexion/" aria-label="Connexion" title="Connexion"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a>
+          <a class="btn btn-al-ghost" href="/fr/compte/inscription/?role=cooperative"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M12 5v14"/></svg> Inscrire ma coopérative</a>
+          <a class="mk-icon-btn" href="/fr/compte/connexion/" aria-label="Connexion" title="Connexion"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a>
         
       </div>
     </div>
@@ -273,204 +269,23 @@
       <a class="al-tile mt-3" href="/fr/accompagnement/vente-en-ligne/"><h3>Vous êtes une coopérative ?</h3><p>Présentez vos produits ici et recevez les demandes des clients. Nous vous accompagnons de A à Z.</p></a>
     </aside>
     <div class="col-lg-9">
-      <p class="text-muted small mb-3">8 produits</p>
+      <p class="text-muted small mb-3 d-none">0 produits</p>
       
-      <div class="row g-3 g-md-4">
-        <div class="col-6 col-md-4">
-<article class="wc-card">
-  <a class="wc-card-media" href="/fr/boutique/produit/11/" tabindex="-1" aria-hidden="true">
-    <span class="wc-card-ph wc-ph-honey"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span>
-    <span class="wc-card-badges">
       
-      <span class="wc-badge mk-badge-onssa">ONSSA</span>
-      
-    </span>
-  </a>
-  <div class="wc-card-body">
-    <a class="wc-card-coop" href="/fr/cooperatives/cooperative-zafrane-taliouine-1f9699/" title="Coopérative Zafrane Taliouine">Coopérative Zafrane Taliouine</a>
-    <h3 dir="auto"><a href="/fr/boutique/produit/11/">Miel de thym</a></h3>
-    <p class="wc-card-origin"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 4.99-5.54 10.19-7.4 11.8a1 1 0 0 1-1.2 0C9.54 20.19 4 14.99 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg> Taliouine · Souss-Massa</p>
-    <p class="mk-price" dir="auto">À partir de : 220 DH <small>/ kg</small></p>
-    <div class="mk-card-actions">
-      <form method="post" action="/fr/boutique/panier/ajouter/11/">
-        <input type="hidden" name="csrfmiddlewaretoken" value="xhvWVxeORTkM2IvYTpIVNxs0VVvBydrWvXRYerqcFiUCwNX6s3NjluyuJ1JhtwGs"><input type="hidden" name="quantity" value="1">
-        <button type="submit" class="btn btn-al" aria-label="Ajouter à ma demande : Miel de thym"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M12 5v14"/></svg> Ajouter à ma demande</button>
-      </form>
-      <a class="mk-btn-whatsapp" href="/fr/boutique/produit/11/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg> Voir</a>
-    </div>
+<div class="mk-opening reveal">
+  <span class="mk-opening-ico"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></svg></span>
+  <h2>La marketplace <span>ouvre bientôt</span></h2>
+  <p>Les premières coopératives sont en cours d'inscription et de vérification. Leurs produits apparaîtront ici dès leur validation.</p>
+  <ol class="mk-steps">
+    <li><b>Vous choisissez</b><span>des produits du terroir, avec leur coopérative, leur région et leurs labels.</span></li>
+    <li><b>Votre demande est transmise</b><span>directement à la coopérative, avec vos coordonnées.</span></li>
+    <li><b>La coopérative vous contacte</b><span>pour confirmer le prix, la livraison et le paiement, qui se règlent avec elle.</span></li>
+  </ol>
+  <div class="mk-cta-actions justify-content-center">
+    <a class="btn btn-al" href="/fr/compte/inscription/?role=cooperative"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M12 5v14"/></svg> Inscrire ma coopérative</a>
+    <a class="btn btn-al-ghost" href="/fr/accompagnement/">Découvrir l'offre coopératives</a>
   </div>
-</article>
-</div><div class="col-6 col-md-4">
-<article class="wc-card">
-  <a class="wc-card-media" href="/fr/boutique/produit/10/" tabindex="-1" aria-hidden="true">
-    <span class="wc-card-ph wc-ph-saffron"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span>
-    <span class="wc-card-badges">
-      
-      <span class="wc-badge mk-badge-onssa">ONSSA</span>
-      
-    </span>
-  </a>
-  <div class="wc-card-body">
-    <a class="wc-card-coop" href="/fr/cooperatives/cooperative-zafrane-taliouine-1f9699/" title="Coopérative Zafrane Taliouine">Coopérative Zafrane Taliouine</a>
-    <h3 dir="auto"><a href="/fr/boutique/produit/10/">Safran en filaments</a></h3>
-    <p class="wc-card-origin"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 4.99-5.54 10.19-7.4 11.8a1 1 0 0 1-1.2 0C9.54 20.19 4 14.99 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg> Taliouine · Souss-Massa</p>
-    <p class="mk-price" dir="auto">À partir de : 65 DH <small>/ boîte ou pot</small></p>
-    <div class="mk-card-actions">
-      <form method="post" action="/fr/boutique/panier/ajouter/10/">
-        <input type="hidden" name="csrfmiddlewaretoken" value="xhvWVxeORTkM2IvYTpIVNxs0VVvBydrWvXRYerqcFiUCwNX6s3NjluyuJ1JhtwGs"><input type="hidden" name="quantity" value="1">
-        <button type="submit" class="btn btn-al" aria-label="Ajouter à ma demande : Safran en filaments"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M12 5v14"/></svg> Ajouter à ma demande</button>
-      </form>
-      <a class="mk-btn-whatsapp" href="/fr/boutique/produit/10/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg> Voir</a>
-    </div>
-  </div>
-</article>
-</div><div class="col-6 col-md-4">
-<article class="wc-card">
-  <a class="wc-card-media" href="/fr/boutique/produit/8/" tabindex="-1" aria-hidden="true">
-    <span class="wc-card-ph wc-ph-olive"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span>
-    <span class="wc-card-badges">
-      
-      <span class="wc-badge mk-badge-onssa">ONSSA</span>
-      
-    </span>
-  </a>
-  <div class="wc-card-body">
-    <a class="wc-card-coop" href="/fr/cooperatives/cooperative-zitoun-taounate-9d5bcb/" title="Coopérative Zitoun Taounate">Coopérative Zitoun Taounate</a>
-    <h3 dir="auto"><a href="/fr/boutique/produit/8/">Olives vertes cassées</a></h3>
-    <p class="wc-card-origin"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 4.99-5.54 10.19-7.4 11.8a1 1 0 0 1-1.2 0C9.54 20.19 4 14.99 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg> Taounate · Fès-Meknès</p>
-    <p class="mk-price" dir="auto">À partir de : 28 DH <small>/ kg</small></p>
-    <div class="mk-card-actions">
-      <form method="post" action="/fr/boutique/panier/ajouter/8/">
-        <input type="hidden" name="csrfmiddlewaretoken" value="xhvWVxeORTkM2IvYTpIVNxs0VVvBydrWvXRYerqcFiUCwNX6s3NjluyuJ1JhtwGs"><input type="hidden" name="quantity" value="1">
-        <button type="submit" class="btn btn-al" aria-label="Ajouter à ma demande : Olives vertes cassées"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M12 5v14"/></svg> Ajouter à ma demande</button>
-      </form>
-      <a class="mk-btn-whatsapp" href="/fr/boutique/produit/8/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg> Voir</a>
-    </div>
-  </div>
-</article>
-</div><div class="col-6 col-md-4">
-<article class="wc-card">
-  <a class="wc-card-media" href="/fr/boutique/produit/7/" tabindex="-1" aria-hidden="true">
-    <span class="wc-card-ph wc-ph-olive"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span>
-    <span class="wc-card-badges">
-      
-      <span class="wc-badge mk-badge-onssa">ONSSA</span>
-      
-    </span>
-  </a>
-  <div class="wc-card-body">
-    <a class="wc-card-coop" href="/fr/cooperatives/cooperative-zitoun-taounate-9d5bcb/" title="Coopérative Zitoun Taounate">Coopérative Zitoun Taounate</a>
-    <h3 dir="auto"><a href="/fr/boutique/produit/7/">Huile d&#x27;olive vierge extra</a></h3>
-    <p class="wc-card-origin"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 4.99-5.54 10.19-7.4 11.8a1 1 0 0 1-1.2 0C9.54 20.19 4 14.99 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg> Taounate · Fès-Meknès</p>
-    <p class="mk-price" dir="auto">À partir de : 75 DH <small>/ litre</small></p>
-    <div class="mk-card-actions">
-      <form method="post" action="/fr/boutique/panier/ajouter/7/">
-        <input type="hidden" name="csrfmiddlewaretoken" value="xhvWVxeORTkM2IvYTpIVNxs0VVvBydrWvXRYerqcFiUCwNX6s3NjluyuJ1JhtwGs"><input type="hidden" name="quantity" value="1">
-        <button type="submit" class="btn btn-al" aria-label="Ajouter à ma demande : Huile d&#x27;olive vierge extra"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M12 5v14"/></svg> Ajouter à ma demande</button>
-      </form>
-      <a class="mk-btn-whatsapp" href="/fr/boutique/produit/7/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg> Voir</a>
-    </div>
-  </div>
-</article>
-</div><div class="col-6 col-md-4">
-<article class="wc-card">
-  <a class="wc-card-media" href="/fr/boutique/produit/5/" tabindex="-1" aria-hidden="true">
-    <span class="wc-card-ph wc-ph-cosmetics"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span>
-    <span class="wc-card-badges">
-      
-      <span class="wc-badge mk-badge-onssa">ONSSA</span>
-      <span class="wc-badge wc-badge-women">Coop. féminine</span>
-    </span>
-  </a>
-  <div class="wc-card-body">
-    <a class="wc-card-coop" href="/fr/cooperatives/cooperative-tifawin-argan-ed4d14/" title="Coopérative Tifawin Argan">Coopérative Tifawin Argan</a>
-    <h3 dir="auto"><a href="/fr/boutique/produit/5/">Huile d&#x27;argan cosmétique</a></h3>
-    <p class="wc-card-origin"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 4.99-5.54 10.19-7.4 11.8a1 1 0 0 1-1.2 0C9.54 20.19 4 14.99 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg> Tiznit · Souss-Massa</p>
-    <p class="mk-price" dir="auto">À partir de : 290 DH <small>/ litre</small></p>
-    <div class="mk-card-actions">
-      <form method="post" action="/fr/boutique/panier/ajouter/5/">
-        <input type="hidden" name="csrfmiddlewaretoken" value="xhvWVxeORTkM2IvYTpIVNxs0VVvBydrWvXRYerqcFiUCwNX6s3NjluyuJ1JhtwGs"><input type="hidden" name="quantity" value="1">
-        <button type="submit" class="btn btn-al" aria-label="Ajouter à ma demande : Huile d&#x27;argan cosmétique"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M12 5v14"/></svg> Ajouter à ma demande</button>
-      </form>
-      <a class="mk-btn-whatsapp" href="/fr/boutique/produit/5/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg> Voir</a>
-    </div>
-  </div>
-</article>
-</div><div class="col-6 col-md-4">
-<article class="wc-card">
-  <a class="wc-card-media" href="/fr/boutique/produit/4/" tabindex="-1" aria-hidden="true">
-    <span class="wc-card-ph wc-ph-argan"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span>
-    <span class="wc-card-badges">
-      
-      <span class="wc-badge mk-badge-onssa">ONSSA</span>
-      <span class="wc-badge wc-badge-women">Coop. féminine</span>
-    </span>
-  </a>
-  <div class="wc-card-body">
-    <a class="wc-card-coop" href="/fr/cooperatives/cooperative-tifawin-argan-ed4d14/" title="Coopérative Tifawin Argan">Coopérative Tifawin Argan</a>
-    <h3 dir="auto"><a href="/fr/boutique/produit/4/">Huile d&#x27;argan alimentaire</a></h3>
-    <p class="wc-card-origin"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 4.99-5.54 10.19-7.4 11.8a1 1 0 0 1-1.2 0C9.54 20.19 4 14.99 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg> Tiznit · Souss-Massa</p>
-    <p class="mk-price" dir="auto">À partir de : 320 DH <small>/ litre</small></p>
-    <div class="mk-card-actions">
-      <form method="post" action="/fr/boutique/panier/ajouter/4/">
-        <input type="hidden" name="csrfmiddlewaretoken" value="xhvWVxeORTkM2IvYTpIVNxs0VVvBydrWvXRYerqcFiUCwNX6s3NjluyuJ1JhtwGs"><input type="hidden" name="quantity" value="1">
-        <button type="submit" class="btn btn-al" aria-label="Ajouter à ma demande : Huile d&#x27;argan alimentaire"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M12 5v14"/></svg> Ajouter à ma demande</button>
-      </form>
-      <a class="mk-btn-whatsapp" href="/fr/boutique/produit/4/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg> Voir</a>
-    </div>
-  </div>
-</article>
-</div><div class="col-6 col-md-4">
-<article class="wc-card">
-  <a class="wc-card-media" href="/fr/boutique/produit/2/" tabindex="-1" aria-hidden="true">
-    <span class="wc-card-ph wc-ph-dates"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span>
-    <span class="wc-card-badges">
-      
-      <span class="wc-badge mk-badge-onssa">ONSSA</span>
-      <span class="wc-badge wc-badge-women">Coop. féminine</span>
-    </span>
-  </a>
-  <div class="wc-card-body">
-    <a class="wc-card-coop" href="/fr/cooperatives/cooperative-nakhil-erfoud-5c0ed7/" title="Coopérative Nakhil Erfoud">Coopérative Nakhil Erfoud</a>
-    <h3 dir="auto"><a href="/fr/boutique/produit/2/">Pâte de dattes</a></h3>
-    <p class="wc-card-origin"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 4.99-5.54 10.19-7.4 11.8a1 1 0 0 1-1.2 0C9.54 20.19 4 14.99 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg> Erfoud · Drâa-Tafilalet</p>
-    <p class="mk-price" dir="auto">À partir de : 38 DH <small>/ kg</small></p>
-    <div class="mk-card-actions">
-      <form method="post" action="/fr/boutique/panier/ajouter/2/">
-        <input type="hidden" name="csrfmiddlewaretoken" value="xhvWVxeORTkM2IvYTpIVNxs0VVvBydrWvXRYerqcFiUCwNX6s3NjluyuJ1JhtwGs"><input type="hidden" name="quantity" value="1">
-        <button type="submit" class="btn btn-al" aria-label="Ajouter à ma demande : Pâte de dattes"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M12 5v14"/></svg> Ajouter à ma demande</button>
-      </form>
-      <a class="mk-btn-whatsapp" href="/fr/boutique/produit/2/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg> Voir</a>
-    </div>
-  </div>
-</article>
-</div><div class="col-6 col-md-4">
-<article class="wc-card">
-  <a class="wc-card-media" href="/fr/boutique/produit/1/" tabindex="-1" aria-hidden="true">
-    <span class="wc-card-ph wc-ph-dates"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span>
-    <span class="wc-card-badges">
-      <span class="wc-badge wc-badge-label">IGP</span>
-      <span class="wc-badge mk-badge-onssa">ONSSA</span>
-      <span class="wc-badge wc-badge-women">Coop. féminine</span>
-    </span>
-  </a>
-  <div class="wc-card-body">
-    <a class="wc-card-coop" href="/fr/cooperatives/cooperative-nakhil-erfoud-5c0ed7/" title="Coopérative Nakhil Erfoud">Coopérative Nakhil Erfoud</a>
-    <h3 dir="auto"><a href="/fr/boutique/produit/1/">Dattes Mejhoul calibre large</a></h3>
-    <p class="wc-card-origin"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 4.99-5.54 10.19-7.4 11.8a1 1 0 0 1-1.2 0C9.54 20.19 4 14.99 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg> Palmeraie d&#x27;Erfoud, vallée du Ziz · Drâa-Tafilalet</p>
-    <p class="mk-price" dir="auto">À partir de : 95 DH <small>/ kg</small></p>
-    <div class="mk-card-actions">
-      <form method="post" action="/fr/boutique/panier/ajouter/1/">
-        <input type="hidden" name="csrfmiddlewaretoken" value="xhvWVxeORTkM2IvYTpIVNxs0VVvBydrWvXRYerqcFiUCwNX6s3NjluyuJ1JhtwGs"><input type="hidden" name="quantity" value="1">
-        <button type="submit" class="btn btn-al" aria-label="Ajouter à ma demande : Dattes Mejhoul calibre large"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="M12 5v14"/></svg> Ajouter à ma demande</button>
-      </form>
-      <a class="mk-btn-whatsapp" href="/fr/boutique/produit/1/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg> Voir</a>
-    </div>
-  </div>
-</article>
 </div>
-      </div>
-      
 
       
     </div>
@@ -508,11 +323,11 @@
       <div class="col-6 col-md-3 col-lg-2">
         <h4>Coopératives</h4>
         <ul>
-          <li><a href="https://wahatech.pythonanywhere.com/fr/compte/inscription/?role=cooperative" rel="nofollow">Inscrire ma coopérative</a></li>
+          <li><a href="/fr/compte/inscription/?role=cooperative">Inscrire ma coopérative</a></li>
           <li><a href="/fr/accompagnement/#abonnement">Abonnement annuel</a></li>
           <li><a href="/fr/accompagnement/">Services et accompagnement</a></li>
           <li><a href="/fr/accompagnement/marque-emballage/">Marque et emballage</a></li>
-          <li><a href="https://wahatech.pythonanywhere.com/fr/compte/connexion/">Espace coopérative</a></li>
+          <li><a href="/fr/compte/connexion/">Espace coopérative</a></li>
         </ul>
       </div>
       <div class="col-6 col-md-3 col-lg-2">
@@ -526,9 +341,10 @@
         <ul>
           <li><a href="/fr/a-propos/">Qui sommes-nous</a></li>
           <li><a href="/fr/questions-frequentes/">Questions fréquentes</a></li>
+          <li><a href="/fr/mentions-legales/">Mentions légales</a></li>
           <li><a href="/fr/conditions-utilisation/">Conditions d'utilisation</a></li>
           <li><a href="/fr/confidentialite/">Confidentialité</a></li>
-          <li><a href="https://wahatech.pythonanywhere.com/fr/avis/?depuis=/fr/boutique/">Suggestions et réclamations</a></li>
+          <li><a href="/fr/avis/?depuis=/fr/boutique/">Suggestions et réclamations</a></li>
         </ul>
       </div>
     </div>
@@ -543,6 +359,6 @@
   <a class="mk-top" href="#contenu" aria-label="Haut de page">↑</a>
   <script src="/static/vendor/bootstrap/bootstrap.bundle.min.js" defer></script>
   <script src="/static/vendor/htmx/htmx.min.js" defer></script>
-<script src="/static/js/vitrine.js" defer></script>
+<script src="/static/js/vitrine.js" data-mode="launch" defer></script>
 </body>
 </html>
