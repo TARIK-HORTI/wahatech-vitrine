@@ -33,7 +33,7 @@
   --mk-shadow: 0 1px 2px rgba(31, 36, 33, .05), 0 12px 32px rgba(31, 36, 33, .08);
 }
 
-body { background: var(--tz-ivory); }
+body { background: var(--tz-ivory) url("../img/zellige.svg") 0 0 / 72px 72px; }
 
 /* ---------- Titres éditoriaux ---------- */
 h1, h2, .mk-title h2, .tz-hero h1 { font-family: var(--tz-serif); font-weight: 600; letter-spacing: -.01em; }
@@ -57,10 +57,10 @@ h1, h2, .mk-title h2, .tz-hero h1 { font-family: var(--tz-serif); font-weight: 6
 .al-demo-banner span, .al-demo-banner a { color: #F2EDE3; }
 
 /* ---------- Motif zellige discret ---------- */
-.tz-zellige { background-color: var(--tz-ivory); background-image: url("../img/zellige.svg"); background-size: 72px 72px; }
+.tz-zellige { background: transparent; }
 
 /* ---------- Hero ---------- */
-.tz-hero { padding: 3.5rem 0 6.5rem; background-color: var(--tz-ivory-2); background-image: radial-gradient(700px 420px at 90% 10%, rgba(212, 163, 115, .35), transparent 65%), url("../img/zellige.svg"); background-size: auto, 72px 72px; }
+.tz-hero { padding: 3.5rem 0 6.5rem; background-image: radial-gradient(700px 420px at 90% 10%, rgba(212, 163, 115, .3), transparent 65%); }
 .tz-hero-grid { display: grid; gap: 2.5rem; align-items: center; }
 @media (min-width: 992px) { .tz-hero-grid { grid-template-columns: 1.15fr .85fr; } }
 .tz-kicker { display: inline-block; margin-bottom: 1rem; padding: .3rem .8rem; border-radius: 999px; background: var(--tz-green-soft); color: var(--tz-green); font-size: .78rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
@@ -130,7 +130,8 @@ h1, h2, .mk-title h2, .tz-hero h1 { font-family: var(--tz-serif); font-weight: 6
 
 /* ---------- Fonds : photos du Maroc (palmeraies, désert, Atlas, Chefchaouen, ksar), une différente à chaque page (js/fonds.js) ---------- */
 /* Très pâles et fixes derrière le contenu : le texte reste lisible, les cartes gardent leur fond. */
-body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: .13; filter: saturate(.8); background: url("../img/fonds/01-palmeraie.jpg") center / cover no-repeat; }
+/* Photos passées aux couleurs du site (vert oasis → ivoire), sous le motif zellige */
+body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: .15; mix-blend-mode: multiply; background: url("../img/fonds/01-palmeraie.jpg") center / cover no-repeat; }
 [data-fond="1"] body::before { background-image: url("../img/fonds/01-palmeraie.jpg"); }
 [data-fond="2"] body::before { background-image: url("../img/fonds/02-dunes.jpg"); }
 [data-fond="3"] body::before { background-image: url("../img/fonds/03-atlas.jpg"); }
@@ -139,11 +140,11 @@ body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-even
 [data-fond="6"] body::before { background-image: url("../img/fonds/06-the-desert.jpg"); }
 [data-fond="7"] body::before { background-image: url("../img/fonds/07-ksar-dattes.jpg"); }
 [data-fond="8"] body::before { background-image: url("../img/fonds/08-maison-ksar.jpg"); }
-@media (max-width: 767.98px) { body::before { opacity: .1; } }
+@media (max-width: 767.98px) { body::before { opacity: .12; } }
 @media print { body::before { display: none; } }
 /* Les grandes bandes laissent voir le paysage par transparence */
 .tz-zellige { background-color: transparent; }
-.tz-hero { background-color: rgba(243, 236, 225, .55); }
+.tz-hero { background-color: rgba(243, 236, 225, .45); }
 .tz-checks, .mk-section-cream { background-color: rgba(243, 236, 225, .6); }
 .wc-shop-head, .al-page-head, .wc-hero-compact { background: rgba(243, 236, 225, .55); }
 .mk-curve::after { background: var(--tz-ivory); opacity: .9; }
